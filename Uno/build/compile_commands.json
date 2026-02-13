@@ -1,0 +1,8 @@
+[
+{
+  "directory": "/home/mynordma/UNO/Uno/build",
+  "command": "/usr/bin/c++   -g -o CMakeFiles/Uno.dir/src/main.cpp.o -c /home/mynordma/UNO/Uno/src/main.cpp",
+  "file": "/home/mynordma/UNO/Uno/src/main.cpp",
+  "output": "CMakeFiles/Uno.dir/src/main.cpp.o"
+}
+]

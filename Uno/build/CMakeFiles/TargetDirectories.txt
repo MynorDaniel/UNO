@@ -1,0 +1,3 @@
+/home/mynordma/UNO/Uno/build/CMakeFiles/Uno.dir
+/home/mynordma/UNO/Uno/build/CMakeFiles/edit_cache.dir
+/home/mynordma/UNO/Uno/build/CMakeFiles/rebuild_cache.dir
