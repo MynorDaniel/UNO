@@ -149,5 +149,7 @@ CMakeFiles/Uno.dir/src/main.cpp.o: /home/mynordma/UNO/Uno/src/main.cpp \
  /usr/include/c++/13/bits/basic_ios.tcc \
  /usr/include/c++/13/bits/ostream.tcc /usr/include/c++/13/istream \
  /usr/include/c++/13/bits/istream.tcc \
- /home/mynordma/UNO/Uno/src/Lista/Lista.h \
- /home/mynordma/UNO/Uno/src/Lista/Nodo.h
+ /home/mynordma/UNO/Uno/src/ListaCircularDoble/ListaCircularDoble.h \
+ /home/mynordma/UNO/Uno/src/ListaCircularDoble/Nodo.h \
+ /home/mynordma/UNO/Uno/src/ListaCircularDoble/Nodo.tpp \
+ /home/mynordma/UNO/Uno/src/ListaCircularDoble/ListaCircularDoble.tpp

@@ -8,31 +8,21 @@ public:
     Nodo<T>* siguiente;
     Nodo<T>* anterior;
 
-    Nodo(T valor) : dato(valor), siguiente(nullptr), anterior(nullptr) {}
+    Nodo(T valor);
 
-    T getDato() const {
-        return dato;
-    }
+    T getDato() const;
 
-    Nodo<T>* getSiguiente() const {
-        return siguiente;
-    }
+    Nodo<T>* getSiguiente() const;
 
-    Nodo<T>* getAnterior() const {
-        return anterior;
-    }
+    Nodo<T>* getAnterior() const;
 
-    void setDato(T valor) {
-        dato = valor;
-    }
+    void setDato(T valor);
 
-    void setSiguiente(Nodo<T>* nodo) {
-        siguiente = nodo;
-    }
+    void setSiguiente(Nodo<T>* nodo);
 
-    void setAnterior(Nodo<T>* nodo) {
-        anterior = nodo;
-    }
+    void setAnterior(Nodo<T>* nodo);
 };
+
+#include "Nodo.tpp"
 
 #endif // NODO_H

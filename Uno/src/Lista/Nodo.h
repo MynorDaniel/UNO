@@ -9,19 +9,15 @@ private:
     Nodo<T>* siguiente;
 
 public:
-    Nodo(T dato) : dato(dato), siguiente(nullptr) {}
+    Nodo(T dato);
 
-    T getDato() const {
-        return dato;
-    }
+    T getDato();
 
-    Nodo<T>* getSiguiente() const {
-        return siguiente;
-    }
+    Nodo<T>* getSiguiente();
 
-    void setSiguiente(Nodo<T>* siguiente) {
-        this->siguiente = siguiente;
-    }
+    void setSiguiente(Nodo<T>* siguiente);
 };
+
+#include "Nodo.tpp"
 
 #endif

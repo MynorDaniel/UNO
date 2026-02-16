@@ -3,8 +3,10 @@
 
 CMakeFiles/Uno.dir/src/main.cpp.o
  /home/mynordma/UNO/Uno/src/main.cpp
- /home/mynordma/UNO/Uno/src/Pila/Nodo.h
- /home/mynordma/UNO/Uno/src/Pila/Pila.h
+ /home/mynordma/UNO/Uno/src/ListaCircularDoble/ListaCircularDoble.h
+ /home/mynordma/UNO/Uno/src/ListaCircularDoble/ListaCircularDoble.tpp
+ /home/mynordma/UNO/Uno/src/ListaCircularDoble/Nodo.h
+ /home/mynordma/UNO/Uno/src/ListaCircularDoble/Nodo.tpp
  /usr/include/alloca.h
  /usr/include/asm-generic/errno-base.h
  /usr/include/asm-generic/errno.h
