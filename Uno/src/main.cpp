@@ -1,15 +1,11 @@
 #include <iostream>
+#include <stdexcept>
 #include "Lista/Lista.h"
 
-int main(int, char**){
-    Lista<int> lista;
+using namespace std;
 
-    lista.agregar(10);
-    lista.agregar(20);
-    lista.agregar(30);
-    lista.agregar(40);
+int main() {
 
-    for (int i = 0; i < lista.getLongitud(); i++) {
-        std::cout << "Elemento en índice " << i << ": " << lista.get(i) << std::endl;
-    }
+    
+    return 0;
 }
