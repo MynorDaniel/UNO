@@ -1,5 +1,5 @@
-#ifndef NODO_H
-#define NODO_H
+#ifndef LISTA_NODO_H
+#define LISTA_NODO_H
 
 template <typename T>
 class Nodo {
@@ -20,4 +20,4 @@ public:
 
 #include "Nodo.tpp"
 
-#endif
+#endif // LISTA_NODO_H

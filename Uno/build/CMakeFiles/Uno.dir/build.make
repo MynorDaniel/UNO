@@ -83,17 +83,81 @@ CMakeFiles/Uno.dir/src/main.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/Uno.dir/src/main.cpp.s"
 	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/mynordma/UNO/Uno/src/main.cpp -o CMakeFiles/Uno.dir/src/main.cpp.s
 
+CMakeFiles/Uno.dir/src/Juego/Juego.cpp.o: CMakeFiles/Uno.dir/flags.make
+CMakeFiles/Uno.dir/src/Juego/Juego.cpp.o: /home/mynordma/UNO/Uno/src/Juego/Juego.cpp
+CMakeFiles/Uno.dir/src/Juego/Juego.cpp.o: CMakeFiles/Uno.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/mynordma/UNO/Uno/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Building CXX object CMakeFiles/Uno.dir/src/Juego/Juego.cpp.o"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/Uno.dir/src/Juego/Juego.cpp.o -MF CMakeFiles/Uno.dir/src/Juego/Juego.cpp.o.d -o CMakeFiles/Uno.dir/src/Juego/Juego.cpp.o -c /home/mynordma/UNO/Uno/src/Juego/Juego.cpp
+
+CMakeFiles/Uno.dir/src/Juego/Juego.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing CXX source to CMakeFiles/Uno.dir/src/Juego/Juego.cpp.i"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/mynordma/UNO/Uno/src/Juego/Juego.cpp > CMakeFiles/Uno.dir/src/Juego/Juego.cpp.i
+
+CMakeFiles/Uno.dir/src/Juego/Juego.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/Uno.dir/src/Juego/Juego.cpp.s"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/mynordma/UNO/Uno/src/Juego/Juego.cpp -o CMakeFiles/Uno.dir/src/Juego/Juego.cpp.s
+
+CMakeFiles/Uno.dir/src/Jugador/Jugador.cpp.o: CMakeFiles/Uno.dir/flags.make
+CMakeFiles/Uno.dir/src/Jugador/Jugador.cpp.o: /home/mynordma/UNO/Uno/src/Jugador/Jugador.cpp
+CMakeFiles/Uno.dir/src/Jugador/Jugador.cpp.o: CMakeFiles/Uno.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/mynordma/UNO/Uno/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Building CXX object CMakeFiles/Uno.dir/src/Jugador/Jugador.cpp.o"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/Uno.dir/src/Jugador/Jugador.cpp.o -MF CMakeFiles/Uno.dir/src/Jugador/Jugador.cpp.o.d -o CMakeFiles/Uno.dir/src/Jugador/Jugador.cpp.o -c /home/mynordma/UNO/Uno/src/Jugador/Jugador.cpp
+
+CMakeFiles/Uno.dir/src/Jugador/Jugador.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing CXX source to CMakeFiles/Uno.dir/src/Jugador/Jugador.cpp.i"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/mynordma/UNO/Uno/src/Jugador/Jugador.cpp > CMakeFiles/Uno.dir/src/Jugador/Jugador.cpp.i
+
+CMakeFiles/Uno.dir/src/Jugador/Jugador.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/Uno.dir/src/Jugador/Jugador.cpp.s"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/mynordma/UNO/Uno/src/Jugador/Jugador.cpp -o CMakeFiles/Uno.dir/src/Jugador/Jugador.cpp.s
+
+CMakeFiles/Uno.dir/src/Carta/Carta.cpp.o: CMakeFiles/Uno.dir/flags.make
+CMakeFiles/Uno.dir/src/Carta/Carta.cpp.o: /home/mynordma/UNO/Uno/src/Carta/Carta.cpp
+CMakeFiles/Uno.dir/src/Carta/Carta.cpp.o: CMakeFiles/Uno.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/mynordma/UNO/Uno/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_4) "Building CXX object CMakeFiles/Uno.dir/src/Carta/Carta.cpp.o"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/Uno.dir/src/Carta/Carta.cpp.o -MF CMakeFiles/Uno.dir/src/Carta/Carta.cpp.o.d -o CMakeFiles/Uno.dir/src/Carta/Carta.cpp.o -c /home/mynordma/UNO/Uno/src/Carta/Carta.cpp
+
+CMakeFiles/Uno.dir/src/Carta/Carta.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing CXX source to CMakeFiles/Uno.dir/src/Carta/Carta.cpp.i"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/mynordma/UNO/Uno/src/Carta/Carta.cpp > CMakeFiles/Uno.dir/src/Carta/Carta.cpp.i
+
+CMakeFiles/Uno.dir/src/Carta/Carta.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/Uno.dir/src/Carta/Carta.cpp.s"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/mynordma/UNO/Uno/src/Carta/Carta.cpp -o CMakeFiles/Uno.dir/src/Carta/Carta.cpp.s
+
+CMakeFiles/Uno.dir/src/Lado/Lado.cpp.o: CMakeFiles/Uno.dir/flags.make
+CMakeFiles/Uno.dir/src/Lado/Lado.cpp.o: /home/mynordma/UNO/Uno/src/Lado/Lado.cpp
+CMakeFiles/Uno.dir/src/Lado/Lado.cpp.o: CMakeFiles/Uno.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/mynordma/UNO/Uno/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_5) "Building CXX object CMakeFiles/Uno.dir/src/Lado/Lado.cpp.o"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/Uno.dir/src/Lado/Lado.cpp.o -MF CMakeFiles/Uno.dir/src/Lado/Lado.cpp.o.d -o CMakeFiles/Uno.dir/src/Lado/Lado.cpp.o -c /home/mynordma/UNO/Uno/src/Lado/Lado.cpp
+
+CMakeFiles/Uno.dir/src/Lado/Lado.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing CXX source to CMakeFiles/Uno.dir/src/Lado/Lado.cpp.i"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/mynordma/UNO/Uno/src/Lado/Lado.cpp > CMakeFiles/Uno.dir/src/Lado/Lado.cpp.i
+
+CMakeFiles/Uno.dir/src/Lado/Lado.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/Uno.dir/src/Lado/Lado.cpp.s"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/mynordma/UNO/Uno/src/Lado/Lado.cpp -o CMakeFiles/Uno.dir/src/Lado/Lado.cpp.s
+
 # Object files for target Uno
 Uno_OBJECTS = \
-"CMakeFiles/Uno.dir/src/main.cpp.o"
+"CMakeFiles/Uno.dir/src/main.cpp.o" \
+"CMakeFiles/Uno.dir/src/Juego/Juego.cpp.o" \
+"CMakeFiles/Uno.dir/src/Jugador/Jugador.cpp.o" \
+"CMakeFiles/Uno.dir/src/Carta/Carta.cpp.o" \
+"CMakeFiles/Uno.dir/src/Lado/Lado.cpp.o"
 
 # External object files for target Uno
 Uno_EXTERNAL_OBJECTS =
 
 Uno: CMakeFiles/Uno.dir/src/main.cpp.o
+Uno: CMakeFiles/Uno.dir/src/Juego/Juego.cpp.o
+Uno: CMakeFiles/Uno.dir/src/Jugador/Jugador.cpp.o
+Uno: CMakeFiles/Uno.dir/src/Carta/Carta.cpp.o
+Uno: CMakeFiles/Uno.dir/src/Lado/Lado.cpp.o
 Uno: CMakeFiles/Uno.dir/build.make
 Uno: CMakeFiles/Uno.dir/link.txt
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --bold --progress-dir=/home/mynordma/UNO/Uno/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Linking CXX executable Uno"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --bold --progress-dir=/home/mynordma/UNO/Uno/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_6) "Linking CXX executable Uno"
 	$(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/Uno.dir/link.txt --verbose=$(VERBOSE)
 
 # Rule to build all files generated by this target.

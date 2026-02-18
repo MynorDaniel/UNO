@@ -1,6 +1,7 @@
 #ifndef PILA_H
 #define PILA_H
 
+#include <stdexcept>
 #include "../Lista/Nodo.h"
 
 template <typename T>

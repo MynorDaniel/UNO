@@ -4,5 +4,29 @@
   "command": "/usr/bin/c++   -g -o CMakeFiles/Uno.dir/src/main.cpp.o -c /home/mynordma/UNO/Uno/src/main.cpp",
   "file": "/home/mynordma/UNO/Uno/src/main.cpp",
   "output": "CMakeFiles/Uno.dir/src/main.cpp.o"
+},
+{
+  "directory": "/home/mynordma/UNO/Uno/build",
+  "command": "/usr/bin/c++   -g -o CMakeFiles/Uno.dir/src/Juego/Juego.cpp.o -c /home/mynordma/UNO/Uno/src/Juego/Juego.cpp",
+  "file": "/home/mynordma/UNO/Uno/src/Juego/Juego.cpp",
+  "output": "CMakeFiles/Uno.dir/src/Juego/Juego.cpp.o"
+},
+{
+  "directory": "/home/mynordma/UNO/Uno/build",
+  "command": "/usr/bin/c++   -g -o CMakeFiles/Uno.dir/src/Jugador/Jugador.cpp.o -c /home/mynordma/UNO/Uno/src/Jugador/Jugador.cpp",
+  "file": "/home/mynordma/UNO/Uno/src/Jugador/Jugador.cpp",
+  "output": "CMakeFiles/Uno.dir/src/Jugador/Jugador.cpp.o"
+},
+{
+  "directory": "/home/mynordma/UNO/Uno/build",
+  "command": "/usr/bin/c++   -g -o CMakeFiles/Uno.dir/src/Carta/Carta.cpp.o -c /home/mynordma/UNO/Uno/src/Carta/Carta.cpp",
+  "file": "/home/mynordma/UNO/Uno/src/Carta/Carta.cpp",
+  "output": "CMakeFiles/Uno.dir/src/Carta/Carta.cpp.o"
+},
+{
+  "directory": "/home/mynordma/UNO/Uno/build",
+  "command": "/usr/bin/c++   -g -o CMakeFiles/Uno.dir/src/Lado/Lado.cpp.o -c /home/mynordma/UNO/Uno/src/Lado/Lado.cpp",
+  "file": "/home/mynordma/UNO/Uno/src/Lado/Lado.cpp",
+  "output": "CMakeFiles/Uno.dir/src/Lado/Lado.cpp.o"
 }
 ]

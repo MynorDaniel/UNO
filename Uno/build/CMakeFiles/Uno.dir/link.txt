@@ -1,1 +1,1 @@
-/usr/bin/c++ -g CMakeFiles/Uno.dir/src/main.cpp.o -o Uno 
+/usr/bin/c++ -g CMakeFiles/Uno.dir/src/main.cpp.o CMakeFiles/Uno.dir/src/Juego/Juego.cpp.o CMakeFiles/Uno.dir/src/Jugador/Jugador.cpp.o CMakeFiles/Uno.dir/src/Carta/Carta.cpp.o CMakeFiles/Uno.dir/src/Lado/Lado.cpp.o -o Uno 

@@ -129,6 +129,102 @@ Uno/fast:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Uno.dir/build.make CMakeFiles/Uno.dir/build
 .PHONY : Uno/fast
 
+src/Carta/Carta.o: src/Carta/Carta.cpp.o
+.PHONY : src/Carta/Carta.o
+
+# target to build an object file
+src/Carta/Carta.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Uno.dir/build.make CMakeFiles/Uno.dir/src/Carta/Carta.cpp.o
+.PHONY : src/Carta/Carta.cpp.o
+
+src/Carta/Carta.i: src/Carta/Carta.cpp.i
+.PHONY : src/Carta/Carta.i
+
+# target to preprocess a source file
+src/Carta/Carta.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Uno.dir/build.make CMakeFiles/Uno.dir/src/Carta/Carta.cpp.i
+.PHONY : src/Carta/Carta.cpp.i
+
+src/Carta/Carta.s: src/Carta/Carta.cpp.s
+.PHONY : src/Carta/Carta.s
+
+# target to generate assembly for a file
+src/Carta/Carta.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Uno.dir/build.make CMakeFiles/Uno.dir/src/Carta/Carta.cpp.s
+.PHONY : src/Carta/Carta.cpp.s
+
+src/Juego/Juego.o: src/Juego/Juego.cpp.o
+.PHONY : src/Juego/Juego.o
+
+# target to build an object file
+src/Juego/Juego.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Uno.dir/build.make CMakeFiles/Uno.dir/src/Juego/Juego.cpp.o
+.PHONY : src/Juego/Juego.cpp.o
+
+src/Juego/Juego.i: src/Juego/Juego.cpp.i
+.PHONY : src/Juego/Juego.i
+
+# target to preprocess a source file
+src/Juego/Juego.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Uno.dir/build.make CMakeFiles/Uno.dir/src/Juego/Juego.cpp.i
+.PHONY : src/Juego/Juego.cpp.i
+
+src/Juego/Juego.s: src/Juego/Juego.cpp.s
+.PHONY : src/Juego/Juego.s
+
+# target to generate assembly for a file
+src/Juego/Juego.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Uno.dir/build.make CMakeFiles/Uno.dir/src/Juego/Juego.cpp.s
+.PHONY : src/Juego/Juego.cpp.s
+
+src/Jugador/Jugador.o: src/Jugador/Jugador.cpp.o
+.PHONY : src/Jugador/Jugador.o
+
+# target to build an object file
+src/Jugador/Jugador.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Uno.dir/build.make CMakeFiles/Uno.dir/src/Jugador/Jugador.cpp.o
+.PHONY : src/Jugador/Jugador.cpp.o
+
+src/Jugador/Jugador.i: src/Jugador/Jugador.cpp.i
+.PHONY : src/Jugador/Jugador.i
+
+# target to preprocess a source file
+src/Jugador/Jugador.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Uno.dir/build.make CMakeFiles/Uno.dir/src/Jugador/Jugador.cpp.i
+.PHONY : src/Jugador/Jugador.cpp.i
+
+src/Jugador/Jugador.s: src/Jugador/Jugador.cpp.s
+.PHONY : src/Jugador/Jugador.s
+
+# target to generate assembly for a file
+src/Jugador/Jugador.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Uno.dir/build.make CMakeFiles/Uno.dir/src/Jugador/Jugador.cpp.s
+.PHONY : src/Jugador/Jugador.cpp.s
+
+src/Lado/Lado.o: src/Lado/Lado.cpp.o
+.PHONY : src/Lado/Lado.o
+
+# target to build an object file
+src/Lado/Lado.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Uno.dir/build.make CMakeFiles/Uno.dir/src/Lado/Lado.cpp.o
+.PHONY : src/Lado/Lado.cpp.o
+
+src/Lado/Lado.i: src/Lado/Lado.cpp.i
+.PHONY : src/Lado/Lado.i
+
+# target to preprocess a source file
+src/Lado/Lado.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Uno.dir/build.make CMakeFiles/Uno.dir/src/Lado/Lado.cpp.i
+.PHONY : src/Lado/Lado.cpp.i
+
+src/Lado/Lado.s: src/Lado/Lado.cpp.s
+.PHONY : src/Lado/Lado.s
+
+# target to generate assembly for a file
+src/Lado/Lado.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Uno.dir/build.make CMakeFiles/Uno.dir/src/Lado/Lado.cpp.s
+.PHONY : src/Lado/Lado.cpp.s
+
 src/main.o: src/main.cpp.o
 .PHONY : src/main.o
 
@@ -162,6 +258,18 @@ help:
 	@echo "... edit_cache"
 	@echo "... rebuild_cache"
 	@echo "... Uno"
+	@echo "... src/Carta/Carta.o"
+	@echo "... src/Carta/Carta.i"
+	@echo "... src/Carta/Carta.s"
+	@echo "... src/Juego/Juego.o"
+	@echo "... src/Juego/Juego.i"
+	@echo "... src/Juego/Juego.s"
+	@echo "... src/Jugador/Jugador.o"
+	@echo "... src/Jugador/Jugador.i"
+	@echo "... src/Jugador/Jugador.s"
+	@echo "... src/Lado/Lado.o"
+	@echo "... src/Lado/Lado.i"
+	@echo "... src/Lado/Lado.s"
 	@echo "... src/main.o"
 	@echo "... src/main.i"
 	@echo "... src/main.s"

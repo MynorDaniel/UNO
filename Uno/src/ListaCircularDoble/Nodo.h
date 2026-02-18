@@ -1,28 +1,28 @@
-#ifndef NODO_H
-#define NODO_H
+#ifndef NODO_CIRCULAR_DOBLE_H
+#define NODO_CIRCULAR_DOBLE_H
 
 template <typename T>
-class Nodo {
+class NodoCircularDoble {
 public:
     T dato;
-    Nodo<T>* siguiente;
-    Nodo<T>* anterior;
+    NodoCircularDoble<T>* siguiente;
+    NodoCircularDoble<T>* anterior;
 
-    Nodo(T valor);
+    NodoCircularDoble(T valor);
 
     T getDato() const;
 
-    Nodo<T>* getSiguiente() const;
+    NodoCircularDoble<T>* getSiguiente() const;
 
-    Nodo<T>* getAnterior() const;
+    NodoCircularDoble<T>* getAnterior() const;
 
     void setDato(T valor);
 
-    void setSiguiente(Nodo<T>* nodo);
+    void setSiguiente(NodoCircularDoble<T>* nodo);
 
-    void setAnterior(Nodo<T>* nodo);
+    void setAnterior(NodoCircularDoble<T>* nodo);
 };
 
 #include "Nodo.tpp"
 
-#endif // NODO_H
+#endif // NODO_CIRCULAR_DOBLE_H

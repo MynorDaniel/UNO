@@ -8,6 +8,10 @@ set(CMAKE_DEPENDS_LANGUAGES
 
 # The set of dependency files which are needed:
 set(CMAKE_DEPENDS_DEPENDENCY_FILES
+  "/home/mynordma/UNO/Uno/src/Carta/Carta.cpp" "CMakeFiles/Uno.dir/src/Carta/Carta.cpp.o" "gcc" "CMakeFiles/Uno.dir/src/Carta/Carta.cpp.o.d"
+  "/home/mynordma/UNO/Uno/src/Juego/Juego.cpp" "CMakeFiles/Uno.dir/src/Juego/Juego.cpp.o" "gcc" "CMakeFiles/Uno.dir/src/Juego/Juego.cpp.o.d"
+  "/home/mynordma/UNO/Uno/src/Jugador/Jugador.cpp" "CMakeFiles/Uno.dir/src/Jugador/Jugador.cpp.o" "gcc" "CMakeFiles/Uno.dir/src/Jugador/Jugador.cpp.o.d"
+  "/home/mynordma/UNO/Uno/src/Lado/Lado.cpp" "CMakeFiles/Uno.dir/src/Lado/Lado.cpp.o" "gcc" "CMakeFiles/Uno.dir/src/Lado/Lado.cpp.o.d"
   "/home/mynordma/UNO/Uno/src/main.cpp" "CMakeFiles/Uno.dir/src/main.cpp.o" "gcc" "CMakeFiles/Uno.dir/src/main.cpp.o.d"
   )
 

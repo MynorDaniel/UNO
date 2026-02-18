@@ -1,6 +1,7 @@
 #ifndef LISTA_H
 #define LISTA_H
 
+#include <stdexcept>
 #include "Nodo.h"
 
 template <typename T>

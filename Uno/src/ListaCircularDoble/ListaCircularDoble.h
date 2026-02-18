@@ -8,7 +8,7 @@
 template <typename T>
 class ListaCircularDoble {
 private:
-    Nodo<T>* cabeza;
+    NodoCircularDoble<T>* cabeza;
     int longitud;
 
 public:
@@ -19,6 +19,8 @@ public:
     void insertar(T valor);
 
     void eliminar(int indice);
+
+    T get(int indice) const;
 
     bool buscar(T valor) const;
 

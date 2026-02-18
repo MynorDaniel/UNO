@@ -5,10 +5,10 @@ template <typename T>
 ListaCircularDoble<T>::~ListaCircularDoble() {
     if (cabeza == nullptr) return;
 
-    Nodo<T>* actual = cabeza->getSiguiente();
+    NodoCircularDoble<T>* actual = cabeza->getSiguiente();
 
     while (actual != cabeza) {
-        Nodo<T>* temp = actual;
+    NodoCircularDoble<T>* temp = actual;
         actual = actual->getSiguiente();
         delete temp;
     }
@@ -19,13 +19,13 @@ ListaCircularDoble<T>::~ListaCircularDoble() {
 
 template <typename T>
 void ListaCircularDoble<T>::insertar(T valor) {
-    Nodo<T>* nuevoNodo = new Nodo<T>(valor);
+    NodoCircularDoble<T>* nuevoNodo = new NodoCircularDoble<T>(valor);
     if (cabeza == nullptr) {
         cabeza = nuevoNodo;
         cabeza->setSiguiente(cabeza);
         cabeza->setAnterior(cabeza);
     } else {
-        Nodo<T>* ultimo = cabeza->getAnterior();
+    NodoCircularDoble<T>* ultimo = cabeza->getAnterior();
         ultimo->setSiguiente(nuevoNodo);
         nuevoNodo->setAnterior(ultimo);
         nuevoNodo->setSiguiente(cabeza);
@@ -44,7 +44,7 @@ void ListaCircularDoble<T>::eliminar(int indice) {
         return;
     }
 
-    Nodo<T>* actual = cabeza;
+    NodoCircularDoble<T>* actual = cabeza;
     for (int i = 0; i < indice; i++) {
         actual = actual->getSiguiente();
     }
@@ -53,8 +53,8 @@ void ListaCircularDoble<T>::eliminar(int indice) {
         delete actual;
         cabeza = nullptr;
     } else {
-        Nodo<T>* anterior = actual->getAnterior();
-        Nodo<T>* siguiente = actual->getSiguiente();
+                NodoCircularDoble<T>* anterior = actual->getAnterior();
+                NodoCircularDoble<T>* siguiente = actual->getSiguiente();
 
         anterior->setSiguiente(siguiente);
         siguiente->setAnterior(anterior);
@@ -70,11 +70,27 @@ void ListaCircularDoble<T>::eliminar(int indice) {
 }
 
 template <typename T>
+T ListaCircularDoble<T>::get(int indice) const {
+    if (indice < 0 || indice >= longitud) {
+        throw std::out_of_range("Indice fuera de rango");
+    }
+    if (cabeza == nullptr) {
+        throw std::out_of_range("Lista vacía");
+    }
+
+    NodoCircularDoble<T>* actual = cabeza;
+    for (int i = 0; i < indice; i++) {
+        actual = actual->getSiguiente();
+    }
+    return actual->getDato();
+}
+
+template <typename T>
 bool ListaCircularDoble<T>::buscar(T valor) const {
     if (cabeza == nullptr) {
         return false;
     }
-    Nodo<T>* actual = cabeza;
+    NodoCircularDoble<T>* actual = cabeza;
     do {
         if (actual->getDato() == valor) {
             return true;
@@ -100,7 +116,7 @@ void ListaCircularDoble<T>::imprimir() const {
         std::cout << "La lista está vacía." << std::endl;
         return;
     }
-    Nodo<T>* actual = cabeza;
+    NodoCircularDoble<T>* actual = cabeza;
     do {
         std::cout << actual->getDato() << " ";
         actual = actual->getSiguiente();

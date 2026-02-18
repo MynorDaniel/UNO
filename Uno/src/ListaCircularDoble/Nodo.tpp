@@ -1,32 +1,32 @@
 template <typename T>
-Nodo<T>::Nodo(T valor) : dato(valor), siguiente(nullptr), anterior(nullptr) {}
+NodoCircularDoble<T>::NodoCircularDoble(T valor) : dato(valor), siguiente(nullptr), anterior(nullptr) {}
 
 template <typename T>
-T Nodo<T>::getDato() const {
+T NodoCircularDoble<T>::getDato() const {
     return dato;
 }
 
 template <typename T>
-Nodo<T>* Nodo<T>::getSiguiente() const {
+NodoCircularDoble<T>* NodoCircularDoble<T>::getSiguiente() const {
     return siguiente;
 }
 
 template <typename T>
-Nodo<T>* Nodo<T>::getAnterior() const {
+NodoCircularDoble<T>* NodoCircularDoble<T>::getAnterior() const {
     return anterior;
 }
 
 template <typename T>
-void Nodo<T>::setDato(T valor) {
+void NodoCircularDoble<T>::setDato(T valor) {
     dato = valor;
 }
 
 template <typename T>
-void Nodo<T>::setSiguiente(Nodo<T>* nodo) {
+void NodoCircularDoble<T>::setSiguiente(NodoCircularDoble<T>* nodo) {
     siguiente = nodo;
 }
 
 template <typename T>
-void Nodo<T>::setAnterior(Nodo<T>* nodo) {
+void NodoCircularDoble<T>::setAnterior(NodoCircularDoble<T>* nodo) {
     anterior = nodo;
 }
