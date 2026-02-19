@@ -49,3 +49,29 @@ int Pila<T>::getLongitud() const {
     return longitud;
 }
 
+template <typename T>
+void Pila<T>::barajear() {
+    if (longitud <= 1) {
+        return;
+    }
+
+    std::vector<T> arreglo;
+    arreglo.reserve(longitud);
+
+    while (cima != nullptr) {
+        Nodo<T>* nodoEliminar = cima;
+        arreglo.push_back(nodoEliminar->getDato());
+        cima = cima->getSiguiente();
+        delete nodoEliminar;
+    }
+
+    longitud = 0;
+
+    std::random_device rd;
+    std::mt19937 gen(rd());
+    std::shuffle(arreglo.begin(), arreglo.end(), gen);
+
+    for (const T& valor : arreglo) {
+        insertar(valor);
+    }
+}

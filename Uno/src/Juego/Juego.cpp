@@ -2,7 +2,7 @@
 #include <iostream>
 #include <string>
 
-Juego::Juego(/* args */)
+Juego::Juego()
         : modoAcumulacion(false),
             modoRetoMasCuatro(false),
             modoRoboSinLimite(false),
@@ -21,8 +21,25 @@ void Juego::iniciarJuego()
     std::cout << "\n¡Bienvenido a UNO!\n";
     pedirConfiguracion();
     pedirJugadores();
-    repartirCartas();
-    mostrarManos();
+    crearMazo();
+}
+
+void Juego::crearMazo() {
+    std::cout << "\nCreando el mazo de cartas...\n";
+     
+    Carta* carta1 = new Carta(new LadoNumero(1), new LadoNumero(2));
+    mazo.insertar(carta1);
+
+    Carta* carta2 = new Carta(new LadoNumero(3), new LadoNumero(4));
+    mazo.insertar(carta2);
+
+    Carta* carta3 = new Carta(new LadoNumero(5), new LadoNumero(6));
+    mazo.insertar(carta3);
+
+    Carta* carta4 = new Carta(new LadoNumero(7), new LadoNumero(8));
+    mazo.insertar(carta4);
+
+    mazo.barajear();
 }
 
 void Juego::pedirConfiguracion()

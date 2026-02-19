@@ -2,6 +2,9 @@
 #define PILA_H
 
 #include <stdexcept>
+#include <vector>
+#include <algorithm>
+#include <random>
 #include "../Lista/Nodo.h"
 
 template <typename T>
@@ -14,18 +17,14 @@ private:
 public:
 
     Pila();
-    
     ~Pila();
     
     void insertar(T valor);
-
     T sacar();
-
     T verCima() const;
-
     bool isEmpty() const;
-
     int getLongitud() const;
+    void barajear();
 };
 
 #include "Pila.tpp"

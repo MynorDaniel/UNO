@@ -5,12 +5,15 @@
 #include "../Jugador/Jugador.h"
 #include "../Pila/Pila.h"
 #include "../ListaCircularDoble/ListaCircularDoble.h"
+#include "../Lado/Lado.h"
+#include "../Lado/LadoNumero.h"
 
 class Juego
 {
 private:
 
     ListaCircularDoble<Jugador*> jugadores;
+    Pila<Carta*> mazo;
 
     bool modoAcumulacion;
     bool modoRetoMasCuatro;
@@ -25,6 +28,7 @@ public:
     void iniciarJuego();
 
 private:
+    void crearMazo();
     void pedirConfiguracion();
     void pedirJugadores();
     void repartirCartas();

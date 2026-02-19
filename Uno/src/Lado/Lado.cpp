@@ -4,6 +4,4 @@ Lado::Lado(/* args */)
 {
 }
 
-Lado::~Lado()
-{
-}
+Lado::~Lado() = default;
