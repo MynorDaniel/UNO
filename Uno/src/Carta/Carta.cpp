@@ -23,3 +23,7 @@ void Carta::aplicarEfecto(Juego& juego) {
 		ladoActual->aplicarEfecto(juego);
 	}
 }
+
+Lado* Carta::getLadoActual() const {
+	return ladoActual;
+}

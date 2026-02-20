@@ -55,23 +55,37 @@ void Pila<T>::barajear() {
         return;
     }
 
-    std::vector<T> arreglo;
-    arreglo.reserve(longitud);
+    T* arreglo = new T[longitud];
+    int n = longitud;
 
-    while (cima != nullptr) {
+    for (int i = 0; i < n; i++) {
         Nodo<T>* nodoEliminar = cima;
-        arreglo.push_back(nodoEliminar->getDato());
+        arreglo[i] = nodoEliminar->getDato();
         cima = cima->getSiguiente();
         delete nodoEliminar;
     }
 
     longitud = 0;
 
-    std::random_device rd;
-    std::mt19937 gen(rd());
-    std::shuffle(arreglo.begin(), arreglo.end(), gen);
+    algoritmoBarajeado(arreglo, n);
 
-    for (const T& valor : arreglo) {
-        insertar(valor);
+    for (int i = n - 1; i >= 0; i--) {
+        insertar(arreglo[i]);
+    }
+
+    delete[] arreglo;
+}
+
+template <typename T>
+void Pila<T>::algoritmoBarajeado(T* arreglo, int n) {
+    if (n <= 1) {
+        return;
+    }
+
+    for (int i = 0; i < n; i++) {
+    int j = std::rand() % n;
+        T temp = arreglo[i];
+        arreglo[i] = arreglo[j];
+        arreglo[j] = temp;
     }
 }

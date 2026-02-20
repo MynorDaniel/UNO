@@ -12,6 +12,7 @@ set(CMAKE_DEPENDS_DEPENDENCY_FILES
   "/home/mynordma/UNO/Uno/src/Juego/Juego.cpp" "CMakeFiles/Uno.dir/src/Juego/Juego.cpp.o" "gcc" "CMakeFiles/Uno.dir/src/Juego/Juego.cpp.o.d"
   "/home/mynordma/UNO/Uno/src/Jugador/Jugador.cpp" "CMakeFiles/Uno.dir/src/Jugador/Jugador.cpp.o" "gcc" "CMakeFiles/Uno.dir/src/Jugador/Jugador.cpp.o.d"
   "/home/mynordma/UNO/Uno/src/Lado/Lado.cpp" "CMakeFiles/Uno.dir/src/Lado/Lado.cpp.o" "gcc" "CMakeFiles/Uno.dir/src/Lado/Lado.cpp.o.d"
+  "/home/mynordma/UNO/Uno/src/Lado/LadoNumero.cpp" "CMakeFiles/Uno.dir/src/Lado/LadoNumero.cpp.o" "gcc" "CMakeFiles/Uno.dir/src/Lado/LadoNumero.cpp.o.d"
   "/home/mynordma/UNO/Uno/src/main.cpp" "CMakeFiles/Uno.dir/src/main.cpp.o" "gcc" "CMakeFiles/Uno.dir/src/main.cpp.o.d"
   )
 

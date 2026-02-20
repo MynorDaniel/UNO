@@ -9,18 +9,18 @@ class Jugador
 {
 private:
     std::string nombre;
-    Lista<Carta> cartas;
+    Lista<Carta*> cartas;
 
 public:
     Jugador(const std::string& nombre);
     ~Jugador();
 
-    void tomarCarta(const Carta& carta);
+    void tomarCarta(Carta* carta);
     void mostrarCartas();
     int getCantidadCartas();
     std::string getNombre();
     void setNombre(const std::string& nuevoNombre);
-    Lista<Carta>& getCartas();
+    Lista<Carta*>& getCartas();
 
 };
 

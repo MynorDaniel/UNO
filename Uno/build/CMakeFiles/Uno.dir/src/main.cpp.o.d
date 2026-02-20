@@ -164,4 +164,7 @@ CMakeFiles/Uno.dir/src/main.cpp.o: /home/mynordma/UNO/Uno/src/main.cpp \
  /home/mynordma/UNO/Uno/src/Juego/../ListaCircularDoble/ListaCircularDoble.h \
  /home/mynordma/UNO/Uno/src/Juego/../ListaCircularDoble/Nodo.h \
  /home/mynordma/UNO/Uno/src/Juego/../ListaCircularDoble/Nodo.tpp \
- /home/mynordma/UNO/Uno/src/Juego/../ListaCircularDoble/ListaCircularDoble.tpp
+ /home/mynordma/UNO/Uno/src/Juego/../ListaCircularDoble/ListaCircularDoble.tpp \
+ /home/mynordma/UNO/Uno/src/Juego/../Lado/Lado.h \
+ /home/mynordma/UNO/Uno/src/Juego/../Lado/LadoNumero.h \
+ /home/mynordma/UNO/Uno/src/Juego/../Lado/Lado.h

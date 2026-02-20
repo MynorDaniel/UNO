@@ -22,6 +22,9 @@ void Juego::iniciarJuego()
     pedirConfiguracion();
     pedirJugadores();
     crearMazo();
+    repartirCartas();
+    mostrarManos();
+    iniciarTurnos();
 }
 
 void Juego::crearMazo() {
@@ -40,6 +43,8 @@ void Juego::crearMazo() {
     mazo.insertar(carta4);
 
     mazo.barajear();
+
+    mostrarMazo();
 }
 
 void Juego::pedirConfiguracion()
@@ -118,10 +123,38 @@ void Juego::pedirJugadores()
 
 void Juego::repartirCartas()
 {
+    int totalJugadores = jugadores.getLongitud();
+    if (totalJugadores <= 0) {
+        std::cout << "\nNo hay jugadores para repartir cartas.\n";
+        return;
+    }
+
+    std::cout << "\nRepartiendo cartas...\n";
+
+    int indiceJugador = 0;
+    while (!mazo.isEmpty()) {
+        Jugador* jugador = jugadores.get(indiceJugador);
+        if (jugador != nullptr) {
+            Carta* carta = mazo.sacar();
+            jugador->tomarCarta(carta);
+        }
+
+        indiceJugador++;
+        if (indiceJugador >= totalJugadores) {
+            indiceJugador = 0;
+        }
+    }
 }
 
 void Juego::mostrarManos()
-{
+{    std::cout << "\nManos de los jugadores:\n";
+    for (int i = 0; i < jugadores.getLongitud(); i++) {
+        Jugador* jugador = jugadores.get(i);
+        if (jugador != nullptr) {
+            std::cout << "\n" << jugador->getNombre() << " tiene " << jugador->getCantidadCartas() << " cartas:\n";
+            jugador->mostrarCartas();
+        }
+    }
 }
 
 void Juego::limpiarPantalla() {
@@ -158,3 +191,164 @@ int Juego::leerOpcionMenu() {
 const char* Juego::boolTexto(bool valor) {
     return valor ? "true" : "false";
 }
+
+void Juego::mostrarMazo() {
+    
+    std::cout << "\nCartas en el mazo:\n";
+    int n = mazo.getLongitud();
+    if (n <= 0) {
+        return;
+    }
+
+    Carta** cartas = new Carta*[n];
+    for (int i = 0; i < n; i++) {
+        cartas[i] = mazo.sacar();
+    }
+
+    for (int i = 0; i < n; i++) {
+        if (cartas[i] != nullptr) {
+            std::cout << cartas[i]->getLadoActual()->toString() << "\n";
+        }
+    }
+
+    for (int i = n - 1; i >= 0; i--) {
+        mazo.insertar(cartas[i]);
+    }
+
+    delete[] cartas;
+}
+
+void Juego::mostrarTopeDescarte() {
+    Lado* ladoTope = descarte.verCima()->getLadoActual();
+    std::cout << "\nTope del descarte: "
+              << (ladoTope ? ladoTope->toString() : "(vacío)") << "\n";
+}
+
+void Juego::mostrarCartasJugador(Jugador* jugador) {
+    if (jugador == nullptr) {
+        return;
+    }
+    for (int i = 0; i < jugador->getCantidadCartas(); i++) {
+        Carta* carta = jugador->getCartas().get(i);
+        if (carta != nullptr) {
+            std::cout << i + 1 << ". " << carta->getLadoActual()->toString() << "\n";
+        }
+    }
+}
+
+bool Juego::jugadorTieneCartaCompatible(Jugador* jugador, Lado* tope) {
+    if (jugador == nullptr || tope == nullptr) {
+        return false;
+    }
+    for (int i = 0; i < jugador->getCantidadCartas(); i++) {
+        Carta* carta = jugador->getCartas().get(i);
+        Lado* ladoActual = carta ? carta->getLadoActual() : nullptr;
+        if (ladoActual != nullptr && ladoActual->esCompatible(*tope)) {
+            return true;
+        }
+    }
+    return false;
+}
+
+int Juego::pedirIndiceCarta(Jugador* jugador, const char* mensaje) {
+    if (jugador == nullptr) {
+        return -1;
+    }
+    int indice = -1;
+    while (indice < 1 || indice > jugador->getCantidadCartas()) {
+        std::cout << mensaje;
+        indice = leerOpcionMenu();
+        if (indice < 1 || indice > jugador->getCantidadCartas()) {
+            std::cout << "Indice inválido.\n";
+        }
+    }
+    return indice - 1;
+}
+
+void Juego::jugarCarta(Jugador* jugador, int indice) {
+    Carta* carta = jugador->getCartas().get(indice);
+    jugador->getCartas().eliminar(indice);
+    descarte.insertar(carta);
+    std::cout << jugador->getNombre() << " descarta: "
+              << carta->getLadoActual()->toString() << "\n";
+    carta->aplicarEfecto(*this);
+}
+
+void Juego::iniciarTurnos() {
+    std::cout << "\nIniciando turnos...\n";
+    int totalJugadores = jugadores.getLongitud();
+    if (totalJugadores <= 0) {
+        std::cout << "No hay jugadores para iniciar turnos.\n";
+        return;
+    }
+
+    Jugador* jugadorInicial = jugadores.get(0);
+    if (jugadorInicial == nullptr || jugadorInicial->getCantidadCartas() == 0) {
+        std::cout << "No hay cartas suficientes para iniciar turnos.\n";
+        return;
+    }
+
+    limpiarPantalla();
+    std::cout << "\nTurno inicial de " << jugadorInicial->getNombre() << ":\n";
+    mostrarCartasJugador(jugadorInicial);
+
+    int indiceInicial = pedirIndiceCarta(jugadorInicial, "Seleccione la carta para iniciar el descarte: ");
+    Carta* cartaInicial = jugadorInicial->getCartas().get(indiceInicial);
+    jugadorInicial->getCartas().eliminar(indiceInicial);
+    descarte.insertar(cartaInicial);
+    std::cout << jugadorInicial->getNombre() << " descarta: "
+              << cartaInicial->getLadoActual()->toString() << "\n";
+
+    bool hayGanador = false;
+    while (!hayGanador) {
+        for (int i = 1; i < totalJugadores; i++) {
+            Jugador* jugador = jugadores.get(i);
+            if (jugador == nullptr) {
+                continue;
+            }
+            if (jugador->getCantidadCartas() == 0) {
+                std::cout << "\n" << jugador->getNombre() << " ha ganado.\n";
+                hayGanador = true;
+                break;
+            }
+
+            limpiarPantalla();
+            mostrarTopeDescarte();
+            Lado* ladoTope = descarte.verCima()->getLadoActual();
+            std::cout << "\nTurno de " << jugador->getNombre() << ":\n";
+
+            if (!jugadorTieneCartaCompatible(jugador, ladoTope)) {
+                std::cout << jugador->getNombre() << " no tiene cartas compatibles.\n";
+                continue;
+            }
+
+            mostrarCartasJugador(jugador);
+
+            while (true) {
+                int indice = pedirIndiceCarta(jugador, "Seleccione la carta a jugar: ");
+                Carta* carta = jugador->getCartas().get(indice);
+                Lado* ladoActual = carta ? carta->getLadoActual() : nullptr;
+                if (ladoActual != nullptr && ladoTope != nullptr && ladoActual->esCompatible(*ladoTope)) {
+                    jugarCarta(jugador, indice);
+                    break;
+                }
+
+                std::cout << "Esa carta no es compatible con el tope.\n";
+            }
+
+            if (jugador->getCantidadCartas() == 0) {
+                std::cout << "\n" << jugador->getNombre() << " ha ganado.\n";
+                hayGanador = true;
+                break;
+            }
+        }
+    }
+}
+
+// TODO: implementar creacion del mazo completo, efectos de los lados en el juego,
+// toma de cartas cuando no hay compatibles, modos especiales.
+
+
+
+
+

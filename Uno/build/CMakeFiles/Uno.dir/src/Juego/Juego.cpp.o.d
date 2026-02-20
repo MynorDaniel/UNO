@@ -3,7 +3,6 @@ CMakeFiles/Uno.dir/src/Juego/Juego.cpp.o: \
  /home/mynordma/UNO/Uno/src/Juego/Juego.h \
  /home/mynordma/UNO/Uno/src/Juego/../Carta/Carta.h \
  /home/mynordma/UNO/Uno/src/Juego/../Carta/../Lado/Lado.h \
- /home/mynordma/UNO/Uno/src/Juego/../Jugador/Jugador.h \
  /usr/include/c++/13/string /usr/include/c++/13/bits/requires_hosted.h \
  /usr/include/x86_64-linux-gnu/c++/13/bits/c++config.h \
  /usr/include/x86_64-linux-gnu/c++/13/bits/os_defines.h \
@@ -118,24 +117,12 @@ CMakeFiles/Uno.dir/src/Juego/Juego.cpp.o: \
  /usr/include/c++/13/bits/memory_resource.h /usr/include/c++/13/cstddef \
  /usr/include/c++/13/bits/uses_allocator.h \
  /usr/include/c++/13/bits/uses_allocator_args.h /usr/include/c++/13/tuple \
- /home/mynordma/UNO/Uno/src/Juego/../Jugador/../Lista/Lista.h \
- /usr/include/c++/13/stdexcept /usr/include/c++/13/exception \
+ /usr/include/c++/13/iostream /usr/include/c++/13/ostream \
+ /usr/include/c++/13/ios /usr/include/c++/13/exception \
  /usr/include/c++/13/bits/exception_ptr.h \
  /usr/include/c++/13/bits/cxxabi_init_exception.h \
  /usr/include/c++/13/typeinfo /usr/include/c++/13/bits/nested_exception.h \
- /home/mynordma/UNO/Uno/src/Juego/../Jugador/../Lista/Nodo.h \
- /home/mynordma/UNO/Uno/src/Juego/../Jugador/../Lista/Nodo.tpp \
- /home/mynordma/UNO/Uno/src/Juego/../Jugador/../Lista/Lista.tpp \
- /home/mynordma/UNO/Uno/src/Juego/../Jugador/../Carta/Carta.h \
- /home/mynordma/UNO/Uno/src/Juego/../Pila/Pila.h \
- /home/mynordma/UNO/Uno/src/Juego/../Pila/../Lista/Nodo.h \
- /home/mynordma/UNO/Uno/src/Juego/../Pila/Pila.tpp \
- /home/mynordma/UNO/Uno/src/Juego/../ListaCircularDoble/ListaCircularDoble.h \
- /home/mynordma/UNO/Uno/src/Juego/../ListaCircularDoble/Nodo.h \
- /home/mynordma/UNO/Uno/src/Juego/../ListaCircularDoble/Nodo.tpp \
- /usr/include/c++/13/iostream /usr/include/c++/13/ostream \
- /usr/include/c++/13/ios /usr/include/c++/13/bits/ios_base.h \
- /usr/include/c++/13/ext/atomicity.h \
+ /usr/include/c++/13/bits/ios_base.h /usr/include/c++/13/ext/atomicity.h \
  /usr/include/x86_64-linux-gnu/c++/13/bits/gthr.h \
  /usr/include/x86_64-linux-gnu/c++/13/bits/gthr-default.h \
  /usr/include/pthread.h /usr/include/sched.h \
@@ -155,7 +142,8 @@ CMakeFiles/Uno.dir/src/Juego/Juego.cpp.o: \
  /usr/include/c++/13/bits/locale_classes.tcc \
  /usr/include/c++/13/system_error \
  /usr/include/x86_64-linux-gnu/c++/13/bits/error_constants.h \
- /usr/include/c++/13/streambuf /usr/include/c++/13/bits/streambuf.tcc \
+ /usr/include/c++/13/stdexcept /usr/include/c++/13/streambuf \
+ /usr/include/c++/13/bits/streambuf.tcc \
  /usr/include/c++/13/bits/basic_ios.h \
  /usr/include/c++/13/bits/locale_facets.h /usr/include/c++/13/cwctype \
  /usr/include/wctype.h /usr/include/x86_64-linux-gnu/bits/wctype-wchar.h \
@@ -166,4 +154,19 @@ CMakeFiles/Uno.dir/src/Juego/Juego.cpp.o: \
  /usr/include/c++/13/bits/basic_ios.tcc \
  /usr/include/c++/13/bits/ostream.tcc /usr/include/c++/13/istream \
  /usr/include/c++/13/bits/istream.tcc \
- /home/mynordma/UNO/Uno/src/Juego/../ListaCircularDoble/ListaCircularDoble.tpp
+ /home/mynordma/UNO/Uno/src/Juego/../Jugador/Jugador.h \
+ /home/mynordma/UNO/Uno/src/Juego/../Jugador/../Lista/Lista.h \
+ /home/mynordma/UNO/Uno/src/Juego/../Jugador/../Lista/Nodo.h \
+ /home/mynordma/UNO/Uno/src/Juego/../Jugador/../Lista/Nodo.tpp \
+ /home/mynordma/UNO/Uno/src/Juego/../Jugador/../Lista/Lista.tpp \
+ /home/mynordma/UNO/Uno/src/Juego/../Jugador/../Carta/Carta.h \
+ /home/mynordma/UNO/Uno/src/Juego/../Pila/Pila.h \
+ /home/mynordma/UNO/Uno/src/Juego/../Pila/../Lista/Nodo.h \
+ /home/mynordma/UNO/Uno/src/Juego/../Pila/Pila.tpp \
+ /home/mynordma/UNO/Uno/src/Juego/../ListaCircularDoble/ListaCircularDoble.h \
+ /home/mynordma/UNO/Uno/src/Juego/../ListaCircularDoble/Nodo.h \
+ /home/mynordma/UNO/Uno/src/Juego/../ListaCircularDoble/Nodo.tpp \
+ /home/mynordma/UNO/Uno/src/Juego/../ListaCircularDoble/ListaCircularDoble.tpp \
+ /home/mynordma/UNO/Uno/src/Juego/../Lado/Lado.h \
+ /home/mynordma/UNO/Uno/src/Juego/../Lado/LadoNumero.h \
+ /home/mynordma/UNO/Uno/src/Juego/../Lado/Lado.h

@@ -7,6 +7,8 @@ file(REMOVE_RECURSE
   "CMakeFiles/Uno.dir/src/Jugador/Jugador.cpp.o.d"
   "CMakeFiles/Uno.dir/src/Lado/Lado.cpp.o"
   "CMakeFiles/Uno.dir/src/Lado/Lado.cpp.o.d"
+  "CMakeFiles/Uno.dir/src/Lado/LadoNumero.cpp.o"
+  "CMakeFiles/Uno.dir/src/Lado/LadoNumero.cpp.o.d"
   "CMakeFiles/Uno.dir/src/main.cpp.o"
   "CMakeFiles/Uno.dir/src/main.cpp.o.d"
   "Uno"

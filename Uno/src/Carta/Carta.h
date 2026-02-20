@@ -3,6 +3,8 @@
 
 #include "../Lado/Lado.h"
 
+class Juego;
+
 class Carta
 {
 private:
@@ -15,6 +17,7 @@ public:
     ~Carta();
     void voltear();
     void aplicarEfecto(Juego& juego);
+    Lado* getLadoActual() const;
 };
 
 #endif // CARTA_H

@@ -1,5 +1,6 @@
-CMakeFiles/Uno.dir/src/Lado/Lado.cpp.o: \
- /home/mynordma/UNO/Uno/src/Lado/Lado.cpp /usr/include/stdc-predef.h \
+CMakeFiles/Uno.dir/src/Lado/LadoNumero.cpp.o: \
+ /home/mynordma/UNO/Uno/src/Lado/LadoNumero.cpp \
+ /usr/include/stdc-predef.h /home/mynordma/UNO/Uno/src/Lado/LadoNumero.h \
  /home/mynordma/UNO/Uno/src/Lado/Lado.h /usr/include/c++/13/string \
  /usr/include/c++/13/bits/requires_hosted.h \
  /usr/include/x86_64-linux-gnu/c++/13/bits/c++config.h \

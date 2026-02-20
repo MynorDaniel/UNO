@@ -225,6 +225,30 @@ src/Lado/Lado.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Uno.dir/build.make CMakeFiles/Uno.dir/src/Lado/Lado.cpp.s
 .PHONY : src/Lado/Lado.cpp.s
 
+src/Lado/LadoNumero.o: src/Lado/LadoNumero.cpp.o
+.PHONY : src/Lado/LadoNumero.o
+
+# target to build an object file
+src/Lado/LadoNumero.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Uno.dir/build.make CMakeFiles/Uno.dir/src/Lado/LadoNumero.cpp.o
+.PHONY : src/Lado/LadoNumero.cpp.o
+
+src/Lado/LadoNumero.i: src/Lado/LadoNumero.cpp.i
+.PHONY : src/Lado/LadoNumero.i
+
+# target to preprocess a source file
+src/Lado/LadoNumero.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Uno.dir/build.make CMakeFiles/Uno.dir/src/Lado/LadoNumero.cpp.i
+.PHONY : src/Lado/LadoNumero.cpp.i
+
+src/Lado/LadoNumero.s: src/Lado/LadoNumero.cpp.s
+.PHONY : src/Lado/LadoNumero.s
+
+# target to generate assembly for a file
+src/Lado/LadoNumero.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Uno.dir/build.make CMakeFiles/Uno.dir/src/Lado/LadoNumero.cpp.s
+.PHONY : src/Lado/LadoNumero.cpp.s
+
 src/main.o: src/main.cpp.o
 .PHONY : src/main.o
 
@@ -270,6 +294,9 @@ help:
 	@echo "... src/Lado/Lado.o"
 	@echo "... src/Lado/Lado.i"
 	@echo "... src/Lado/Lado.s"
+	@echo "... src/Lado/LadoNumero.o"
+	@echo "... src/Lado/LadoNumero.i"
+	@echo "... src/Lado/LadoNumero.s"
 	@echo "... src/main.o"
 	@echo "... src/main.i"
 	@echo "... src/main.s"

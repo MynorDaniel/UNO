@@ -28,5 +28,11 @@
   "command": "/usr/bin/c++   -g -o CMakeFiles/Uno.dir/src/Lado/Lado.cpp.o -c /home/mynordma/UNO/Uno/src/Lado/Lado.cpp",
   "file": "/home/mynordma/UNO/Uno/src/Lado/Lado.cpp",
   "output": "CMakeFiles/Uno.dir/src/Lado/Lado.cpp.o"
+},
+{
+  "directory": "/home/mynordma/UNO/Uno/build",
+  "command": "/usr/bin/c++   -g -o CMakeFiles/Uno.dir/src/Lado/LadoNumero.cpp.o -c /home/mynordma/UNO/Uno/src/Lado/LadoNumero.cpp",
+  "file": "/home/mynordma/UNO/Uno/src/Lado/LadoNumero.cpp",
+  "output": "CMakeFiles/Uno.dir/src/Lado/LadoNumero.cpp.o"
 }
 ]

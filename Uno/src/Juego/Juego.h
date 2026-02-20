@@ -14,6 +14,7 @@ private:
 
     ListaCircularDoble<Jugador*> jugadores;
     Pila<Carta*> mazo;
+    Pila<Carta*> descarte;
 
     bool modoAcumulacion;
     bool modoRetoMasCuatro;
@@ -33,10 +34,18 @@ private:
     void pedirJugadores();
     void repartirCartas();
     void mostrarManos();
+    void iniciarTurnos();
 
     void limpiarPantalla();
     int leerOpcionMenu();
     const char* boolTexto(bool valor);
+    void mostrarMazo();
+
+    void mostrarTopeDescarte();
+    void mostrarCartasJugador(Jugador* jugador);
+    bool jugadorTieneCartaCompatible(Jugador* jugador, Lado* tope);
+    int pedirIndiceCarta(Jugador* jugador, const char* mensaje);
+    void jugarCarta(Jugador* jugador, int indice);
 
 };
 

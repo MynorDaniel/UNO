@@ -2,9 +2,7 @@
 #define PILA_H
 
 #include <stdexcept>
-#include <vector>
-#include <algorithm>
-#include <random>
+#include <cstdlib>
 #include "../Lista/Nodo.h"
 
 template <typename T>
@@ -13,6 +11,8 @@ private:
 
     Nodo<T>* cima;
     int longitud;
+
+   
 
 public:
 
@@ -25,6 +25,7 @@ public:
     bool isEmpty() const;
     int getLongitud() const;
     void barajear();
+    void algoritmoBarajeado(T* arreglo, int n);
 };
 
 #include "Pila.tpp"
