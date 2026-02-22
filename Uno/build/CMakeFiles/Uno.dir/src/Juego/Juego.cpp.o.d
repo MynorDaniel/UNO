@@ -154,19 +154,36 @@ CMakeFiles/Uno.dir/src/Juego/Juego.cpp.o: \
  /usr/include/c++/13/bits/basic_ios.tcc \
  /usr/include/c++/13/bits/ostream.tcc /usr/include/c++/13/istream \
  /usr/include/c++/13/bits/istream.tcc \
+ /home/mynordma/UNO/Uno/src/Juego/../Carta/../Lado/../Color/Color.h \
  /home/mynordma/UNO/Uno/src/Juego/../Jugador/Jugador.h \
  /home/mynordma/UNO/Uno/src/Juego/../Jugador/../Lista/Lista.h \
  /home/mynordma/UNO/Uno/src/Juego/../Jugador/../Lista/Nodo.h \
  /home/mynordma/UNO/Uno/src/Juego/../Jugador/../Lista/Nodo.tpp \
  /home/mynordma/UNO/Uno/src/Juego/../Jugador/../Lista/Lista.tpp \
  /home/mynordma/UNO/Uno/src/Juego/../Jugador/../Carta/Carta.h \
+ /home/mynordma/UNO/Uno/src/Juego/../Jugador/../Pila/Pila.h \
+ /home/mynordma/UNO/Uno/src/Juego/../Jugador/../Pila/../Lista/Nodo.h \
+ /home/mynordma/UNO/Uno/src/Juego/../Jugador/../Pila/Pila.tpp \
  /home/mynordma/UNO/Uno/src/Juego/../Pila/Pila.h \
- /home/mynordma/UNO/Uno/src/Juego/../Pila/../Lista/Nodo.h \
- /home/mynordma/UNO/Uno/src/Juego/../Pila/Pila.tpp \
  /home/mynordma/UNO/Uno/src/Juego/../ListaCircularDoble/ListaCircularDoble.h \
  /home/mynordma/UNO/Uno/src/Juego/../ListaCircularDoble/Nodo.h \
  /home/mynordma/UNO/Uno/src/Juego/../ListaCircularDoble/Nodo.tpp \
  /home/mynordma/UNO/Uno/src/Juego/../ListaCircularDoble/ListaCircularDoble.tpp \
  /home/mynordma/UNO/Uno/src/Juego/../Lado/Lado.h \
  /home/mynordma/UNO/Uno/src/Juego/../Lado/LadoNumero.h \
- /home/mynordma/UNO/Uno/src/Juego/../Lado/Lado.h
+ /home/mynordma/UNO/Uno/src/Juego/../Lado/Lado.h \
+ /home/mynordma/UNO/Uno/src/Juego/../Lado/LadoSalto.h \
+ /home/mynordma/UNO/Uno/src/Juego/../Lado/../Color/Color.h \
+ /home/mynordma/UNO/Uno/src/Juego/../Lado/LadoReversa.h \
+ /home/mynordma/UNO/Uno/src/Juego/../Lado/LadoMasDos.h \
+ /home/mynordma/UNO/Uno/src/Juego/../Lado/LadoComodin.h \
+ /home/mynordma/UNO/Uno/src/Juego/../Lado/LadoMasCuatro.h \
+ /home/mynordma/UNO/Uno/src/Juego/../ListaCircularDoble/Nodo.h \
+ /usr/include/c++/13/ctime /usr/include/c++/13/algorithm \
+ /usr/include/c++/13/bits/stl_algo.h \
+ /usr/include/c++/13/bits/algorithmfwd.h \
+ /usr/include/c++/13/bits/stl_heap.h \
+ /usr/include/c++/13/bits/uniform_int_dist.h \
+ /usr/include/c++/13/bits/stl_tempbuf.h \
+ /usr/include/c++/13/pstl/glue_algorithm_defs.h \
+ /usr/include/c++/13/pstl/execution_defs.h

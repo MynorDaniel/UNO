@@ -157,4 +157,28 @@ CMakeFiles/Uno.dir/src/Jugador/Jugador.cpp.o: \
  /usr/include/c++/13/bits/locale_facets.tcc \
  /usr/include/c++/13/bits/basic_ios.tcc \
  /usr/include/c++/13/bits/ostream.tcc /usr/include/c++/13/istream \
- /usr/include/c++/13/bits/istream.tcc
+ /usr/include/c++/13/bits/istream.tcc \
+ /home/mynordma/UNO/Uno/src/Jugador/../Carta/../Lado/../Color/Color.h \
+ /home/mynordma/UNO/Uno/src/Jugador/../Pila/Pila.h \
+ /home/mynordma/UNO/Uno/src/Jugador/../Pila/../Lista/Nodo.h \
+ /home/mynordma/UNO/Uno/src/Jugador/../Pila/Pila.tpp \
+ /home/mynordma/UNO/Uno/src/Jugador/../Juego/Juego.h \
+ /home/mynordma/UNO/Uno/src/Jugador/../Juego/../Carta/Carta.h \
+ /home/mynordma/UNO/Uno/src/Jugador/../Juego/../Jugador/Jugador.h \
+ /home/mynordma/UNO/Uno/src/Jugador/../Juego/../Pila/Pila.h \
+ /home/mynordma/UNO/Uno/src/Jugador/../Juego/../ListaCircularDoble/ListaCircularDoble.h \
+ /home/mynordma/UNO/Uno/src/Jugador/../Juego/../ListaCircularDoble/Nodo.h \
+ /home/mynordma/UNO/Uno/src/Jugador/../Juego/../ListaCircularDoble/Nodo.tpp \
+ /home/mynordma/UNO/Uno/src/Jugador/../Juego/../ListaCircularDoble/ListaCircularDoble.tpp \
+ /home/mynordma/UNO/Uno/src/Jugador/../Juego/../Lado/Lado.h \
+ /home/mynordma/UNO/Uno/src/Jugador/../Juego/../Lado/LadoNumero.h \
+ /home/mynordma/UNO/Uno/src/Jugador/../Juego/../Lado/Lado.h \
+ /home/mynordma/UNO/Uno/src/Jugador/../Juego/../Lado/LadoSalto.h \
+ /home/mynordma/UNO/Uno/src/Jugador/../Juego/../Lado/../Color/Color.h \
+ /home/mynordma/UNO/Uno/src/Jugador/../Juego/../Lado/LadoReversa.h \
+ /home/mynordma/UNO/Uno/src/Jugador/../Juego/../Lado/LadoMasDos.h \
+ /home/mynordma/UNO/Uno/src/Jugador/../Juego/../Lado/LadoComodin.h \
+ /home/mynordma/UNO/Uno/src/Jugador/../Juego/../Lado/LadoMasCuatro.h \
+ /home/mynordma/UNO/Uno/src/Jugador/../Juego/../ListaCircularDoble/Nodo.h \
+ /home/mynordma/UNO/Uno/src/Jugador/../Lado/LadoComodin.h \
+ /home/mynordma/UNO/Uno/src/Jugador/../Lado/LadoMasCuatro.h

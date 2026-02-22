@@ -153,6 +153,76 @@ CMakeFiles/Uno.dir/src/Lado/LadoNumero.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/Uno.dir/src/Lado/LadoNumero.cpp.s"
 	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/mynordma/UNO/Uno/src/Lado/LadoNumero.cpp -o CMakeFiles/Uno.dir/src/Lado/LadoNumero.cpp.s
 
+CMakeFiles/Uno.dir/src/Lado/LadoMasDos.cpp.o: CMakeFiles/Uno.dir/flags.make
+CMakeFiles/Uno.dir/src/Lado/LadoMasDos.cpp.o: /home/mynordma/UNO/Uno/src/Lado/LadoMasDos.cpp
+CMakeFiles/Uno.dir/src/Lado/LadoMasDos.cpp.o: CMakeFiles/Uno.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/mynordma/UNO/Uno/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_7) "Building CXX object CMakeFiles/Uno.dir/src/Lado/LadoMasDos.cpp.o"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/Uno.dir/src/Lado/LadoMasDos.cpp.o -MF CMakeFiles/Uno.dir/src/Lado/LadoMasDos.cpp.o.d -o CMakeFiles/Uno.dir/src/Lado/LadoMasDos.cpp.o -c /home/mynordma/UNO/Uno/src/Lado/LadoMasDos.cpp
+
+CMakeFiles/Uno.dir/src/Lado/LadoMasDos.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing CXX source to CMakeFiles/Uno.dir/src/Lado/LadoMasDos.cpp.i"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/mynordma/UNO/Uno/src/Lado/LadoMasDos.cpp > CMakeFiles/Uno.dir/src/Lado/LadoMasDos.cpp.i
+
+CMakeFiles/Uno.dir/src/Lado/LadoMasDos.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/Uno.dir/src/Lado/LadoMasDos.cpp.s"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/mynordma/UNO/Uno/src/Lado/LadoMasDos.cpp -o CMakeFiles/Uno.dir/src/Lado/LadoMasDos.cpp.s
+
+CMakeFiles/Uno.dir/src/Lado/LadoMasCuatro.cpp.o: CMakeFiles/Uno.dir/flags.make
+CMakeFiles/Uno.dir/src/Lado/LadoMasCuatro.cpp.o: /home/mynordma/UNO/Uno/src/Lado/LadoMasCuatro.cpp
+CMakeFiles/Uno.dir/src/Lado/LadoMasCuatro.cpp.o: CMakeFiles/Uno.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/mynordma/UNO/Uno/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_8) "Building CXX object CMakeFiles/Uno.dir/src/Lado/LadoMasCuatro.cpp.o"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/Uno.dir/src/Lado/LadoMasCuatro.cpp.o -MF CMakeFiles/Uno.dir/src/Lado/LadoMasCuatro.cpp.o.d -o CMakeFiles/Uno.dir/src/Lado/LadoMasCuatro.cpp.o -c /home/mynordma/UNO/Uno/src/Lado/LadoMasCuatro.cpp
+
+CMakeFiles/Uno.dir/src/Lado/LadoMasCuatro.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing CXX source to CMakeFiles/Uno.dir/src/Lado/LadoMasCuatro.cpp.i"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/mynordma/UNO/Uno/src/Lado/LadoMasCuatro.cpp > CMakeFiles/Uno.dir/src/Lado/LadoMasCuatro.cpp.i
+
+CMakeFiles/Uno.dir/src/Lado/LadoMasCuatro.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/Uno.dir/src/Lado/LadoMasCuatro.cpp.s"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/mynordma/UNO/Uno/src/Lado/LadoMasCuatro.cpp -o CMakeFiles/Uno.dir/src/Lado/LadoMasCuatro.cpp.s
+
+CMakeFiles/Uno.dir/src/Lado/LadoSalto.cpp.o: CMakeFiles/Uno.dir/flags.make
+CMakeFiles/Uno.dir/src/Lado/LadoSalto.cpp.o: /home/mynordma/UNO/Uno/src/Lado/LadoSalto.cpp
+CMakeFiles/Uno.dir/src/Lado/LadoSalto.cpp.o: CMakeFiles/Uno.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/mynordma/UNO/Uno/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_9) "Building CXX object CMakeFiles/Uno.dir/src/Lado/LadoSalto.cpp.o"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/Uno.dir/src/Lado/LadoSalto.cpp.o -MF CMakeFiles/Uno.dir/src/Lado/LadoSalto.cpp.o.d -o CMakeFiles/Uno.dir/src/Lado/LadoSalto.cpp.o -c /home/mynordma/UNO/Uno/src/Lado/LadoSalto.cpp
+
+CMakeFiles/Uno.dir/src/Lado/LadoSalto.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing CXX source to CMakeFiles/Uno.dir/src/Lado/LadoSalto.cpp.i"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/mynordma/UNO/Uno/src/Lado/LadoSalto.cpp > CMakeFiles/Uno.dir/src/Lado/LadoSalto.cpp.i
+
+CMakeFiles/Uno.dir/src/Lado/LadoSalto.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/Uno.dir/src/Lado/LadoSalto.cpp.s"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/mynordma/UNO/Uno/src/Lado/LadoSalto.cpp -o CMakeFiles/Uno.dir/src/Lado/LadoSalto.cpp.s
+
+CMakeFiles/Uno.dir/src/Lado/LadoReversa.cpp.o: CMakeFiles/Uno.dir/flags.make
+CMakeFiles/Uno.dir/src/Lado/LadoReversa.cpp.o: /home/mynordma/UNO/Uno/src/Lado/LadoReversa.cpp
+CMakeFiles/Uno.dir/src/Lado/LadoReversa.cpp.o: CMakeFiles/Uno.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/mynordma/UNO/Uno/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_10) "Building CXX object CMakeFiles/Uno.dir/src/Lado/LadoReversa.cpp.o"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/Uno.dir/src/Lado/LadoReversa.cpp.o -MF CMakeFiles/Uno.dir/src/Lado/LadoReversa.cpp.o.d -o CMakeFiles/Uno.dir/src/Lado/LadoReversa.cpp.o -c /home/mynordma/UNO/Uno/src/Lado/LadoReversa.cpp
+
+CMakeFiles/Uno.dir/src/Lado/LadoReversa.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing CXX source to CMakeFiles/Uno.dir/src/Lado/LadoReversa.cpp.i"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/mynordma/UNO/Uno/src/Lado/LadoReversa.cpp > CMakeFiles/Uno.dir/src/Lado/LadoReversa.cpp.i
+
+CMakeFiles/Uno.dir/src/Lado/LadoReversa.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/Uno.dir/src/Lado/LadoReversa.cpp.s"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/mynordma/UNO/Uno/src/Lado/LadoReversa.cpp -o CMakeFiles/Uno.dir/src/Lado/LadoReversa.cpp.s
+
+CMakeFiles/Uno.dir/src/Lado/LadoComodin.cpp.o: CMakeFiles/Uno.dir/flags.make
+CMakeFiles/Uno.dir/src/Lado/LadoComodin.cpp.o: /home/mynordma/UNO/Uno/src/Lado/LadoComodin.cpp
+CMakeFiles/Uno.dir/src/Lado/LadoComodin.cpp.o: CMakeFiles/Uno.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/mynordma/UNO/Uno/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_11) "Building CXX object CMakeFiles/Uno.dir/src/Lado/LadoComodin.cpp.o"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/Uno.dir/src/Lado/LadoComodin.cpp.o -MF CMakeFiles/Uno.dir/src/Lado/LadoComodin.cpp.o.d -o CMakeFiles/Uno.dir/src/Lado/LadoComodin.cpp.o -c /home/mynordma/UNO/Uno/src/Lado/LadoComodin.cpp
+
+CMakeFiles/Uno.dir/src/Lado/LadoComodin.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing CXX source to CMakeFiles/Uno.dir/src/Lado/LadoComodin.cpp.i"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/mynordma/UNO/Uno/src/Lado/LadoComodin.cpp > CMakeFiles/Uno.dir/src/Lado/LadoComodin.cpp.i
+
+CMakeFiles/Uno.dir/src/Lado/LadoComodin.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/Uno.dir/src/Lado/LadoComodin.cpp.s"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/mynordma/UNO/Uno/src/Lado/LadoComodin.cpp -o CMakeFiles/Uno.dir/src/Lado/LadoComodin.cpp.s
+
 # Object files for target Uno
 Uno_OBJECTS = \
 "CMakeFiles/Uno.dir/src/main.cpp.o" \
@@ -160,7 +230,12 @@ Uno_OBJECTS = \
 "CMakeFiles/Uno.dir/src/Jugador/Jugador.cpp.o" \
 "CMakeFiles/Uno.dir/src/Carta/Carta.cpp.o" \
 "CMakeFiles/Uno.dir/src/Lado/Lado.cpp.o" \
-"CMakeFiles/Uno.dir/src/Lado/LadoNumero.cpp.o"
+"CMakeFiles/Uno.dir/src/Lado/LadoNumero.cpp.o" \
+"CMakeFiles/Uno.dir/src/Lado/LadoMasDos.cpp.o" \
+"CMakeFiles/Uno.dir/src/Lado/LadoMasCuatro.cpp.o" \
+"CMakeFiles/Uno.dir/src/Lado/LadoSalto.cpp.o" \
+"CMakeFiles/Uno.dir/src/Lado/LadoReversa.cpp.o" \
+"CMakeFiles/Uno.dir/src/Lado/LadoComodin.cpp.o"
 
 # External object files for target Uno
 Uno_EXTERNAL_OBJECTS =
@@ -171,9 +246,14 @@ Uno: CMakeFiles/Uno.dir/src/Jugador/Jugador.cpp.o
 Uno: CMakeFiles/Uno.dir/src/Carta/Carta.cpp.o
 Uno: CMakeFiles/Uno.dir/src/Lado/Lado.cpp.o
 Uno: CMakeFiles/Uno.dir/src/Lado/LadoNumero.cpp.o
+Uno: CMakeFiles/Uno.dir/src/Lado/LadoMasDos.cpp.o
+Uno: CMakeFiles/Uno.dir/src/Lado/LadoMasCuatro.cpp.o
+Uno: CMakeFiles/Uno.dir/src/Lado/LadoSalto.cpp.o
+Uno: CMakeFiles/Uno.dir/src/Lado/LadoReversa.cpp.o
+Uno: CMakeFiles/Uno.dir/src/Lado/LadoComodin.cpp.o
 Uno: CMakeFiles/Uno.dir/build.make
 Uno: CMakeFiles/Uno.dir/link.txt
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --bold --progress-dir=/home/mynordma/UNO/Uno/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_7) "Linking CXX executable Uno"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --bold --progress-dir=/home/mynordma/UNO/Uno/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_12) "Linking CXX executable Uno"
 	$(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/Uno.dir/link.txt --verbose=$(VERBOSE)
 
 # Rule to build all files generated by this target.

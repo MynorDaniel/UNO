@@ -29,6 +29,9 @@ public:
     bool isEmpty() const;
 
     void imprimir() const;
+
+    NodoCircularDoble<T>* getCabeza() const;
+    NodoCircularDoble<T>* getNodo(int indice) const;
 };
 
 #include "ListaCircularDoble.tpp"

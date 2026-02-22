@@ -12,7 +12,7 @@ private:
     int numero;
 
 public:
-    LadoNumero(int num);
+    LadoNumero(int num, Color color);
     virtual ~LadoNumero();
 
     virtual void aplicarEfecto(Juego& juego) override;
@@ -20,6 +20,8 @@ public:
     virtual bool esCompatible(const Lado& otro) const override;
 
     virtual std::string toString() const override;
+
+    int getNumero() const;
 };
 
 #endif // LADONUMERO_H

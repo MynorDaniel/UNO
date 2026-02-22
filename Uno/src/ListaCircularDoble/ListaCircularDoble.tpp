@@ -123,3 +123,24 @@ void ListaCircularDoble<T>::imprimir() const {
     } while (actual != cabeza);
     std::cout << std::endl;
 }
+
+template <typename T>
+NodoCircularDoble<T>* ListaCircularDoble<T>::getCabeza() const {
+    return cabeza;
+}
+
+template <typename T>
+NodoCircularDoble<T>* ListaCircularDoble<T>::getNodo(int indice) const {
+    if (indice < 0 || indice >= longitud) {
+        throw std::out_of_range("Indice fuera de rango");
+    }
+    if (cabeza == nullptr) {
+        throw std::out_of_range("Lista vacía");
+    }
+
+    NodoCircularDoble<T>* actual = cabeza;
+    for (int i = 0; i < indice; i++) {
+        actual = actual->getSiguiente();
+    }
+    return actual;
+}

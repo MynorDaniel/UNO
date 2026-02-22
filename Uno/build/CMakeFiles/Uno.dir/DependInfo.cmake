@@ -12,7 +12,12 @@ set(CMAKE_DEPENDS_DEPENDENCY_FILES
   "/home/mynordma/UNO/Uno/src/Juego/Juego.cpp" "CMakeFiles/Uno.dir/src/Juego/Juego.cpp.o" "gcc" "CMakeFiles/Uno.dir/src/Juego/Juego.cpp.o.d"
   "/home/mynordma/UNO/Uno/src/Jugador/Jugador.cpp" "CMakeFiles/Uno.dir/src/Jugador/Jugador.cpp.o" "gcc" "CMakeFiles/Uno.dir/src/Jugador/Jugador.cpp.o.d"
   "/home/mynordma/UNO/Uno/src/Lado/Lado.cpp" "CMakeFiles/Uno.dir/src/Lado/Lado.cpp.o" "gcc" "CMakeFiles/Uno.dir/src/Lado/Lado.cpp.o.d"
+  "/home/mynordma/UNO/Uno/src/Lado/LadoComodin.cpp" "CMakeFiles/Uno.dir/src/Lado/LadoComodin.cpp.o" "gcc" "CMakeFiles/Uno.dir/src/Lado/LadoComodin.cpp.o.d"
+  "/home/mynordma/UNO/Uno/src/Lado/LadoMasCuatro.cpp" "CMakeFiles/Uno.dir/src/Lado/LadoMasCuatro.cpp.o" "gcc" "CMakeFiles/Uno.dir/src/Lado/LadoMasCuatro.cpp.o.d"
+  "/home/mynordma/UNO/Uno/src/Lado/LadoMasDos.cpp" "CMakeFiles/Uno.dir/src/Lado/LadoMasDos.cpp.o" "gcc" "CMakeFiles/Uno.dir/src/Lado/LadoMasDos.cpp.o.d"
   "/home/mynordma/UNO/Uno/src/Lado/LadoNumero.cpp" "CMakeFiles/Uno.dir/src/Lado/LadoNumero.cpp.o" "gcc" "CMakeFiles/Uno.dir/src/Lado/LadoNumero.cpp.o.d"
+  "/home/mynordma/UNO/Uno/src/Lado/LadoReversa.cpp" "CMakeFiles/Uno.dir/src/Lado/LadoReversa.cpp.o" "gcc" "CMakeFiles/Uno.dir/src/Lado/LadoReversa.cpp.o.d"
+  "/home/mynordma/UNO/Uno/src/Lado/LadoSalto.cpp" "CMakeFiles/Uno.dir/src/Lado/LadoSalto.cpp.o" "gcc" "CMakeFiles/Uno.dir/src/Lado/LadoSalto.cpp.o.d"
   "/home/mynordma/UNO/Uno/src/main.cpp" "CMakeFiles/Uno.dir/src/main.cpp.o" "gcc" "CMakeFiles/Uno.dir/src/main.cpp.o.d"
   )
 

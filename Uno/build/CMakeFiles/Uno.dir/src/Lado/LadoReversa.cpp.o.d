@@ -1,8 +1,8 @@
-CMakeFiles/Uno.dir/src/Carta/Carta.cpp.o: \
- /home/mynordma/UNO/Uno/src/Carta/Carta.cpp /usr/include/stdc-predef.h \
- /home/mynordma/UNO/Uno/src/Carta/Carta.h \
- /home/mynordma/UNO/Uno/src/Carta/../Lado/Lado.h \
- /usr/include/c++/13/string /usr/include/c++/13/bits/requires_hosted.h \
+CMakeFiles/Uno.dir/src/Lado/LadoReversa.cpp.o: \
+ /home/mynordma/UNO/Uno/src/Lado/LadoReversa.cpp \
+ /usr/include/stdc-predef.h /home/mynordma/UNO/Uno/src/Lado/LadoReversa.h \
+ /home/mynordma/UNO/Uno/src/Lado/Lado.h /usr/include/c++/13/string \
+ /usr/include/c++/13/bits/requires_hosted.h \
  /usr/include/x86_64-linux-gnu/c++/13/bits/c++config.h \
  /usr/include/x86_64-linux-gnu/c++/13/bits/os_defines.h \
  /usr/include/features.h /usr/include/features-time64.h \
@@ -153,4 +153,31 @@ CMakeFiles/Uno.dir/src/Carta/Carta.cpp.o: \
  /usr/include/c++/13/bits/basic_ios.tcc \
  /usr/include/c++/13/bits/ostream.tcc /usr/include/c++/13/istream \
  /usr/include/c++/13/bits/istream.tcc \
- /home/mynordma/UNO/Uno/src/Carta/../Lado/../Color/Color.h
+ /home/mynordma/UNO/Uno/src/Lado/../Color/Color.h \
+ /home/mynordma/UNO/Uno/src/Lado/../Juego/Juego.h \
+ /home/mynordma/UNO/Uno/src/Lado/../Juego/../Carta/Carta.h \
+ /home/mynordma/UNO/Uno/src/Lado/../Juego/../Carta/../Lado/Lado.h \
+ /home/mynordma/UNO/Uno/src/Lado/../Juego/../Jugador/Jugador.h \
+ /home/mynordma/UNO/Uno/src/Lado/../Juego/../Jugador/../Lista/Lista.h \
+ /home/mynordma/UNO/Uno/src/Lado/../Juego/../Jugador/../Lista/Nodo.h \
+ /home/mynordma/UNO/Uno/src/Lado/../Juego/../Jugador/../Lista/Nodo.tpp \
+ /home/mynordma/UNO/Uno/src/Lado/../Juego/../Jugador/../Lista/Lista.tpp \
+ /home/mynordma/UNO/Uno/src/Lado/../Juego/../Jugador/../Carta/Carta.h \
+ /home/mynordma/UNO/Uno/src/Lado/../Juego/../Jugador/../Pila/Pila.h \
+ /home/mynordma/UNO/Uno/src/Lado/../Juego/../Jugador/../Pila/../Lista/Nodo.h \
+ /home/mynordma/UNO/Uno/src/Lado/../Juego/../Jugador/../Pila/Pila.tpp \
+ /home/mynordma/UNO/Uno/src/Lado/../Juego/../Pila/Pila.h \
+ /home/mynordma/UNO/Uno/src/Lado/../Juego/../ListaCircularDoble/ListaCircularDoble.h \
+ /home/mynordma/UNO/Uno/src/Lado/../Juego/../ListaCircularDoble/Nodo.h \
+ /home/mynordma/UNO/Uno/src/Lado/../Juego/../ListaCircularDoble/Nodo.tpp \
+ /home/mynordma/UNO/Uno/src/Lado/../Juego/../ListaCircularDoble/ListaCircularDoble.tpp \
+ /home/mynordma/UNO/Uno/src/Lado/../Juego/../Lado/Lado.h \
+ /home/mynordma/UNO/Uno/src/Lado/../Juego/../Lado/LadoNumero.h \
+ /home/mynordma/UNO/Uno/src/Lado/../Juego/../Lado/Lado.h \
+ /home/mynordma/UNO/Uno/src/Lado/../Juego/../Lado/LadoSalto.h \
+ /home/mynordma/UNO/Uno/src/Lado/../Juego/../Lado/../Color/Color.h \
+ /home/mynordma/UNO/Uno/src/Lado/../Juego/../Lado/LadoReversa.h \
+ /home/mynordma/UNO/Uno/src/Lado/../Juego/../Lado/LadoMasDos.h \
+ /home/mynordma/UNO/Uno/src/Lado/../Juego/../Lado/LadoComodin.h \
+ /home/mynordma/UNO/Uno/src/Lado/../Juego/../Lado/LadoMasCuatro.h \
+ /home/mynordma/UNO/Uno/src/Lado/../Juego/../ListaCircularDoble/Nodo.h

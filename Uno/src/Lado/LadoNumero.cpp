@@ -1,6 +1,8 @@
 #include "LadoNumero.h"
 
-LadoNumero::LadoNumero(int num) : numero(num) {}
+LadoNumero::LadoNumero(int num, Color color) : numero(num) {
+    setColor(color);
+}
 
 LadoNumero::~LadoNumero() {}
 
@@ -9,9 +11,26 @@ void LadoNumero::aplicarEfecto(Juego& juego) {
 }
 
 bool LadoNumero::esCompatible(const Lado& otro) const {
-    return true;
+    if (getColor() == Color::Multicolor) {
+        return true;
+    }
+
+    if (otro.getColor() == Color::Multicolor) {
+        return true;
+    }
+
+    if (getColor() == otro.getColor()) {
+        return true;
+    }
+
+    const LadoNumero* otroNumero = dynamic_cast<const LadoNumero*>(&otro);
+    return otroNumero != nullptr && otroNumero->numero == numero;
 }
 
 std::string LadoNumero::toString() const {
-    return "| Carta Numero: " + std::to_string(numero) + "|";
+    return "| " + std::to_string(numero) + " " + colorToString(getColor()) + " |";
+}
+
+int LadoNumero::getNumero() const {
+    return numero;
 }

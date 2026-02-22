@@ -3,13 +3,14 @@
 
 #include <string>
 #include <iostream>
+#include "../Color/Color.h"
 
 class Juego;
 
 class Lado
 {
 private:
-    /* data */
+    Color color;
 public:
     Lado();
     virtual ~Lado();
@@ -19,5 +20,8 @@ public:
     virtual bool esCompatible(const Lado& otro) const = 0;
 
     virtual std::string toString() const = 0;
+
+    Color getColor() const;
+    void setColor(Color nuevoColor);
 };
 #endif // LADO_H
