@@ -178,12 +178,16 @@ CMakeFiles/Uno.dir/src/Juego/Juego.cpp.o: \
  /home/mynordma/UNO/Uno/src/Juego/../Lado/LadoMasDos.h \
  /home/mynordma/UNO/Uno/src/Juego/../Lado/LadoComodin.h \
  /home/mynordma/UNO/Uno/src/Juego/../Lado/LadoMasCuatro.h \
+ /home/mynordma/UNO/Uno/src/Juego/../Lado/LadoRayosX.h \
+ /home/mynordma/UNO/Uno/src/Juego/../Lado/LadoCambio.h \
+ /home/mynordma/UNO/Uno/src/Juego/../Lado/Flip/LadoFlip.h \
+ /home/mynordma/UNO/Uno/src/Juego/../Lado/Flip/../Lado.h \
+ /home/mynordma/UNO/Uno/src/Juego/../Lado/Flip/../../Color/Color.h \
+ /home/mynordma/UNO/Uno/src/Juego/../Lado/Flip/LadoMasUnoFlip.h \
+ /home/mynordma/UNO/Uno/src/Juego/../Lado/Flip/LadoMasDosFlip.h \
+ /home/mynordma/UNO/Uno/src/Juego/../Lado/Flip/LadoMasTresFlip.h \
+ /home/mynordma/UNO/Uno/src/Juego/../Lado/Flip/LadoMasSeisFlip.h \
+ /home/mynordma/UNO/Uno/src/Juego/../Lado/Flip/LadoSaltaTodos.h \
+ /home/mynordma/UNO/Uno/src/Juego/../Lado/Flip/LadoColorEterno.h \
  /home/mynordma/UNO/Uno/src/Juego/../ListaCircularDoble/Nodo.h \
- /usr/include/c++/13/ctime /usr/include/c++/13/algorithm \
- /usr/include/c++/13/bits/stl_algo.h \
- /usr/include/c++/13/bits/algorithmfwd.h \
- /usr/include/c++/13/bits/stl_heap.h \
- /usr/include/c++/13/bits/uniform_int_dist.h \
- /usr/include/c++/13/bits/stl_tempbuf.h \
- /usr/include/c++/13/pstl/glue_algorithm_defs.h \
- /usr/include/c++/13/pstl/execution_defs.h
+ /usr/include/c++/13/ctime

@@ -3,7 +3,6 @@
 #include <string>
 #include <cstdlib>
 #include <ctime>
-#include <algorithm>
 
 Juego::Juego()
         : modoAcumulacion(false),
@@ -11,6 +10,10 @@ Juego::Juego()
             modoRoboSinLimite(false),
             modoGritoDeUno(false),
             modoGanarConNegra(false),
+            modoFlip(false),
+            colorEternoPendiente(false),
+            colorEternoObjetivo(Color::Multicolor),
+            repetirTurnoActual(false),
             direccionTurno(1),
             saltosPendientes(0),
             cartasRoboPendientes(0),
@@ -19,7 +22,9 @@ Juego::Juego()
             colorAnteriorMasCuatro(Color::Multicolor),
             numeroAnteriorMasCuatro(0),
             numeroAnteriorValido(false),
-            jugadorPendienteUno(nullptr)
+            jugadorPendienteUno(nullptr),
+            jugadorActual(nullptr),
+            nodoActualTurno(nullptr)
 {
 }
 
@@ -40,10 +45,25 @@ void Juego::iniciarJuego()
         retoMasCuatroPendiente = false;
         jugadorMasCuatro = nullptr;
         jugadorPendienteUno = nullptr;
+        jugadorActual = nullptr;
+        nodoActualTurno = nullptr;
+        colorEternoPendiente = false;
+        repetirTurnoActual = false;
+
         std::cout << "\n¡Bienvenido a UNO!\n";
-        pedirConfiguracion();
+        pedirModoJuego();
+        if (!modoFlip) {
+            pedirConfiguracion();
+        } else {
+            modoGritoDeUno = false;
+            modoRetoMasCuatro = false;
+        }
         pedirJugadores();
-        crearMazoCompleto();
+        if (modoFlip) {
+            crearMazoFlip();
+        } else {
+            crearMazoCompleto();
+        }
         repartirCartas();
         mostrarManos();
         jugarDeNuevo = iniciarTurnos();
@@ -76,7 +96,7 @@ void Juego::crearMazoCompleto() {
 
 void Juego::crearMazo() {
 
-    // Cartas numericas 
+    // Cartas numerica
     Color colores[] = { Color::Rojo, Color::Amarillo, Color::Verde, Color::Azul };
 
     auto agregarCarta = [this](int numero, Color color) {
@@ -111,6 +131,133 @@ void Juego::crearMazo() {
         mazo.insertar(new Carta(new LadoComodin(), nullptr));
         mazo.insertar(new Carta(new LadoMasCuatro(), nullptr));
     }
+
+    // Cartas especiales (Rayos X y Cambio) - 4 de cada tipo por mazo
+    for (int i = 0; i < 4; i++) {
+        Color color = colores[i % 4];
+        mazo.insertar(new Carta(new LadoRayosX(color), nullptr));
+        mazo.insertar(new Carta(new LadoCambio(color), nullptr));
+    }
+}
+
+void Juego::crearMazoFlip() {
+    std::cout << "\nCreando el mazo de cartas Flip...\n";
+
+    int cantidadMazos = calcularCantidadDeMazos(jugadores.getLongitud());
+    for (int indiceMazo = 0; indiceMazo < cantidadMazos; indiceMazo++) {
+        std::cout << "\nMazo Flip " << indiceMazo + 1 << " de " << cantidadMazos << ":\n";
+
+        Color coloresClaros[] = { Color::Rojo, Color::Amarillo, Color::Azul, Color::Verde };
+        Color coloresOscuros[] = { Color::Rosa, Color::Turquesa, Color::Naranja, Color::Violeta };
+
+        const int totalBase = 108;
+        const int totalLados = totalBase + 8;
+
+        Lado** ladosClaros = new Lado*[totalLados];
+        Lado** ladosOscuros = new Lado*[totalLados];
+        int indiceClaro = 0;
+        int indiceOscuro = 0;
+
+        auto agregarClaro = [&ladosClaros, &indiceClaro](Lado* lado) {
+            ladosClaros[indiceClaro++] = lado;
+        };
+
+        auto agregarOscuro = [&ladosOscuros, &indiceOscuro](Lado* lado) {
+            ladosOscuros[indiceOscuro++] = lado;
+        };
+
+        for (int i = 0; i < 4; i++) {
+            Color color = coloresClaros[i];
+            agregarClaro(new LadoNumero(0, color));
+            for (int numero = 1; numero <= 9; numero++) {
+                agregarClaro(new LadoNumero(numero, color));
+                agregarClaro(new LadoNumero(numero, color));
+            }
+
+            agregarClaro(new LadoMasUnoFlip(color));
+            agregarClaro(new LadoMasUnoFlip(color));
+
+            agregarClaro(new LadoSalto(color));
+            agregarClaro(new LadoSalto(color));
+
+            agregarClaro(new LadoReversa(color));
+            agregarClaro(new LadoReversa(color));
+        }
+
+        for (int i = 0; i < 4; i++) {
+            agregarClaro(new LadoMasDosFlip(Color::Multicolor));
+            agregarClaro(new LadoComodin());
+        }
+
+        for (int i = 0; i < 4; i++) {
+            Color color = coloresOscuros[i];
+            agregarOscuro(new LadoNumero(0, color));
+            for (int numero = 1; numero <= 9; numero++) {
+                agregarOscuro(new LadoNumero(numero, color));
+                agregarOscuro(new LadoNumero(numero, color));
+            }
+
+            agregarOscuro(new LadoMasTresFlip(color));
+            agregarOscuro(new LadoMasTresFlip(color));
+
+            agregarOscuro(new LadoSaltaTodos(color));
+            agregarOscuro(new LadoSaltaTodos(color));
+
+            agregarOscuro(new LadoReversa(color));
+            agregarOscuro(new LadoReversa(color));
+        }
+
+        for (int i = 0; i < 4; i++) {
+            agregarOscuro(new LadoMasSeisFlip(Color::Multicolor));
+            agregarOscuro(new LadoColorEterno());
+        }
+
+        for (int i = 0; i < 4; i++) {
+            Color colorClaro = coloresClaros[i];
+            agregarClaro(new LadoFlip(colorClaro));
+            agregarClaro(new LadoFlip(colorClaro));
+
+            Color colorOscuro = coloresOscuros[i];
+            agregarOscuro(new LadoFlip(colorOscuro));
+            agregarOscuro(new LadoFlip(colorOscuro));
+        }
+
+        if (indiceClaro != totalLados || indiceOscuro != totalLados) {
+            std::cout << "Error: cantidad de lados claros y oscuros no coincide.\n";
+        }
+
+        for (int i = totalLados - 1; i > 0; i--) {
+            int j = std::rand() % (i + 1);
+            Lado* temp = ladosClaros[i];
+            ladosClaros[i] = ladosClaros[j];
+            ladosClaros[j] = temp;
+        }
+
+        for (int i = totalLados - 1; i > 0; i--) {
+            int j = std::rand() % (i + 1);
+            Lado* temp = ladosOscuros[i];
+            ladosOscuros[i] = ladosOscuros[j];
+            ladosOscuros[j] = temp;
+        }
+
+        int totalCartas = (indiceClaro < indiceOscuro) ? indiceClaro : indiceOscuro;
+        for (int i = 0; i < totalCartas; i++) {
+            Carta* carta = new Carta(ladosClaros[i], ladosOscuros[i]);
+            mazo.insertar(carta);
+
+            std::cout << "Carta " << i + 1 << ":\n";
+            std::cout << "Claro: " << ladosClaros[i]->toString() << "\n";
+            std::cout << "Oscuro: " << ladosOscuros[i]->toString() << "\n";
+        }
+
+        std::cout << "\nTotal de cartas creadas: " << totalCartas << "\n";
+
+        delete[] ladosClaros;
+        delete[] ladosOscuros;
+    }
+
+    mazo.barajear();
+    mostrarMazo();
 }
 
 void Juego::pedirConfiguracion()
@@ -346,6 +493,31 @@ Color Juego::pedirColorCarta(const std::string& nombreJugador) {
     }
 }
 
+Color Juego::pedirColorOscuro(const std::string& nombreJugador) {
+    while (true) {
+        std::cout << "\n" << nombreJugador << ", elige el color oscuro:\n";
+        std::cout << "1. Rosa\n";
+        std::cout << "2. Turquesa\n";
+        std::cout << "3. Naranja\n";
+        std::cout << "4. Violeta\n";
+
+        int opcion = leerOpcionMenu();
+        switch (opcion) {
+            case 1:
+                return Color::Rosa;
+            case 2:
+                return Color::Turquesa;
+            case 3:
+                return Color::Naranja;
+            case 4:
+                return Color::Violeta;
+            default:
+                std::cout << "Opción inválida. Intente nuevamente.\n";
+                break;
+        }
+    }
+}
+
 void Juego::aplicarReversa() {
     direccionTurno *= -1;
     std::cout << "El orden de turnos ha cambiado.\n";
@@ -371,6 +543,81 @@ void Juego::aplicarMasCuatro() {
     }
 }
 
+void Juego::aplicarMasUnoFlip() {
+    cartasRoboPendientes += 1;
+    saltosPendientes++;
+}
+
+void Juego::aplicarMasDosFlip() {
+    cartasRoboPendientes += 2;
+    saltosPendientes++;
+}
+
+void Juego::aplicarMasTresFlip() {
+    cartasRoboPendientes += 3;
+    saltosPendientes++;
+}
+
+void Juego::aplicarMasSeisFlip() {
+    cartasRoboPendientes += 6;
+    saltosPendientes++;
+}
+
+void Juego::aplicarSaltaTodosFlip() {
+    repetirTurnoActual = true;
+}
+
+void Juego::aplicarFlip() {
+    int totalMazo = mazo.getLongitud();
+    if (totalMazo > 0) {
+        Carta** cartasMazo = new Carta*[totalMazo];
+        for (int i = 0; i < totalMazo; i++) {
+            cartasMazo[i] = mazo.sacar();
+            if (cartasMazo[i] != nullptr) {
+                cartasMazo[i]->voltear();
+            }
+        }
+        for (int i = totalMazo - 1; i >= 0; i--) {
+            mazo.insertar(cartasMazo[i]);
+        }
+        delete[] cartasMazo;
+    }
+
+    int totalDescarte = descarte.getLongitud();
+    if (totalDescarte > 0) {
+        Carta** cartasDescarte = new Carta*[totalDescarte];
+        for (int i = 0; i < totalDescarte; i++) {
+            cartasDescarte[i] = descarte.sacar();
+            if (cartasDescarte[i] != nullptr) {
+                cartasDescarte[i]->voltear();
+            }
+        }
+        for (int i = totalDescarte - 1; i >= 0; i--) {
+            descarte.insertar(cartasDescarte[i]);
+        }
+        delete[] cartasDescarte;
+    }
+
+    NodoCircularDoble<Jugador*>* nodo = jugadores.getCabeza();
+    if (nodo != nullptr) {
+        NodoCircularDoble<Jugador*>* actual = nodo;
+        do {
+            Jugador* jugador = actual->getDato();
+            if (jugador != nullptr) {
+                jugador->voltearCartas();
+            }
+            actual = actual->getSiguiente();
+        } while (actual != nodo);
+    }
+
+    std::cout << "Todas las cartas fueron volteadas.\n";
+}
+
+void Juego::aplicarColorEterno(Color colorElegido) {
+    colorEternoPendiente = true;
+    colorEternoObjetivo = colorElegido;
+}
+
 void Juego::registrarMasCuatro(Jugador* jugador, const Lado& topeAntes) {
     jugadorMasCuatro = jugador;
     colorAnteriorMasCuatro = topeAntes.getColor();
@@ -387,6 +634,43 @@ bool Juego::isModoRoboSinLimite() const {
     return modoRoboSinLimite;
 }
 
+void Juego::revelarCartasSiguiente() {
+    NodoCircularDoble<Jugador*>* nodoSiguiente = obtenerNodoSiguiente();
+    if (nodoSiguiente == nullptr) {
+        return;
+    }
+    Jugador* siguiente = nodoSiguiente->getDato();
+    if (siguiente == nullptr) {
+        return;
+    }
+
+    std::cout << "\nCartas de " << siguiente->getNombre() << ":\n";
+    mostrarCartasJugador(siguiente);
+}
+
+void Juego::intercambiarCartasConAnterior() {
+    if (jugadorActual == nullptr) {
+        return;
+    }
+
+    NodoCircularDoble<Jugador*>* nodoAnterior = obtenerNodoAnterior();
+    if (nodoAnterior == nullptr) {
+        return;
+    }
+
+    Jugador* anterior = nodoAnterior->getDato();
+    if (anterior == nullptr) {
+        return;
+    }
+
+    jugadorActual->intercambiarCartasCon(*anterior);
+    std::cout << jugadorActual->getNombre() << " intercambió cartas con " << anterior->getNombre() << ".\n";
+}
+
+std::string Juego::getNombreJugadorActual() const {
+    return jugadorActual != nullptr ? jugadorActual->getNombre() : "Jugador";
+}
+
 bool Juego::preguntarReinicio() {
     while (true) {
         std::cout << "\n¿Desea jugar otra vez?\n";
@@ -399,6 +683,26 @@ bool Juego::preguntarReinicio() {
         }
         if (opcion == 2) {
             return false;
+        }
+
+        std::cout << "Opción inválida. Intente nuevamente.\n";
+    }
+}
+
+void Juego::pedirModoJuego() {
+    while (true) {
+        std::cout << "\nSeleccione el modo de juego:\n";
+        std::cout << "1. UNO\n";
+        std::cout << "2. UNO Flip\n";
+
+        int opcion = leerOpcionMenu();
+        if (opcion == 1) {
+            modoFlip = false;
+            return;
+        }
+        if (opcion == 2) {
+            modoFlip = true;
+            return;
         }
 
         std::cout << "Opción inválida. Intente nuevamente.\n";
@@ -428,8 +732,17 @@ bool Juego::aplicarEfectosInicioTurno(Jugador* jugador) {
         return false;
     }
 
-    if (modoGritoDeUno) {
-        manejarReporteUno(jugador);
+    if (colorEternoPendiente) {
+        std::cout << jugador->getNombre() << " debe robar hasta encontrar " << colorToString(colorEternoObjetivo) << ".\n";
+        while (!mazo.isEmpty()) {
+            Carta* carta = mazo.sacar();
+            jugador->tomarCarta(carta);
+            if (carta != nullptr && carta->getLadoActual()->getColor() == colorEternoObjetivo) {
+                break;
+            }
+        }
+        colorEternoPendiente = false;
+        saltosPendientes++;
     }
 
     if (retoMasCuatroPendiente && modoRetoMasCuatro) {
@@ -444,7 +757,9 @@ bool Juego::aplicarEfectosInicioTurno(Jugador* jugador) {
         std::cout << jugador->getNombre() << " debe robar " << cartasRoboPendientes << " carta(s).\n";
         jugador->robarCartas(cartasRoboPendientes);
         cartasRoboPendientes = 0;
-        saltosPendientes = std::max(saltosPendientes, 1);
+        if (saltosPendientes < 1) {
+            saltosPendientes = 1;
+        }
     }
 
     if (saltosPendientes > 0) {
@@ -454,6 +769,20 @@ bool Juego::aplicarEfectosInicioTurno(Jugador* jugador) {
     }
 
     return false;
+}
+
+NodoCircularDoble<Jugador*>* Juego::obtenerNodoSiguiente() const {
+    if (nodoActualTurno == nullptr) {
+        return nullptr;
+    }
+    return (direccionTurno == 1) ? nodoActualTurno->getSiguiente() : nodoActualTurno->getAnterior();
+}
+
+NodoCircularDoble<Jugador*>* Juego::obtenerNodoAnterior() const {
+    if (nodoActualTurno == nullptr) {
+        return nullptr;
+    }
+    return (direccionTurno == 1) ? nodoActualTurno->getAnterior() : nodoActualTurno->getSiguiente();
 }
 
 int Juego::avanzarIndiceJugador(int indiceActual, int pasos) const {
@@ -512,6 +841,7 @@ bool Juego::manejarRetoMasCuatro(Jugador* jugadorActual) {
         return false;
     }
 
+    limpiarPantalla();
     std::cout << "\n" << jugadorActual->getNombre() << ", ¿Deseas retar el +4?\n";
     std::cout << "1. Sí\n";
     std::cout << "2. No\n";
@@ -657,6 +987,9 @@ bool Juego::iniciarTurnos() {
             continue;
         }
 
+        jugadorActual = jugador;
+        nodoActualTurno = nodoActual;
+
         // Verificar si el jugador actual ya ha ganado
         if (jugador->getCantidadCartas() == 0) {
             std::cout << "\n" << jugador->getNombre() << " ha ganado.\n";
@@ -719,11 +1052,27 @@ bool Juego::iniciarTurnos() {
             continue;
         }
 
-        mostrarCartasJugador(jugador);
-
-        // Pedir al jugador que seleccione una carta para jugar, se repite hasta que seleccione una carta compatible
+        // Pedir al jugador que seleccione una carta para jugar o reportar UNO
         while (true) {
-            int indice = pedirIndiceCarta(jugador, "Seleccione la carta a jugar: ");
+            mostrarCartasJugador(jugador);
+            int totalCartas = jugador->getCantidadCartas();
+            if (modoGritoDeUno) {
+                std::cout << totalCartas + 1 << ". Reportar UNO\n";
+            }
+
+            int opcion = leerOpcionMenu();
+
+            if (modoGritoDeUno && opcion == totalCartas + 1) {
+                manejarReporteUno(jugador);
+                continue;
+            }
+
+            if (opcion < 1 || opcion > totalCartas) {
+                std::cout << "Indice inválido.\n";
+                continue;
+            }
+
+            int indice = opcion - 1;
             Carta* cartaSeleccionada = jugador->getCartas().get(indice);
             if (!validarJugada(jugador, cartaSeleccionada, *ladoTope, acumulacionActiva)) {
                 std::cout << "Esa carta no es compatible con las reglas actuales.\n";
@@ -744,6 +1093,11 @@ bool Juego::iniciarTurnos() {
             nombreGanador = jugador->getNombre();
             hayGanador = true;
             break;
+        }
+
+        if (repetirTurnoActual) {
+            repetirTurnoActual = false;
+            continue;
         }
 
         nodoActual = (direccionTurno == 1) ? nodoActual->getSiguiente() : nodoActual->getAnterior();

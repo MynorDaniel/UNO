@@ -179,6 +179,19 @@ CMakeFiles/Uno.dir/src/Jugador/Jugador.cpp.o: \
  /home/mynordma/UNO/Uno/src/Jugador/../Juego/../Lado/LadoMasDos.h \
  /home/mynordma/UNO/Uno/src/Jugador/../Juego/../Lado/LadoComodin.h \
  /home/mynordma/UNO/Uno/src/Jugador/../Juego/../Lado/LadoMasCuatro.h \
+ /home/mynordma/UNO/Uno/src/Jugador/../Juego/../Lado/LadoRayosX.h \
+ /home/mynordma/UNO/Uno/src/Jugador/../Juego/../Lado/LadoCambio.h \
+ /home/mynordma/UNO/Uno/src/Jugador/../Juego/../Lado/Flip/LadoFlip.h \
+ /home/mynordma/UNO/Uno/src/Jugador/../Juego/../Lado/Flip/../Lado.h \
+ /home/mynordma/UNO/Uno/src/Jugador/../Juego/../Lado/Flip/../../Color/Color.h \
+ /home/mynordma/UNO/Uno/src/Jugador/../Juego/../Lado/Flip/LadoMasUnoFlip.h \
+ /home/mynordma/UNO/Uno/src/Jugador/../Juego/../Lado/Flip/LadoMasDosFlip.h \
+ /home/mynordma/UNO/Uno/src/Jugador/../Juego/../Lado/Flip/LadoMasTresFlip.h \
+ /home/mynordma/UNO/Uno/src/Jugador/../Juego/../Lado/Flip/LadoMasSeisFlip.h \
+ /home/mynordma/UNO/Uno/src/Jugador/../Juego/../Lado/Flip/LadoSaltaTodos.h \
+ /home/mynordma/UNO/Uno/src/Jugador/../Juego/../Lado/Flip/LadoColorEterno.h \
  /home/mynordma/UNO/Uno/src/Jugador/../Juego/../ListaCircularDoble/Nodo.h \
  /home/mynordma/UNO/Uno/src/Jugador/../Lado/LadoComodin.h \
- /home/mynordma/UNO/Uno/src/Jugador/../Lado/LadoMasCuatro.h
+ /home/mynordma/UNO/Uno/src/Jugador/../Lado/LadoMasCuatro.h \
+ /home/mynordma/UNO/Uno/src/Jugador/../Lado/LadoMasDos.h \
+ /home/mynordma/UNO/Uno/src/Jugador/../Lado/LadoNumero.h

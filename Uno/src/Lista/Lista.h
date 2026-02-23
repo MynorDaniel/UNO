@@ -24,6 +24,8 @@ public:
     T get(int indice) const;
 
     void eliminar(int indice);
+
+    void intercambiar(Lista<T>& otra);
 };
 
 #include "Lista.tpp"

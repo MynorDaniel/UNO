@@ -35,6 +35,8 @@ public:
     bool tieneCartaDeColor(Color color) const;
     bool tieneCartaNumero(int numero) const;
     bool tieneCartaAcumulable(const Lado& tope) const;
+    void intercambiarCartasCon(Jugador& otro);
+    void voltearCartas();
 
 };
 

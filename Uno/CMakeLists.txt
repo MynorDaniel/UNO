@@ -13,5 +13,14 @@ add_executable(Uno
     src/Lado/LadoSalto.cpp
     src/Lado/LadoReversa.cpp
     src/Lado/LadoComodin.cpp
+    src/Lado/LadoRayosX.cpp
+    src/Lado/LadoCambio.cpp
+    src/Lado/Flip/LadoFlip.cpp
+    src/Lado/Flip/LadoMasUnoFlip.cpp
+    src/Lado/Flip/LadoMasDosFlip.cpp
+    src/Lado/Flip/LadoMasTresFlip.cpp
+    src/Lado/Flip/LadoMasSeisFlip.cpp
+    src/Lado/Flip/LadoSaltaTodos.cpp
+    src/Lado/Flip/LadoColorEterno.cpp
 )
 

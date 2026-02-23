@@ -74,3 +74,14 @@ void Lista<T>::eliminar(int indice) {
     longitud--;
 }
 
+template <typename T>
+void Lista<T>::intercambiar(Lista<T>& otra) {
+    Nodo<T>* tempCabeza = cabeza;
+    cabeza = otra.cabeza;
+    otra.cabeza = tempCabeza;
+
+    int tempLongitud = longitud;
+    longitud = otra.longitud;
+    otra.longitud = tempLongitud;
+}
+

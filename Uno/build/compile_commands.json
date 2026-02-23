@@ -64,5 +64,59 @@
   "command": "/usr/bin/c++   -g -o CMakeFiles/Uno.dir/src/Lado/LadoComodin.cpp.o -c /home/mynordma/UNO/Uno/src/Lado/LadoComodin.cpp",
   "file": "/home/mynordma/UNO/Uno/src/Lado/LadoComodin.cpp",
   "output": "CMakeFiles/Uno.dir/src/Lado/LadoComodin.cpp.o"
+},
+{
+  "directory": "/home/mynordma/UNO/Uno/build",
+  "command": "/usr/bin/c++   -g -o CMakeFiles/Uno.dir/src/Lado/LadoRayosX.cpp.o -c /home/mynordma/UNO/Uno/src/Lado/LadoRayosX.cpp",
+  "file": "/home/mynordma/UNO/Uno/src/Lado/LadoRayosX.cpp",
+  "output": "CMakeFiles/Uno.dir/src/Lado/LadoRayosX.cpp.o"
+},
+{
+  "directory": "/home/mynordma/UNO/Uno/build",
+  "command": "/usr/bin/c++   -g -o CMakeFiles/Uno.dir/src/Lado/LadoCambio.cpp.o -c /home/mynordma/UNO/Uno/src/Lado/LadoCambio.cpp",
+  "file": "/home/mynordma/UNO/Uno/src/Lado/LadoCambio.cpp",
+  "output": "CMakeFiles/Uno.dir/src/Lado/LadoCambio.cpp.o"
+},
+{
+  "directory": "/home/mynordma/UNO/Uno/build",
+  "command": "/usr/bin/c++   -g -o CMakeFiles/Uno.dir/src/Lado/Flip/LadoFlip.cpp.o -c /home/mynordma/UNO/Uno/src/Lado/Flip/LadoFlip.cpp",
+  "file": "/home/mynordma/UNO/Uno/src/Lado/Flip/LadoFlip.cpp",
+  "output": "CMakeFiles/Uno.dir/src/Lado/Flip/LadoFlip.cpp.o"
+},
+{
+  "directory": "/home/mynordma/UNO/Uno/build",
+  "command": "/usr/bin/c++   -g -o CMakeFiles/Uno.dir/src/Lado/Flip/LadoMasUnoFlip.cpp.o -c /home/mynordma/UNO/Uno/src/Lado/Flip/LadoMasUnoFlip.cpp",
+  "file": "/home/mynordma/UNO/Uno/src/Lado/Flip/LadoMasUnoFlip.cpp",
+  "output": "CMakeFiles/Uno.dir/src/Lado/Flip/LadoMasUnoFlip.cpp.o"
+},
+{
+  "directory": "/home/mynordma/UNO/Uno/build",
+  "command": "/usr/bin/c++   -g -o CMakeFiles/Uno.dir/src/Lado/Flip/LadoMasDosFlip.cpp.o -c /home/mynordma/UNO/Uno/src/Lado/Flip/LadoMasDosFlip.cpp",
+  "file": "/home/mynordma/UNO/Uno/src/Lado/Flip/LadoMasDosFlip.cpp",
+  "output": "CMakeFiles/Uno.dir/src/Lado/Flip/LadoMasDosFlip.cpp.o"
+},
+{
+  "directory": "/home/mynordma/UNO/Uno/build",
+  "command": "/usr/bin/c++   -g -o CMakeFiles/Uno.dir/src/Lado/Flip/LadoMasTresFlip.cpp.o -c /home/mynordma/UNO/Uno/src/Lado/Flip/LadoMasTresFlip.cpp",
+  "file": "/home/mynordma/UNO/Uno/src/Lado/Flip/LadoMasTresFlip.cpp",
+  "output": "CMakeFiles/Uno.dir/src/Lado/Flip/LadoMasTresFlip.cpp.o"
+},
+{
+  "directory": "/home/mynordma/UNO/Uno/build",
+  "command": "/usr/bin/c++   -g -o CMakeFiles/Uno.dir/src/Lado/Flip/LadoMasSeisFlip.cpp.o -c /home/mynordma/UNO/Uno/src/Lado/Flip/LadoMasSeisFlip.cpp",
+  "file": "/home/mynordma/UNO/Uno/src/Lado/Flip/LadoMasSeisFlip.cpp",
+  "output": "CMakeFiles/Uno.dir/src/Lado/Flip/LadoMasSeisFlip.cpp.o"
+},
+{
+  "directory": "/home/mynordma/UNO/Uno/build",
+  "command": "/usr/bin/c++   -g -o CMakeFiles/Uno.dir/src/Lado/Flip/LadoSaltaTodos.cpp.o -c /home/mynordma/UNO/Uno/src/Lado/Flip/LadoSaltaTodos.cpp",
+  "file": "/home/mynordma/UNO/Uno/src/Lado/Flip/LadoSaltaTodos.cpp",
+  "output": "CMakeFiles/Uno.dir/src/Lado/Flip/LadoSaltaTodos.cpp.o"
+},
+{
+  "directory": "/home/mynordma/UNO/Uno/build",
+  "command": "/usr/bin/c++   -g -o CMakeFiles/Uno.dir/src/Lado/Flip/LadoColorEterno.cpp.o -c /home/mynordma/UNO/Uno/src/Lado/Flip/LadoColorEterno.cpp",
+  "file": "/home/mynordma/UNO/Uno/src/Lado/Flip/LadoColorEterno.cpp",
+  "output": "CMakeFiles/Uno.dir/src/Lado/Flip/LadoColorEterno.cpp.o"
 }
 ]

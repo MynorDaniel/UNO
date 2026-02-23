@@ -201,6 +201,174 @@ src/Jugador/Jugador.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Uno.dir/build.make CMakeFiles/Uno.dir/src/Jugador/Jugador.cpp.s
 .PHONY : src/Jugador/Jugador.cpp.s
 
+src/Lado/Flip/LadoColorEterno.o: src/Lado/Flip/LadoColorEterno.cpp.o
+.PHONY : src/Lado/Flip/LadoColorEterno.o
+
+# target to build an object file
+src/Lado/Flip/LadoColorEterno.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Uno.dir/build.make CMakeFiles/Uno.dir/src/Lado/Flip/LadoColorEterno.cpp.o
+.PHONY : src/Lado/Flip/LadoColorEterno.cpp.o
+
+src/Lado/Flip/LadoColorEterno.i: src/Lado/Flip/LadoColorEterno.cpp.i
+.PHONY : src/Lado/Flip/LadoColorEterno.i
+
+# target to preprocess a source file
+src/Lado/Flip/LadoColorEterno.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Uno.dir/build.make CMakeFiles/Uno.dir/src/Lado/Flip/LadoColorEterno.cpp.i
+.PHONY : src/Lado/Flip/LadoColorEterno.cpp.i
+
+src/Lado/Flip/LadoColorEterno.s: src/Lado/Flip/LadoColorEterno.cpp.s
+.PHONY : src/Lado/Flip/LadoColorEterno.s
+
+# target to generate assembly for a file
+src/Lado/Flip/LadoColorEterno.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Uno.dir/build.make CMakeFiles/Uno.dir/src/Lado/Flip/LadoColorEterno.cpp.s
+.PHONY : src/Lado/Flip/LadoColorEterno.cpp.s
+
+src/Lado/Flip/LadoFlip.o: src/Lado/Flip/LadoFlip.cpp.o
+.PHONY : src/Lado/Flip/LadoFlip.o
+
+# target to build an object file
+src/Lado/Flip/LadoFlip.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Uno.dir/build.make CMakeFiles/Uno.dir/src/Lado/Flip/LadoFlip.cpp.o
+.PHONY : src/Lado/Flip/LadoFlip.cpp.o
+
+src/Lado/Flip/LadoFlip.i: src/Lado/Flip/LadoFlip.cpp.i
+.PHONY : src/Lado/Flip/LadoFlip.i
+
+# target to preprocess a source file
+src/Lado/Flip/LadoFlip.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Uno.dir/build.make CMakeFiles/Uno.dir/src/Lado/Flip/LadoFlip.cpp.i
+.PHONY : src/Lado/Flip/LadoFlip.cpp.i
+
+src/Lado/Flip/LadoFlip.s: src/Lado/Flip/LadoFlip.cpp.s
+.PHONY : src/Lado/Flip/LadoFlip.s
+
+# target to generate assembly for a file
+src/Lado/Flip/LadoFlip.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Uno.dir/build.make CMakeFiles/Uno.dir/src/Lado/Flip/LadoFlip.cpp.s
+.PHONY : src/Lado/Flip/LadoFlip.cpp.s
+
+src/Lado/Flip/LadoMasDosFlip.o: src/Lado/Flip/LadoMasDosFlip.cpp.o
+.PHONY : src/Lado/Flip/LadoMasDosFlip.o
+
+# target to build an object file
+src/Lado/Flip/LadoMasDosFlip.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Uno.dir/build.make CMakeFiles/Uno.dir/src/Lado/Flip/LadoMasDosFlip.cpp.o
+.PHONY : src/Lado/Flip/LadoMasDosFlip.cpp.o
+
+src/Lado/Flip/LadoMasDosFlip.i: src/Lado/Flip/LadoMasDosFlip.cpp.i
+.PHONY : src/Lado/Flip/LadoMasDosFlip.i
+
+# target to preprocess a source file
+src/Lado/Flip/LadoMasDosFlip.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Uno.dir/build.make CMakeFiles/Uno.dir/src/Lado/Flip/LadoMasDosFlip.cpp.i
+.PHONY : src/Lado/Flip/LadoMasDosFlip.cpp.i
+
+src/Lado/Flip/LadoMasDosFlip.s: src/Lado/Flip/LadoMasDosFlip.cpp.s
+.PHONY : src/Lado/Flip/LadoMasDosFlip.s
+
+# target to generate assembly for a file
+src/Lado/Flip/LadoMasDosFlip.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Uno.dir/build.make CMakeFiles/Uno.dir/src/Lado/Flip/LadoMasDosFlip.cpp.s
+.PHONY : src/Lado/Flip/LadoMasDosFlip.cpp.s
+
+src/Lado/Flip/LadoMasSeisFlip.o: src/Lado/Flip/LadoMasSeisFlip.cpp.o
+.PHONY : src/Lado/Flip/LadoMasSeisFlip.o
+
+# target to build an object file
+src/Lado/Flip/LadoMasSeisFlip.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Uno.dir/build.make CMakeFiles/Uno.dir/src/Lado/Flip/LadoMasSeisFlip.cpp.o
+.PHONY : src/Lado/Flip/LadoMasSeisFlip.cpp.o
+
+src/Lado/Flip/LadoMasSeisFlip.i: src/Lado/Flip/LadoMasSeisFlip.cpp.i
+.PHONY : src/Lado/Flip/LadoMasSeisFlip.i
+
+# target to preprocess a source file
+src/Lado/Flip/LadoMasSeisFlip.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Uno.dir/build.make CMakeFiles/Uno.dir/src/Lado/Flip/LadoMasSeisFlip.cpp.i
+.PHONY : src/Lado/Flip/LadoMasSeisFlip.cpp.i
+
+src/Lado/Flip/LadoMasSeisFlip.s: src/Lado/Flip/LadoMasSeisFlip.cpp.s
+.PHONY : src/Lado/Flip/LadoMasSeisFlip.s
+
+# target to generate assembly for a file
+src/Lado/Flip/LadoMasSeisFlip.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Uno.dir/build.make CMakeFiles/Uno.dir/src/Lado/Flip/LadoMasSeisFlip.cpp.s
+.PHONY : src/Lado/Flip/LadoMasSeisFlip.cpp.s
+
+src/Lado/Flip/LadoMasTresFlip.o: src/Lado/Flip/LadoMasTresFlip.cpp.o
+.PHONY : src/Lado/Flip/LadoMasTresFlip.o
+
+# target to build an object file
+src/Lado/Flip/LadoMasTresFlip.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Uno.dir/build.make CMakeFiles/Uno.dir/src/Lado/Flip/LadoMasTresFlip.cpp.o
+.PHONY : src/Lado/Flip/LadoMasTresFlip.cpp.o
+
+src/Lado/Flip/LadoMasTresFlip.i: src/Lado/Flip/LadoMasTresFlip.cpp.i
+.PHONY : src/Lado/Flip/LadoMasTresFlip.i
+
+# target to preprocess a source file
+src/Lado/Flip/LadoMasTresFlip.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Uno.dir/build.make CMakeFiles/Uno.dir/src/Lado/Flip/LadoMasTresFlip.cpp.i
+.PHONY : src/Lado/Flip/LadoMasTresFlip.cpp.i
+
+src/Lado/Flip/LadoMasTresFlip.s: src/Lado/Flip/LadoMasTresFlip.cpp.s
+.PHONY : src/Lado/Flip/LadoMasTresFlip.s
+
+# target to generate assembly for a file
+src/Lado/Flip/LadoMasTresFlip.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Uno.dir/build.make CMakeFiles/Uno.dir/src/Lado/Flip/LadoMasTresFlip.cpp.s
+.PHONY : src/Lado/Flip/LadoMasTresFlip.cpp.s
+
+src/Lado/Flip/LadoMasUnoFlip.o: src/Lado/Flip/LadoMasUnoFlip.cpp.o
+.PHONY : src/Lado/Flip/LadoMasUnoFlip.o
+
+# target to build an object file
+src/Lado/Flip/LadoMasUnoFlip.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Uno.dir/build.make CMakeFiles/Uno.dir/src/Lado/Flip/LadoMasUnoFlip.cpp.o
+.PHONY : src/Lado/Flip/LadoMasUnoFlip.cpp.o
+
+src/Lado/Flip/LadoMasUnoFlip.i: src/Lado/Flip/LadoMasUnoFlip.cpp.i
+.PHONY : src/Lado/Flip/LadoMasUnoFlip.i
+
+# target to preprocess a source file
+src/Lado/Flip/LadoMasUnoFlip.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Uno.dir/build.make CMakeFiles/Uno.dir/src/Lado/Flip/LadoMasUnoFlip.cpp.i
+.PHONY : src/Lado/Flip/LadoMasUnoFlip.cpp.i
+
+src/Lado/Flip/LadoMasUnoFlip.s: src/Lado/Flip/LadoMasUnoFlip.cpp.s
+.PHONY : src/Lado/Flip/LadoMasUnoFlip.s
+
+# target to generate assembly for a file
+src/Lado/Flip/LadoMasUnoFlip.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Uno.dir/build.make CMakeFiles/Uno.dir/src/Lado/Flip/LadoMasUnoFlip.cpp.s
+.PHONY : src/Lado/Flip/LadoMasUnoFlip.cpp.s
+
+src/Lado/Flip/LadoSaltaTodos.o: src/Lado/Flip/LadoSaltaTodos.cpp.o
+.PHONY : src/Lado/Flip/LadoSaltaTodos.o
+
+# target to build an object file
+src/Lado/Flip/LadoSaltaTodos.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Uno.dir/build.make CMakeFiles/Uno.dir/src/Lado/Flip/LadoSaltaTodos.cpp.o
+.PHONY : src/Lado/Flip/LadoSaltaTodos.cpp.o
+
+src/Lado/Flip/LadoSaltaTodos.i: src/Lado/Flip/LadoSaltaTodos.cpp.i
+.PHONY : src/Lado/Flip/LadoSaltaTodos.i
+
+# target to preprocess a source file
+src/Lado/Flip/LadoSaltaTodos.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Uno.dir/build.make CMakeFiles/Uno.dir/src/Lado/Flip/LadoSaltaTodos.cpp.i
+.PHONY : src/Lado/Flip/LadoSaltaTodos.cpp.i
+
+src/Lado/Flip/LadoSaltaTodos.s: src/Lado/Flip/LadoSaltaTodos.cpp.s
+.PHONY : src/Lado/Flip/LadoSaltaTodos.s
+
+# target to generate assembly for a file
+src/Lado/Flip/LadoSaltaTodos.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Uno.dir/build.make CMakeFiles/Uno.dir/src/Lado/Flip/LadoSaltaTodos.cpp.s
+.PHONY : src/Lado/Flip/LadoSaltaTodos.cpp.s
+
 src/Lado/Lado.o: src/Lado/Lado.cpp.o
 .PHONY : src/Lado/Lado.o
 
@@ -224,6 +392,30 @@ src/Lado/Lado.s: src/Lado/Lado.cpp.s
 src/Lado/Lado.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Uno.dir/build.make CMakeFiles/Uno.dir/src/Lado/Lado.cpp.s
 .PHONY : src/Lado/Lado.cpp.s
+
+src/Lado/LadoCambio.o: src/Lado/LadoCambio.cpp.o
+.PHONY : src/Lado/LadoCambio.o
+
+# target to build an object file
+src/Lado/LadoCambio.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Uno.dir/build.make CMakeFiles/Uno.dir/src/Lado/LadoCambio.cpp.o
+.PHONY : src/Lado/LadoCambio.cpp.o
+
+src/Lado/LadoCambio.i: src/Lado/LadoCambio.cpp.i
+.PHONY : src/Lado/LadoCambio.i
+
+# target to preprocess a source file
+src/Lado/LadoCambio.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Uno.dir/build.make CMakeFiles/Uno.dir/src/Lado/LadoCambio.cpp.i
+.PHONY : src/Lado/LadoCambio.cpp.i
+
+src/Lado/LadoCambio.s: src/Lado/LadoCambio.cpp.s
+.PHONY : src/Lado/LadoCambio.s
+
+# target to generate assembly for a file
+src/Lado/LadoCambio.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Uno.dir/build.make CMakeFiles/Uno.dir/src/Lado/LadoCambio.cpp.s
+.PHONY : src/Lado/LadoCambio.cpp.s
 
 src/Lado/LadoComodin.o: src/Lado/LadoComodin.cpp.o
 .PHONY : src/Lado/LadoComodin.o
@@ -321,6 +513,30 @@ src/Lado/LadoNumero.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Uno.dir/build.make CMakeFiles/Uno.dir/src/Lado/LadoNumero.cpp.s
 .PHONY : src/Lado/LadoNumero.cpp.s
 
+src/Lado/LadoRayosX.o: src/Lado/LadoRayosX.cpp.o
+.PHONY : src/Lado/LadoRayosX.o
+
+# target to build an object file
+src/Lado/LadoRayosX.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Uno.dir/build.make CMakeFiles/Uno.dir/src/Lado/LadoRayosX.cpp.o
+.PHONY : src/Lado/LadoRayosX.cpp.o
+
+src/Lado/LadoRayosX.i: src/Lado/LadoRayosX.cpp.i
+.PHONY : src/Lado/LadoRayosX.i
+
+# target to preprocess a source file
+src/Lado/LadoRayosX.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Uno.dir/build.make CMakeFiles/Uno.dir/src/Lado/LadoRayosX.cpp.i
+.PHONY : src/Lado/LadoRayosX.cpp.i
+
+src/Lado/LadoRayosX.s: src/Lado/LadoRayosX.cpp.s
+.PHONY : src/Lado/LadoRayosX.s
+
+# target to generate assembly for a file
+src/Lado/LadoRayosX.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Uno.dir/build.make CMakeFiles/Uno.dir/src/Lado/LadoRayosX.cpp.s
+.PHONY : src/Lado/LadoRayosX.cpp.s
+
 src/Lado/LadoReversa.o: src/Lado/LadoReversa.cpp.o
 .PHONY : src/Lado/LadoReversa.o
 
@@ -411,9 +627,33 @@ help:
 	@echo "... src/Jugador/Jugador.o"
 	@echo "... src/Jugador/Jugador.i"
 	@echo "... src/Jugador/Jugador.s"
+	@echo "... src/Lado/Flip/LadoColorEterno.o"
+	@echo "... src/Lado/Flip/LadoColorEterno.i"
+	@echo "... src/Lado/Flip/LadoColorEterno.s"
+	@echo "... src/Lado/Flip/LadoFlip.o"
+	@echo "... src/Lado/Flip/LadoFlip.i"
+	@echo "... src/Lado/Flip/LadoFlip.s"
+	@echo "... src/Lado/Flip/LadoMasDosFlip.o"
+	@echo "... src/Lado/Flip/LadoMasDosFlip.i"
+	@echo "... src/Lado/Flip/LadoMasDosFlip.s"
+	@echo "... src/Lado/Flip/LadoMasSeisFlip.o"
+	@echo "... src/Lado/Flip/LadoMasSeisFlip.i"
+	@echo "... src/Lado/Flip/LadoMasSeisFlip.s"
+	@echo "... src/Lado/Flip/LadoMasTresFlip.o"
+	@echo "... src/Lado/Flip/LadoMasTresFlip.i"
+	@echo "... src/Lado/Flip/LadoMasTresFlip.s"
+	@echo "... src/Lado/Flip/LadoMasUnoFlip.o"
+	@echo "... src/Lado/Flip/LadoMasUnoFlip.i"
+	@echo "... src/Lado/Flip/LadoMasUnoFlip.s"
+	@echo "... src/Lado/Flip/LadoSaltaTodos.o"
+	@echo "... src/Lado/Flip/LadoSaltaTodos.i"
+	@echo "... src/Lado/Flip/LadoSaltaTodos.s"
 	@echo "... src/Lado/Lado.o"
 	@echo "... src/Lado/Lado.i"
 	@echo "... src/Lado/Lado.s"
+	@echo "... src/Lado/LadoCambio.o"
+	@echo "... src/Lado/LadoCambio.i"
+	@echo "... src/Lado/LadoCambio.s"
 	@echo "... src/Lado/LadoComodin.o"
 	@echo "... src/Lado/LadoComodin.i"
 	@echo "... src/Lado/LadoComodin.s"
@@ -426,6 +666,9 @@ help:
 	@echo "... src/Lado/LadoNumero.o"
 	@echo "... src/Lado/LadoNumero.i"
 	@echo "... src/Lado/LadoNumero.s"
+	@echo "... src/Lado/LadoRayosX.o"
+	@echo "... src/Lado/LadoRayosX.i"
+	@echo "... src/Lado/LadoRayosX.s"
 	@echo "... src/Lado/LadoReversa.o"
 	@echo "... src/Lado/LadoReversa.i"
 	@echo "... src/Lado/LadoReversa.s"

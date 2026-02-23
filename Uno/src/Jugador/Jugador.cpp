@@ -173,6 +173,21 @@ bool Jugador::tieneCartaAcumulable(const Lado& tope) const
     return false;
 }
 
+void Jugador::intercambiarCartasCon(Jugador& otro)
+{
+    cartas.intercambiar(otro.cartas);
+}
+
+void Jugador::voltearCartas()
+{
+    for (int i = 0; i < cartas.getLongitud(); i++) {
+        Carta* carta = cartas.get(i);
+        if (carta != nullptr) {
+            carta->voltear();
+        }
+    }
+}
+
 int Jugador::getCantidadCartas() const
 {
     return cartas.getLongitud();

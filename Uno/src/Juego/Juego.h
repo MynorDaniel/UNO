@@ -12,6 +12,15 @@
 #include "../Lado/LadoMasDos.h"
 #include "../Lado/LadoComodin.h"
 #include "../Lado/LadoMasCuatro.h"
+#include "../Lado/LadoRayosX.h"
+#include "../Lado/LadoCambio.h"
+#include "../Lado/Flip/LadoFlip.h"
+#include "../Lado/Flip/LadoMasUnoFlip.h"
+#include "../Lado/Flip/LadoMasDosFlip.h"
+#include "../Lado/Flip/LadoMasTresFlip.h"
+#include "../Lado/Flip/LadoMasSeisFlip.h"
+#include "../Lado/Flip/LadoSaltaTodos.h"
+#include "../Lado/Flip/LadoColorEterno.h"
 #include "../ListaCircularDoble/Nodo.h"
 
 class Juego
@@ -31,12 +40,18 @@ private:
     int numeroAnteriorMasCuatro;
     bool numeroAnteriorValido;
     Jugador* jugadorPendienteUno;
+    Jugador* jugadorActual;
+    NodoCircularDoble<Jugador*>* nodoActualTurno;
 
     bool modoAcumulacion;
     bool modoRetoMasCuatro;
     bool modoRoboSinLimite;
     bool modoGritoDeUno;
     bool modoGanarConNegra;
+    bool modoFlip;
+    bool colorEternoPendiente;
+    Color colorEternoObjetivo;
+    bool repetirTurnoActual;
 
 public:
     Juego(/* args */);
@@ -48,13 +63,26 @@ public:
     void aplicarSalto();
     void aplicarMasDos();
     void aplicarMasCuatro();
+    void aplicarMasUnoFlip();
+    void aplicarMasDosFlip();
+    void aplicarMasTresFlip();
+    void aplicarMasSeisFlip();
+    void aplicarSaltaTodosFlip();
+    void aplicarFlip();
+    void aplicarColorEterno(Color colorElegido);
     void registrarMasCuatro(Jugador* jugador, const Lado& topeAntes);
     bool isModoRoboSinLimite() const;
+    void revelarCartasSiguiente();
+    void intercambiarCartasConAnterior();
+    std::string getNombreJugadorActual() const;
+    Color pedirColorOscuro(const std::string& nombreJugador);
 
 private:
     int calcularCantidadDeMazos(int cantidadJugadores);
     void crearMazoCompleto();
     void crearMazo();
+    void crearMazoFlip();
+    void pedirModoJuego();
     void pedirConfiguracion();
     void pedirJugadores();
     void repartirCartas();
@@ -69,6 +97,8 @@ private:
     void manejarGritoUno(Jugador* jugador);
     void manejarReporteUno(Jugador* jugadorReportador);
     bool esCartaNegra(const Carta* carta) const;
+    NodoCircularDoble<Jugador*>* obtenerNodoSiguiente() const;
+    NodoCircularDoble<Jugador*>* obtenerNodoAnterior() const;
 
     void limpiarPantalla();
     void esperarContinuar();
@@ -79,6 +109,7 @@ private:
     void mostrarTopeDescarte();
     void mostrarCartasJugador(Jugador* jugador);
     int pedirIndiceCarta(Jugador* jugador, const char* mensaje);
+    
     
 
 };
