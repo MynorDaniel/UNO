@@ -190,7 +190,13 @@ CMakeFiles/Uno.dir/src/Jugador/Jugador.cpp.o: \
  /home/mynordma/UNO/Uno/src/Jugador/../Juego/../Lado/Flip/LadoMasSeisFlip.h \
  /home/mynordma/UNO/Uno/src/Jugador/../Juego/../Lado/Flip/LadoSaltaTodos.h \
  /home/mynordma/UNO/Uno/src/Jugador/../Juego/../Lado/Flip/LadoColorEterno.h \
+ /home/mynordma/UNO/Uno/src/Jugador/../Juego/../Consola/Consola.h \
+ /home/mynordma/UNO/Uno/src/Jugador/../Juego/../Consola/../Color/Color.h \
  /home/mynordma/UNO/Uno/src/Jugador/../Juego/../ListaCircularDoble/Nodo.h \
+ /home/mynordma/UNO/Uno/src/Jugador/../Juego/../Validador/Validador.h \
+ /home/mynordma/UNO/Uno/src/Jugador/../Juego/../Validador/../Pila/Pila.h \
+ /home/mynordma/UNO/Uno/src/Jugador/../Juego/../Validador/../Carta/Carta.h \
+ /home/mynordma/UNO/Uno/src/Jugador/../Juego/../Validador/../Jugador/Jugador.h \
  /home/mynordma/UNO/Uno/src/Jugador/../Lado/LadoComodin.h \
  /home/mynordma/UNO/Uno/src/Jugador/../Lado/LadoMasCuatro.h \
  /home/mynordma/UNO/Uno/src/Jugador/../Lado/LadoMasDos.h \

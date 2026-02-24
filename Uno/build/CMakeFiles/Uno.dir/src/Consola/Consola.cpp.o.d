@@ -1,8 +1,6 @@
-CMakeFiles/Uno.dir/src/Lado/Flip/LadoMasTresFlip.cpp.o: \
- /home/mynordma/UNO/Uno/src/Lado/Flip/LadoMasTresFlip.cpp \
- /usr/include/stdc-predef.h \
- /home/mynordma/UNO/Uno/src/Lado/Flip/LadoMasTresFlip.h \
- /home/mynordma/UNO/Uno/src/Lado/Flip/../Lado.h \
+CMakeFiles/Uno.dir/src/Consola/Consola.cpp.o: \
+ /home/mynordma/UNO/Uno/src/Consola/Consola.cpp \
+ /usr/include/stdc-predef.h /home/mynordma/UNO/Uno/src/Consola/Consola.h \
  /usr/include/c++/13/string /usr/include/c++/13/bits/requires_hosted.h \
  /usr/include/x86_64-linux-gnu/c++/13/bits/c++config.h \
  /usr/include/x86_64-linux-gnu/c++/13/bits/os_defines.h \
@@ -117,6 +115,7 @@ CMakeFiles/Uno.dir/src/Lado/Flip/LadoMasTresFlip.cpp.o: \
  /usr/include/c++/13/bits/memory_resource.h /usr/include/c++/13/cstddef \
  /usr/include/c++/13/bits/uses_allocator.h \
  /usr/include/c++/13/bits/uses_allocator_args.h /usr/include/c++/13/tuple \
+ /home/mynordma/UNO/Uno/src/Consola/../Color/Color.h \
  /usr/include/c++/13/iostream /usr/include/c++/13/ostream \
  /usr/include/c++/13/ios /usr/include/c++/13/exception \
  /usr/include/c++/13/bits/exception_ptr.h \
@@ -153,50 +152,4 @@ CMakeFiles/Uno.dir/src/Lado/Flip/LadoMasTresFlip.cpp.o: \
  /usr/include/c++/13/bits/locale_facets.tcc \
  /usr/include/c++/13/bits/basic_ios.tcc \
  /usr/include/c++/13/bits/ostream.tcc /usr/include/c++/13/istream \
- /usr/include/c++/13/bits/istream.tcc \
- /home/mynordma/UNO/Uno/src/Lado/Flip/../../Color/Color.h \
- /home/mynordma/UNO/Uno/src/Lado/Flip/../../Color/Color.h \
- /home/mynordma/UNO/Uno/src/Lado/Flip/../../Juego/Juego.h \
- /home/mynordma/UNO/Uno/src/Lado/Flip/../../Juego/../Carta/Carta.h \
- /home/mynordma/UNO/Uno/src/Lado/Flip/../../Juego/../Carta/../Lado/Lado.h \
- /home/mynordma/UNO/Uno/src/Lado/Flip/../../Juego/../Jugador/Jugador.h \
- /home/mynordma/UNO/Uno/src/Lado/Flip/../../Juego/../Jugador/../Lista/Lista.h \
- /home/mynordma/UNO/Uno/src/Lado/Flip/../../Juego/../Jugador/../Lista/Nodo.h \
- /home/mynordma/UNO/Uno/src/Lado/Flip/../../Juego/../Jugador/../Lista/Nodo.tpp \
- /home/mynordma/UNO/Uno/src/Lado/Flip/../../Juego/../Jugador/../Lista/Lista.tpp \
- /home/mynordma/UNO/Uno/src/Lado/Flip/../../Juego/../Jugador/../Carta/Carta.h \
- /home/mynordma/UNO/Uno/src/Lado/Flip/../../Juego/../Jugador/../Pila/Pila.h \
- /home/mynordma/UNO/Uno/src/Lado/Flip/../../Juego/../Jugador/../Pila/../Lista/Nodo.h \
- /home/mynordma/UNO/Uno/src/Lado/Flip/../../Juego/../Jugador/../Pila/Pila.tpp \
- /home/mynordma/UNO/Uno/src/Lado/Flip/../../Juego/../Pila/Pila.h \
- /home/mynordma/UNO/Uno/src/Lado/Flip/../../Juego/../ListaCircularDoble/ListaCircularDoble.h \
- /home/mynordma/UNO/Uno/src/Lado/Flip/../../Juego/../ListaCircularDoble/Nodo.h \
- /home/mynordma/UNO/Uno/src/Lado/Flip/../../Juego/../ListaCircularDoble/Nodo.tpp \
- /home/mynordma/UNO/Uno/src/Lado/Flip/../../Juego/../ListaCircularDoble/ListaCircularDoble.tpp \
- /home/mynordma/UNO/Uno/src/Lado/Flip/../../Juego/../Lado/Lado.h \
- /home/mynordma/UNO/Uno/src/Lado/Flip/../../Juego/../Lado/LadoNumero.h \
- /home/mynordma/UNO/Uno/src/Lado/Flip/../../Juego/../Lado/Lado.h \
- /home/mynordma/UNO/Uno/src/Lado/Flip/../../Juego/../Lado/LadoSalto.h \
- /home/mynordma/UNO/Uno/src/Lado/Flip/../../Juego/../Lado/../Color/Color.h \
- /home/mynordma/UNO/Uno/src/Lado/Flip/../../Juego/../Lado/LadoReversa.h \
- /home/mynordma/UNO/Uno/src/Lado/Flip/../../Juego/../Lado/LadoMasDos.h \
- /home/mynordma/UNO/Uno/src/Lado/Flip/../../Juego/../Lado/LadoComodin.h \
- /home/mynordma/UNO/Uno/src/Lado/Flip/../../Juego/../Lado/LadoMasCuatro.h \
- /home/mynordma/UNO/Uno/src/Lado/Flip/../../Juego/../Lado/LadoRayosX.h \
- /home/mynordma/UNO/Uno/src/Lado/Flip/../../Juego/../Lado/LadoCambio.h \
- /home/mynordma/UNO/Uno/src/Lado/Flip/../../Juego/../Lado/Flip/LadoFlip.h \
- /home/mynordma/UNO/Uno/src/Lado/Flip/../../Juego/../Lado/Flip/../Lado.h \
- /home/mynordma/UNO/Uno/src/Lado/Flip/../../Juego/../Lado/Flip/../../Color/Color.h \
- /home/mynordma/UNO/Uno/src/Lado/Flip/../../Juego/../Lado/Flip/LadoMasUnoFlip.h \
- /home/mynordma/UNO/Uno/src/Lado/Flip/../../Juego/../Lado/Flip/LadoMasDosFlip.h \
- /home/mynordma/UNO/Uno/src/Lado/Flip/../../Juego/../Lado/Flip/LadoMasTresFlip.h \
- /home/mynordma/UNO/Uno/src/Lado/Flip/../../Juego/../Lado/Flip/LadoMasSeisFlip.h \
- /home/mynordma/UNO/Uno/src/Lado/Flip/../../Juego/../Lado/Flip/LadoSaltaTodos.h \
- /home/mynordma/UNO/Uno/src/Lado/Flip/../../Juego/../Lado/Flip/LadoColorEterno.h \
- /home/mynordma/UNO/Uno/src/Lado/Flip/../../Juego/../Consola/Consola.h \
- /home/mynordma/UNO/Uno/src/Lado/Flip/../../Juego/../Consola/../Color/Color.h \
- /home/mynordma/UNO/Uno/src/Lado/Flip/../../Juego/../ListaCircularDoble/Nodo.h \
- /home/mynordma/UNO/Uno/src/Lado/Flip/../../Juego/../Validador/Validador.h \
- /home/mynordma/UNO/Uno/src/Lado/Flip/../../Juego/../Validador/../Pila/Pila.h \
- /home/mynordma/UNO/Uno/src/Lado/Flip/../../Juego/../Validador/../Carta/Carta.h \
- /home/mynordma/UNO/Uno/src/Lado/Flip/../../Juego/../Validador/../Jugador/Jugador.h
+ /usr/include/c++/13/bits/istream.tcc

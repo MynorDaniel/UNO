@@ -1,6 +1,8 @@
-CMakeFiles/Uno.dir/src/main.cpp.o: /home/mynordma/UNO/Uno/src/main.cpp \
- /usr/include/stdc-predef.h /usr/include/c++/13/iostream \
- /usr/include/c++/13/bits/requires_hosted.h \
+CMakeFiles/Uno.dir/src/Validador/Validador.cpp.o: \
+ /home/mynordma/UNO/Uno/src/Validador/Validador.cpp \
+ /usr/include/stdc-predef.h \
+ /home/mynordma/UNO/Uno/src/Validador/Validador.h \
+ /usr/include/c++/13/iostream /usr/include/c++/13/bits/requires_hosted.h \
  /usr/include/x86_64-linux-gnu/c++/13/bits/c++config.h \
  /usr/include/x86_64-linux-gnu/c++/13/bits/os_defines.h \
  /usr/include/features.h /usr/include/features-time64.h \
@@ -149,48 +151,17 @@ CMakeFiles/Uno.dir/src/main.cpp.o: /home/mynordma/UNO/Uno/src/main.cpp \
  /usr/include/c++/13/bits/basic_ios.tcc \
  /usr/include/c++/13/bits/ostream.tcc /usr/include/c++/13/istream \
  /usr/include/c++/13/bits/istream.tcc \
- /home/mynordma/UNO/Uno/src/Juego/Juego.h \
- /home/mynordma/UNO/Uno/src/Juego/../Carta/Carta.h \
- /home/mynordma/UNO/Uno/src/Juego/../Carta/../Lado/Lado.h \
- /home/mynordma/UNO/Uno/src/Juego/../Carta/../Lado/../Color/Color.h \
- /home/mynordma/UNO/Uno/src/Juego/../Jugador/Jugador.h \
- /home/mynordma/UNO/Uno/src/Juego/../Jugador/../Lista/Lista.h \
- /home/mynordma/UNO/Uno/src/Juego/../Jugador/../Lista/Nodo.h \
- /home/mynordma/UNO/Uno/src/Juego/../Jugador/../Lista/Nodo.tpp \
- /home/mynordma/UNO/Uno/src/Juego/../Jugador/../Lista/Lista.tpp \
- /home/mynordma/UNO/Uno/src/Juego/../Jugador/../Carta/Carta.h \
- /home/mynordma/UNO/Uno/src/Juego/../Jugador/../Pila/Pila.h \
- /home/mynordma/UNO/Uno/src/Juego/../Jugador/../Pila/../Lista/Nodo.h \
- /home/mynordma/UNO/Uno/src/Juego/../Jugador/../Pila/Pila.tpp \
- /home/mynordma/UNO/Uno/src/Juego/../Pila/Pila.h \
- /home/mynordma/UNO/Uno/src/Juego/../ListaCircularDoble/ListaCircularDoble.h \
- /home/mynordma/UNO/Uno/src/Juego/../ListaCircularDoble/Nodo.h \
- /home/mynordma/UNO/Uno/src/Juego/../ListaCircularDoble/Nodo.tpp \
- /home/mynordma/UNO/Uno/src/Juego/../ListaCircularDoble/ListaCircularDoble.tpp \
- /home/mynordma/UNO/Uno/src/Juego/../Lado/Lado.h \
- /home/mynordma/UNO/Uno/src/Juego/../Lado/LadoNumero.h \
- /home/mynordma/UNO/Uno/src/Juego/../Lado/Lado.h \
- /home/mynordma/UNO/Uno/src/Juego/../Lado/LadoSalto.h \
- /home/mynordma/UNO/Uno/src/Juego/../Lado/../Color/Color.h \
- /home/mynordma/UNO/Uno/src/Juego/../Lado/LadoReversa.h \
- /home/mynordma/UNO/Uno/src/Juego/../Lado/LadoMasDos.h \
- /home/mynordma/UNO/Uno/src/Juego/../Lado/LadoComodin.h \
- /home/mynordma/UNO/Uno/src/Juego/../Lado/LadoMasCuatro.h \
- /home/mynordma/UNO/Uno/src/Juego/../Lado/LadoRayosX.h \
- /home/mynordma/UNO/Uno/src/Juego/../Lado/LadoCambio.h \
- /home/mynordma/UNO/Uno/src/Juego/../Lado/Flip/LadoFlip.h \
- /home/mynordma/UNO/Uno/src/Juego/../Lado/Flip/../Lado.h \
- /home/mynordma/UNO/Uno/src/Juego/../Lado/Flip/../../Color/Color.h \
- /home/mynordma/UNO/Uno/src/Juego/../Lado/Flip/LadoMasUnoFlip.h \
- /home/mynordma/UNO/Uno/src/Juego/../Lado/Flip/LadoMasDosFlip.h \
- /home/mynordma/UNO/Uno/src/Juego/../Lado/Flip/LadoMasTresFlip.h \
- /home/mynordma/UNO/Uno/src/Juego/../Lado/Flip/LadoMasSeisFlip.h \
- /home/mynordma/UNO/Uno/src/Juego/../Lado/Flip/LadoSaltaTodos.h \
- /home/mynordma/UNO/Uno/src/Juego/../Lado/Flip/LadoColorEterno.h \
- /home/mynordma/UNO/Uno/src/Juego/../Consola/Consola.h \
- /home/mynordma/UNO/Uno/src/Juego/../Consola/../Color/Color.h \
- /home/mynordma/UNO/Uno/src/Juego/../ListaCircularDoble/Nodo.h \
- /home/mynordma/UNO/Uno/src/Juego/../Validador/Validador.h \
- /home/mynordma/UNO/Uno/src/Juego/../Validador/../Pila/Pila.h \
- /home/mynordma/UNO/Uno/src/Juego/../Validador/../Carta/Carta.h \
- /home/mynordma/UNO/Uno/src/Juego/../Validador/../Jugador/Jugador.h
+ /home/mynordma/UNO/Uno/src/Validador/../Pila/Pila.h \
+ /home/mynordma/UNO/Uno/src/Validador/../Pila/../Lista/Nodo.h \
+ /home/mynordma/UNO/Uno/src/Validador/../Pila/../Lista/Nodo.tpp \
+ /home/mynordma/UNO/Uno/src/Validador/../Pila/../Lista/Nodo.h \
+ /home/mynordma/UNO/Uno/src/Validador/../Pila/Pila.tpp \
+ /home/mynordma/UNO/Uno/src/Validador/../Carta/Carta.h \
+ /home/mynordma/UNO/Uno/src/Validador/../Carta/../Lado/Lado.h \
+ /home/mynordma/UNO/Uno/src/Validador/../Carta/../Lado/../Color/Color.h \
+ /home/mynordma/UNO/Uno/src/Validador/../Jugador/Jugador.h \
+ /home/mynordma/UNO/Uno/src/Validador/../Jugador/../Lista/Lista.h \
+ /home/mynordma/UNO/Uno/src/Validador/../Jugador/../Lista/Nodo.h \
+ /home/mynordma/UNO/Uno/src/Validador/../Jugador/../Lista/Lista.tpp \
+ /home/mynordma/UNO/Uno/src/Validador/../Jugador/../Carta/Carta.h \
+ /home/mynordma/UNO/Uno/src/Validador/../Jugador/../Pila/Pila.h

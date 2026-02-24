@@ -3,6 +3,7 @@
 #include <string>
 #include <cstdlib>
 #include <ctime>
+#include "../Consola/Consola.h"
 
 Juego::Juego()
         : modoAcumulacion(false),
@@ -302,24 +303,10 @@ void Juego::pedirConfiguracion()
 
 void Juego::pedirJugadores()
 {
-    int cantidad = 0;
-    while (cantidad < 2) {
-        std::cout << "\nIngrese la cantidad de jugadores (mínimo 2): ";
-        cantidad = leerOpcionMenu();
-        if (cantidad < 2) {
-            std::cout << "Debe ingresar al menos 2 jugadores.\n";
-        }
-    }
+    int cantidad = consola.pedirEnteroMinimo("\nIngrese la cantidad de jugadores (mínimo 2): ", 2);
 
     for (int i = 1; i <= cantidad; i++) {
-        std::string nombre;
-        while (nombre.empty()) {
-            std::cout << "Nombre del jugador " << i << ": ";
-            std::getline(std::cin >> std::ws, nombre);
-            if (nombre.empty()) {
-                std::cout << "El nombre no puede estar vacío.\n";
-            }
-        }
+    std::string nombre = consola.pedirTextoNoVacio("Nombre del jugador " + std::to_string(i) + ": ");
 
     Jugador* jugador = new Jugador(nombre, this, &mazo, &descarte);
         jugadores.insertar(jugador);
@@ -337,8 +324,7 @@ void Juego::pedirJugadores()
 void Juego::repartirCartas()
 {
     int totalJugadores = jugadores.getLongitud();
-    if (totalJugadores <= 0) {
-        std::cout << "\nNo hay jugadores para repartir cartas.\n";
+    if (!validador.validarJugadoresParaRepartir(totalJugadores)) {
         return;
     }
 
@@ -349,6 +335,9 @@ void Juego::repartirCartas()
         Jugador* jugador = jugadores.get(i);
         if (jugador != nullptr) {
             for (int j = 0; j < 7; j++) {
+                if (!validador.validarMazoNoVacio(mazo, "\nNo hay cartas en el mazo para repartir.")) {
+                    return;
+                }
                 Carta* carta = mazo.sacar();
                 jugador->tomarCarta(carta);
             }
@@ -369,44 +358,19 @@ void Juego::mostrarManos()
 }
 
 void Juego::limpiarPantalla() {
-    std::cout << "\033[2J\033[H";
+    consola.limpiarPantalla();
 }
 
 void Juego::esperarContinuar() {
-    std::cout << "Presione Enter para continuar...";
-    std::string linea;
-    std::getline(std::cin, linea);
+    consola.esperarContinuar();
 }
 
 int Juego::leerOpcionMenu() {
-    while (true) {
-        std::cout << "Seleccione una opción: ";
-        std::string entrada;
-        if (!std::getline(std::cin >> std::ws, entrada)) {
-            std::cin.clear();
-            return 0;
-        }
-
-        if (entrada.empty()) {
-            std::cout << "Entrada vacía. Intente nuevamente.\n";
-            continue;
-        }
-
-        try {
-            size_t idx = 0;
-            int opcion = std::stoi(entrada, &idx);
-            if (idx != entrada.size()) {
-                throw std::invalid_argument("Entrada inválida");
-            }
-            return opcion;
-        } catch (const std::exception&) {
-            std::cout << "Entrada inválida. Ingrese un número.\n";
-        }
-    }
+    return consola.leerOpcionMenu();
 }
 
 const char* Juego::boolTexto(bool valor) {
-    return valor ? "true" : "false";
+    return consola.boolTexto(valor);
 }
 
 void Juego::mostrarMazo() {
@@ -457,65 +421,15 @@ int Juego::pedirIndiceCarta(Jugador* jugador, const char* mensaje) {
     if (jugador == nullptr) {
         return -1;
     }
-    int indice = -1;
-    while (indice < 1 || indice > jugador->getCantidadCartas()) {
-        std::cout << mensaje;
-        indice = leerOpcionMenu();
-        if (indice < 1 || indice > jugador->getCantidadCartas()) {
-            std::cout << "Indice inválido.\n";
-        }
-    }
-    return indice - 1;
+    return consola.pedirIndiceCarta(jugador->getCantidadCartas(), mensaje);
 }
 
 Color Juego::pedirColorCarta(const std::string& nombreJugador) {
-    while (true) {
-        std::cout << "\n" << nombreJugador << ", elige el color del comodín:\n";
-        std::cout << "1. Rojo\n";
-        std::cout << "2. Verde\n";
-        std::cout << "3. Azul\n";
-        std::cout << "4. Amarillo\n";
-
-        int opcion = leerOpcionMenu();
-        switch (opcion) {
-            case 1:
-                return Color::Rojo;
-            case 2:
-                return Color::Verde;
-            case 3:
-                return Color::Azul;
-            case 4:
-                return Color::Amarillo;
-            default:
-                std::cout << "Opción inválida. Intente nuevamente.\n";
-                break;
-        }
-    }
+    return consola.pedirColorClaro(nombreJugador);
 }
 
 Color Juego::pedirColorOscuro(const std::string& nombreJugador) {
-    while (true) {
-        std::cout << "\n" << nombreJugador << ", elige el color oscuro:\n";
-        std::cout << "1. Rosa\n";
-        std::cout << "2. Turquesa\n";
-        std::cout << "3. Naranja\n";
-        std::cout << "4. Violeta\n";
-
-        int opcion = leerOpcionMenu();
-        switch (opcion) {
-            case 1:
-                return Color::Rosa;
-            case 2:
-                return Color::Turquesa;
-            case 3:
-                return Color::Naranja;
-            case 4:
-                return Color::Violeta;
-            default:
-                std::cout << "Opción inválida. Intente nuevamente.\n";
-                break;
-        }
-    }
+    return consola.pedirColorOscuro(nombreJugador);
 }
 
 void Juego::aplicarReversa() {
@@ -635,6 +549,7 @@ bool Juego::isModoRoboSinLimite() const {
 }
 
 void Juego::revelarCartasSiguiente() {
+    limpiarPantalla();
     NodoCircularDoble<Jugador*>* nodoSiguiente = obtenerNodoSiguiente();
     if (nodoSiguiente == nullptr) {
         return;
@@ -669,6 +584,25 @@ void Juego::intercambiarCartasConAnterior() {
 
 std::string Juego::getNombreJugadorActual() const {
     return jugadorActual != nullptr ? jugadorActual->getNombre() : "Jugador";
+}
+
+void Juego::recargarMazoDesdeDescarte() {
+    if (!mazo.isEmpty()) {
+        return;
+    }
+
+    if (descarte.getLongitud() <= 1) {
+        return;
+    }
+
+    Carta* tope = descarte.sacar();
+    while (!descarte.isEmpty()) {
+        mazo.insertar(descarte.sacar());
+    }
+    descarte.insertar(tope);
+    mazo.barajear();
+
+    std::cout << "El mazo estaba vacío. Se barajaron las cartas del descarte.\n";
 }
 
 bool Juego::preguntarReinicio() {
@@ -734,7 +668,11 @@ bool Juego::aplicarEfectosInicioTurno(Jugador* jugador) {
 
     if (colorEternoPendiente) {
         std::cout << jugador->getNombre() << " debe robar hasta encontrar " << colorToString(colorEternoObjetivo) << ".\n";
-        while (!mazo.isEmpty()) {
+        while (true) {
+            recargarMazoDesdeDescarte();
+            if (mazo.isEmpty()) {
+                break;
+            }
             Carta* carta = mazo.sacar();
             jugador->tomarCarta(carta);
             if (carta != nullptr && carta->getLadoActual()->getColor() == colorEternoObjetivo) {
@@ -935,21 +873,16 @@ bool Juego::iniciarTurnos() {
 
     // Verificar que haya jugadores y cartas para iniciar el juego
     int totalJugadores = jugadores.getLongitud();
-    if (totalJugadores <= 0) {
-        std::cout << "No hay jugadores para iniciar turnos.\n";
-        return false;
-    }
-
-    // Verificar que el primer jugador tenga cartas para iniciar el juego
     NodoCircularDoble<Jugador*>* nodoInicial = jugadores.getCabeza();
     if (nodoInicial == nullptr) {
-        std::cout << "No hay cartas suficientes para iniciar turnos.\n";
+        validador.validarInicioTurnos(totalJugadores, nullptr);
         return false;
     }
-
     Jugador* jugadorInicial = nodoInicial->getDato();
-    if (jugadorInicial == nullptr || jugadorInicial->getCantidadCartas() == 0) {
-        std::cout << "No hay cartas suficientes para iniciar turnos.\n";
+    if (!validador.validarInicioTurnos(totalJugadores, jugadorInicial)) {
+        return false;
+    }
+    if (!validador.validarJugadorConCartas(jugadorInicial, "No hay cartas suficientes para iniciar turnos.")) {
         return false;
     }
 
@@ -960,8 +893,7 @@ bool Juego::iniciarTurnos() {
 
     // Pedir al jugador inicial que seleccione una carta para iniciar el descarte
     int indiceInicial = pedirIndiceCarta(jugadorInicial, "Seleccione la carta para iniciar el descarte: ");
-    Carta* cartaInicial = jugadorInicial->getCartas().get(indiceInicial);
-    jugadorInicial->getCartas().eliminar(indiceInicial);
+    Carta* cartaInicial = jugadorInicial->extraerCarta(indiceInicial);
     descarte.insertar(cartaInicial);
     std::cout << jugadorInicial->getNombre() << " descarta: "
               << cartaInicial->getLadoActual()->toString() << "\n";

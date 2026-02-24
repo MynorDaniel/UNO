@@ -21,7 +21,9 @@
 #include "../Lado/Flip/LadoMasSeisFlip.h"
 #include "../Lado/Flip/LadoSaltaTodos.h"
 #include "../Lado/Flip/LadoColorEterno.h"
+#include "../Consola/Consola.h"
 #include "../ListaCircularDoble/Nodo.h"
+#include "../Validador/Validador.h"
 
 class Juego
 {
@@ -30,6 +32,8 @@ private:
     ListaCircularDoble<Jugador*> jugadores;
     Pila<Carta*> mazo;
     Pila<Carta*> descarte;
+    Consola consola;
+    Validador validador;
 
     int direccionTurno;
     int saltosPendientes;
@@ -76,6 +80,7 @@ public:
     void intercambiarCartasConAnterior();
     std::string getNombreJugadorActual() const;
     Color pedirColorOscuro(const std::string& nombreJugador);
+    void recargarMazoDesdeDescarte();
 
 private:
     int calcularCantidadDeMazos(int cantidadJugadores);

@@ -9,6 +9,10 @@ LadoMasSeisFlip::~LadoMasSeisFlip() = default;
 
 void LadoMasSeisFlip::aplicarEfecto(Juego& juego) {
     std::cout << "Se ha jugado un +6 (Flip)." << "\n";
+    if (getColor() == Color::Multicolor) {
+        Color colorElegido = juego.pedirColorOscuro(juego.getNombreJugadorActual());
+        setColor(colorElegido);
+    }
     juego.aplicarMasSeisFlip();
 }
 

@@ -17,6 +17,13 @@ private:
     Pila<Carta*>* mazo;
     Pila<Carta*>* descarte;
 
+    void ordenarCartas();
+    void mergeSort(Carta** cartas, int inicio, int fin);
+    void mezclar(Carta** cartas, int inicio, int medio, int fin);
+    bool compararCartas(const Carta* izquierda, const Carta* derecha);
+    int obtenerNumeroOrden(const Carta* carta);
+    int obtenerColorOrden(const Carta* carta);
+
 public:
     Jugador(const std::string& nombre, Juego* juego, Pila<Carta*>* mazo, Pila<Carta*>* descarte);
     ~Jugador();
@@ -37,6 +44,7 @@ public:
     bool tieneCartaAcumulable(const Lado& tope) const;
     void intercambiarCartasCon(Jugador& otro);
     void voltearCartas();
+    Carta* extraerCarta(int indice);
 
 };
 

@@ -189,5 +189,11 @@ CMakeFiles/Uno.dir/src/Juego/Juego.cpp.o: \
  /home/mynordma/UNO/Uno/src/Juego/../Lado/Flip/LadoMasSeisFlip.h \
  /home/mynordma/UNO/Uno/src/Juego/../Lado/Flip/LadoSaltaTodos.h \
  /home/mynordma/UNO/Uno/src/Juego/../Lado/Flip/LadoColorEterno.h \
+ /home/mynordma/UNO/Uno/src/Juego/../Consola/Consola.h \
+ /home/mynordma/UNO/Uno/src/Juego/../Consola/../Color/Color.h \
  /home/mynordma/UNO/Uno/src/Juego/../ListaCircularDoble/Nodo.h \
+ /home/mynordma/UNO/Uno/src/Juego/../Validador/Validador.h \
+ /home/mynordma/UNO/Uno/src/Juego/../Validador/../Pila/Pila.h \
+ /home/mynordma/UNO/Uno/src/Juego/../Validador/../Carta/Carta.h \
+ /home/mynordma/UNO/Uno/src/Juego/../Validador/../Jugador/Jugador.h \
  /usr/include/c++/13/ctime

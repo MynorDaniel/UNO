@@ -191,4 +191,10 @@ CMakeFiles/Uno.dir/src/Lado/LadoRayosX.cpp.o: \
  /home/mynordma/UNO/Uno/src/Lado/../Juego/../Lado/Flip/LadoMasSeisFlip.h \
  /home/mynordma/UNO/Uno/src/Lado/../Juego/../Lado/Flip/LadoSaltaTodos.h \
  /home/mynordma/UNO/Uno/src/Lado/../Juego/../Lado/Flip/LadoColorEterno.h \
- /home/mynordma/UNO/Uno/src/Lado/../Juego/../ListaCircularDoble/Nodo.h
+ /home/mynordma/UNO/Uno/src/Lado/../Juego/../Consola/Consola.h \
+ /home/mynordma/UNO/Uno/src/Lado/../Juego/../Consola/../Color/Color.h \
+ /home/mynordma/UNO/Uno/src/Lado/../Juego/../ListaCircularDoble/Nodo.h \
+ /home/mynordma/UNO/Uno/src/Lado/../Juego/../Validador/Validador.h \
+ /home/mynordma/UNO/Uno/src/Lado/../Juego/../Validador/../Pila/Pila.h \
+ /home/mynordma/UNO/Uno/src/Lado/../Juego/../Validador/../Carta/Carta.h \
+ /home/mynordma/UNO/Uno/src/Lado/../Juego/../Validador/../Jugador/Jugador.h

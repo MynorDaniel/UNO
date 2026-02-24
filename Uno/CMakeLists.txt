@@ -6,6 +6,8 @@ add_executable(Uno
     src/Juego/Juego.cpp
     src/Jugador/Jugador.cpp
     src/Carta/Carta.cpp
+    src/Consola/Consola.cpp
+    src/Validador/Validador.cpp
     src/Lado/Lado.cpp
     src/Lado/LadoNumero.cpp
     src/Lado/LadoMasDos.cpp

@@ -9,6 +9,7 @@ set(CMAKE_DEPENDS_LANGUAGES
 # The set of dependency files which are needed:
 set(CMAKE_DEPENDS_DEPENDENCY_FILES
   "/home/mynordma/UNO/Uno/src/Carta/Carta.cpp" "CMakeFiles/Uno.dir/src/Carta/Carta.cpp.o" "gcc" "CMakeFiles/Uno.dir/src/Carta/Carta.cpp.o.d"
+  "/home/mynordma/UNO/Uno/src/Consola/Consola.cpp" "CMakeFiles/Uno.dir/src/Consola/Consola.cpp.o" "gcc" "CMakeFiles/Uno.dir/src/Consola/Consola.cpp.o.d"
   "/home/mynordma/UNO/Uno/src/Juego/Juego.cpp" "CMakeFiles/Uno.dir/src/Juego/Juego.cpp.o" "gcc" "CMakeFiles/Uno.dir/src/Juego/Juego.cpp.o.d"
   "/home/mynordma/UNO/Uno/src/Jugador/Jugador.cpp" "CMakeFiles/Uno.dir/src/Jugador/Jugador.cpp.o" "gcc" "CMakeFiles/Uno.dir/src/Jugador/Jugador.cpp.o.d"
   "/home/mynordma/UNO/Uno/src/Lado/Flip/LadoColorEterno.cpp" "CMakeFiles/Uno.dir/src/Lado/Flip/LadoColorEterno.cpp.o" "gcc" "CMakeFiles/Uno.dir/src/Lado/Flip/LadoColorEterno.cpp.o.d"
@@ -27,6 +28,7 @@ set(CMAKE_DEPENDS_DEPENDENCY_FILES
   "/home/mynordma/UNO/Uno/src/Lado/LadoRayosX.cpp" "CMakeFiles/Uno.dir/src/Lado/LadoRayosX.cpp.o" "gcc" "CMakeFiles/Uno.dir/src/Lado/LadoRayosX.cpp.o.d"
   "/home/mynordma/UNO/Uno/src/Lado/LadoReversa.cpp" "CMakeFiles/Uno.dir/src/Lado/LadoReversa.cpp.o" "gcc" "CMakeFiles/Uno.dir/src/Lado/LadoReversa.cpp.o.d"
   "/home/mynordma/UNO/Uno/src/Lado/LadoSalto.cpp" "CMakeFiles/Uno.dir/src/Lado/LadoSalto.cpp.o" "gcc" "CMakeFiles/Uno.dir/src/Lado/LadoSalto.cpp.o.d"
+  "/home/mynordma/UNO/Uno/src/Validador/Validador.cpp" "CMakeFiles/Uno.dir/src/Validador/Validador.cpp.o" "gcc" "CMakeFiles/Uno.dir/src/Validador/Validador.cpp.o.d"
   "/home/mynordma/UNO/Uno/src/main.cpp" "CMakeFiles/Uno.dir/src/main.cpp.o" "gcc" "CMakeFiles/Uno.dir/src/main.cpp.o.d"
   )
 

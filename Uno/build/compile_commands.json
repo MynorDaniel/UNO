@@ -25,6 +25,18 @@
 },
 {
   "directory": "/home/mynordma/UNO/Uno/build",
+  "command": "/usr/bin/c++   -g -o CMakeFiles/Uno.dir/src/Consola/Consola.cpp.o -c /home/mynordma/UNO/Uno/src/Consola/Consola.cpp",
+  "file": "/home/mynordma/UNO/Uno/src/Consola/Consola.cpp",
+  "output": "CMakeFiles/Uno.dir/src/Consola/Consola.cpp.o"
+},
+{
+  "directory": "/home/mynordma/UNO/Uno/build",
+  "command": "/usr/bin/c++   -g -o CMakeFiles/Uno.dir/src/Validador/Validador.cpp.o -c /home/mynordma/UNO/Uno/src/Validador/Validador.cpp",
+  "file": "/home/mynordma/UNO/Uno/src/Validador/Validador.cpp",
+  "output": "CMakeFiles/Uno.dir/src/Validador/Validador.cpp.o"
+},
+{
+  "directory": "/home/mynordma/UNO/Uno/build",
   "command": "/usr/bin/c++   -g -o CMakeFiles/Uno.dir/src/Lado/Lado.cpp.o -c /home/mynordma/UNO/Uno/src/Lado/Lado.cpp",
   "file": "/home/mynordma/UNO/Uno/src/Lado/Lado.cpp",
   "output": "CMakeFiles/Uno.dir/src/Lado/Lado.cpp.o"

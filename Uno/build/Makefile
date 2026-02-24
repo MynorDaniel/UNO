@@ -153,6 +153,30 @@ src/Carta/Carta.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Uno.dir/build.make CMakeFiles/Uno.dir/src/Carta/Carta.cpp.s
 .PHONY : src/Carta/Carta.cpp.s
 
+src/Consola/Consola.o: src/Consola/Consola.cpp.o
+.PHONY : src/Consola/Consola.o
+
+# target to build an object file
+src/Consola/Consola.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Uno.dir/build.make CMakeFiles/Uno.dir/src/Consola/Consola.cpp.o
+.PHONY : src/Consola/Consola.cpp.o
+
+src/Consola/Consola.i: src/Consola/Consola.cpp.i
+.PHONY : src/Consola/Consola.i
+
+# target to preprocess a source file
+src/Consola/Consola.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Uno.dir/build.make CMakeFiles/Uno.dir/src/Consola/Consola.cpp.i
+.PHONY : src/Consola/Consola.cpp.i
+
+src/Consola/Consola.s: src/Consola/Consola.cpp.s
+.PHONY : src/Consola/Consola.s
+
+# target to generate assembly for a file
+src/Consola/Consola.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Uno.dir/build.make CMakeFiles/Uno.dir/src/Consola/Consola.cpp.s
+.PHONY : src/Consola/Consola.cpp.s
+
 src/Juego/Juego.o: src/Juego/Juego.cpp.o
 .PHONY : src/Juego/Juego.o
 
@@ -585,6 +609,30 @@ src/Lado/LadoSalto.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Uno.dir/build.make CMakeFiles/Uno.dir/src/Lado/LadoSalto.cpp.s
 .PHONY : src/Lado/LadoSalto.cpp.s
 
+src/Validador/Validador.o: src/Validador/Validador.cpp.o
+.PHONY : src/Validador/Validador.o
+
+# target to build an object file
+src/Validador/Validador.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Uno.dir/build.make CMakeFiles/Uno.dir/src/Validador/Validador.cpp.o
+.PHONY : src/Validador/Validador.cpp.o
+
+src/Validador/Validador.i: src/Validador/Validador.cpp.i
+.PHONY : src/Validador/Validador.i
+
+# target to preprocess a source file
+src/Validador/Validador.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Uno.dir/build.make CMakeFiles/Uno.dir/src/Validador/Validador.cpp.i
+.PHONY : src/Validador/Validador.cpp.i
+
+src/Validador/Validador.s: src/Validador/Validador.cpp.s
+.PHONY : src/Validador/Validador.s
+
+# target to generate assembly for a file
+src/Validador/Validador.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Uno.dir/build.make CMakeFiles/Uno.dir/src/Validador/Validador.cpp.s
+.PHONY : src/Validador/Validador.cpp.s
+
 src/main.o: src/main.cpp.o
 .PHONY : src/main.o
 
@@ -621,6 +669,9 @@ help:
 	@echo "... src/Carta/Carta.o"
 	@echo "... src/Carta/Carta.i"
 	@echo "... src/Carta/Carta.s"
+	@echo "... src/Consola/Consola.o"
+	@echo "... src/Consola/Consola.i"
+	@echo "... src/Consola/Consola.s"
 	@echo "... src/Juego/Juego.o"
 	@echo "... src/Juego/Juego.i"
 	@echo "... src/Juego/Juego.s"
@@ -675,6 +726,9 @@ help:
 	@echo "... src/Lado/LadoSalto.o"
 	@echo "... src/Lado/LadoSalto.i"
 	@echo "... src/Lado/LadoSalto.s"
+	@echo "... src/Validador/Validador.o"
+	@echo "... src/Validador/Validador.i"
+	@echo "... src/Validador/Validador.s"
 	@echo "... src/main.o"
 	@echo "... src/main.i"
 	@echo "... src/main.s"

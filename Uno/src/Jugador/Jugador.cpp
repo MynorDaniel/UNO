@@ -23,6 +23,7 @@ Jugador::~Jugador()
 void Jugador::tomarCarta(Carta* carta)
 {
     cartas.agregar(carta);
+    ordenarCartas();
 }
 
 void Jugador::mostrarCartas()
@@ -60,6 +61,7 @@ bool Jugador::jugarCarta(int indice, const Lado& tope)
     }
 
     cartas.eliminar(indice);
+    ordenarCartas();
     if (descarte != nullptr) {
         descarte->insertar(carta);
     }
@@ -87,6 +89,10 @@ void Jugador::manejarSinCompatibles(const Lado& tope)
 {
     std::cout << nombre << " no tiene cartas compatibles.\n";
 
+    if (juego != nullptr && mazo != nullptr && mazo->isEmpty()) {
+        juego->recargarMazoDesdeDescarte();
+    }
+
     if (mazo == nullptr || mazo->isEmpty()) {
         std::cout << "El mazo está vacío. Se pasa el turno.\n";
         return;
@@ -95,6 +101,13 @@ void Jugador::manejarSinCompatibles(const Lado& tope)
     bool roboSinLimite = juego != nullptr && juego->isModoRoboSinLimite();
 
     do {
+        if (juego != nullptr && mazo != nullptr && mazo->isEmpty()) {
+            juego->recargarMazoDesdeDescarte();
+        }
+        if (mazo == nullptr || mazo->isEmpty()) {
+            std::cout << "El mazo está vacío. Se pasa el turno.\n";
+            return;
+        }
         Carta* cartaRobada = mazo->sacar();
         tomarCarta(cartaRobada);
         std::cout << nombre << " roba: "
@@ -116,6 +129,9 @@ void Jugador::robarCartas(int cantidad)
     }
 
     for (int i = 0; i < cantidad; i++) {
+        if (juego != nullptr && mazo != nullptr && mazo->isEmpty()) {
+            juego->recargarMazoDesdeDescarte();
+        }
         if (mazo->isEmpty()) {
             std::cout << "El mazo se quedó sin cartas.\n";
             break;
@@ -176,6 +192,8 @@ bool Jugador::tieneCartaAcumulable(const Lado& tope) const
 void Jugador::intercambiarCartasCon(Jugador& otro)
 {
     cartas.intercambiar(otro.cartas);
+    ordenarCartas();
+    otro.ordenarCartas();
 }
 
 void Jugador::voltearCartas()
@@ -186,6 +204,138 @@ void Jugador::voltearCartas()
             carta->voltear();
         }
     }
+    ordenarCartas();
+}
+
+Carta* Jugador::extraerCarta(int indice)
+{
+    if (indice < 0 || indice >= cartas.getLongitud()) {
+        return nullptr;
+    }
+
+    Carta* carta = cartas.get(indice);
+    cartas.eliminar(indice);
+    ordenarCartas();
+    return carta;
+}
+
+int Jugador::obtenerNumeroOrden(const Carta* carta) {
+    if (carta == nullptr) {
+        return 100;
+    }
+
+    Lado* lado = carta->getLadoActual();
+    if (lado == nullptr) {
+        return 100;
+    }
+
+    LadoNumero* ladoNumero = dynamic_cast<LadoNumero*>(lado);
+    if (ladoNumero != nullptr) {
+        return ladoNumero->getNumero();
+    }
+
+    return 100;
+}
+
+int Jugador::obtenerColorOrden(const Carta* carta) {
+    if (carta == nullptr) {
+        return 100;
+    }
+
+    Lado* lado = carta->getLadoActual();
+    if (lado == nullptr) {
+        return 100;
+    }
+
+    switch (lado->getColor()) {
+        case Color::Rojo: return 0;
+        case Color::Amarillo: return 1;
+        case Color::Verde: return 2;
+        case Color::Azul: return 3;
+        case Color::Rosa: return 4;
+        case Color::Turquesa: return 5;
+        case Color::Naranja: return 6;
+        case Color::Violeta: return 7;
+        case Color::Multicolor: return 8;
+        default: return 100;
+    }
+}
+
+bool Jugador::compararCartas(const Carta* izquierda, const Carta* derecha) {
+    int numeroIzquierda = obtenerNumeroOrden(izquierda);
+    int numeroDerecha = obtenerNumeroOrden(derecha);
+    if (numeroIzquierda != numeroDerecha) {
+        return numeroIzquierda < numeroDerecha;
+    }
+
+    int colorIzquierda = obtenerColorOrden(izquierda);
+    int colorDerecha = obtenerColorOrden(derecha);
+    return colorIzquierda < colorDerecha;
+}
+
+void Jugador::mezclar(Carta** cartasArray, int inicio, int medio, int fin) {
+    int izquierda = inicio;
+    int derecha = medio + 1;
+    int total = fin - inicio + 1;
+    Carta** resultado = new Carta*[total];
+    int indiceResultado = 0;
+
+    while (izquierda <= medio && derecha <= fin) {
+        if (compararCartas(cartasArray[izquierda], cartasArray[derecha])) {
+            resultado[indiceResultado++] = cartasArray[izquierda++];
+        } else {
+            resultado[indiceResultado++] = cartasArray[derecha++];
+        }
+    }
+
+    while (izquierda <= medio) {
+        resultado[indiceResultado++] = cartasArray[izquierda++];
+    }
+
+    while (derecha <= fin) {
+        resultado[indiceResultado++] = cartasArray[derecha++];
+    }
+
+    for (int i = 0; i < total; i++) {
+        cartasArray[inicio + i] = resultado[i];
+    }
+
+    delete[] resultado;
+}
+
+void Jugador::mergeSort(Carta** cartasArray, int inicio, int fin) {
+    if (inicio >= fin) {
+        return;
+    }
+
+    int medio = inicio + (fin - inicio) / 2;
+    mergeSort(cartasArray, inicio, medio);
+    mergeSort(cartasArray, medio + 1, fin);
+    mezclar(cartasArray, inicio, medio, fin);
+}
+
+void Jugador::ordenarCartas() {
+    int total = cartas.getLongitud();
+    if (total <= 1) {
+        return;
+    }
+
+    Carta** cartasArray = new Carta*[total];
+    for (int i = 0; i < total; i++) {
+        cartasArray[i] = cartas.get(i);
+    }
+
+    mergeSort(cartasArray, 0, total - 1);
+
+    while (cartas.getLongitud() > 0) {
+        cartas.eliminar(0);
+    }
+
+    for (int i = 0; i < total; i++) {
+        cartas.agregar(cartasArray[i]);
+    }
+
+    delete[] cartasArray;
 }
 
 int Jugador::getCantidadCartas() const

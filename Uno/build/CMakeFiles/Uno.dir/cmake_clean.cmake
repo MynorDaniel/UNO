@@ -1,6 +1,8 @@
 file(REMOVE_RECURSE
   "CMakeFiles/Uno.dir/src/Carta/Carta.cpp.o"
   "CMakeFiles/Uno.dir/src/Carta/Carta.cpp.o.d"
+  "CMakeFiles/Uno.dir/src/Consola/Consola.cpp.o"
+  "CMakeFiles/Uno.dir/src/Consola/Consola.cpp.o.d"
   "CMakeFiles/Uno.dir/src/Juego/Juego.cpp.o"
   "CMakeFiles/Uno.dir/src/Juego/Juego.cpp.o.d"
   "CMakeFiles/Uno.dir/src/Jugador/Jugador.cpp.o"
@@ -37,6 +39,8 @@ file(REMOVE_RECURSE
   "CMakeFiles/Uno.dir/src/Lado/LadoReversa.cpp.o.d"
   "CMakeFiles/Uno.dir/src/Lado/LadoSalto.cpp.o"
   "CMakeFiles/Uno.dir/src/Lado/LadoSalto.cpp.o.d"
+  "CMakeFiles/Uno.dir/src/Validador/Validador.cpp.o"
+  "CMakeFiles/Uno.dir/src/Validador/Validador.cpp.o.d"
   "CMakeFiles/Uno.dir/src/main.cpp.o"
   "CMakeFiles/Uno.dir/src/main.cpp.o.d"
   "Uno"

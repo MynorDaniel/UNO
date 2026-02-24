@@ -193,4 +193,10 @@ CMakeFiles/Uno.dir/src/Lado/Flip/LadoFlip.cpp.o: \
  /home/mynordma/UNO/Uno/src/Lado/Flip/../../Juego/../Lado/Flip/LadoMasSeisFlip.h \
  /home/mynordma/UNO/Uno/src/Lado/Flip/../../Juego/../Lado/Flip/LadoSaltaTodos.h \
  /home/mynordma/UNO/Uno/src/Lado/Flip/../../Juego/../Lado/Flip/LadoColorEterno.h \
- /home/mynordma/UNO/Uno/src/Lado/Flip/../../Juego/../ListaCircularDoble/Nodo.h
+ /home/mynordma/UNO/Uno/src/Lado/Flip/../../Juego/../Consola/Consola.h \
+ /home/mynordma/UNO/Uno/src/Lado/Flip/../../Juego/../Consola/../Color/Color.h \
+ /home/mynordma/UNO/Uno/src/Lado/Flip/../../Juego/../ListaCircularDoble/Nodo.h \
+ /home/mynordma/UNO/Uno/src/Lado/Flip/../../Juego/../Validador/Validador.h \
+ /home/mynordma/UNO/Uno/src/Lado/Flip/../../Juego/../Validador/../Pila/Pila.h \
+ /home/mynordma/UNO/Uno/src/Lado/Flip/../../Juego/../Validador/../Carta/Carta.h \
+ /home/mynordma/UNO/Uno/src/Lado/Flip/../../Juego/../Validador/../Jugador/Jugador.h
