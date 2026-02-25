@@ -26,6 +26,8 @@ public:
     void eliminar(int indice);
 
     void intercambiar(Lista<T>& otra);
+
+    Nodo<T>* getCabeza() const;
 };
 
 #include "Lista.tpp"

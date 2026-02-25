@@ -1,0 +1,44 @@
+
+# Consider dependencies only in project.
+set(CMAKE_DEPENDS_IN_PROJECT_ONLY OFF)
+
+# The set of languages for which implicit dependencies are needed:
+set(CMAKE_DEPENDS_LANGUAGES
+  )
+
+# The set of dependency files which are needed:
+set(CMAKE_DEPENDS_DEPENDENCY_FILES
+  "/home/mynordma/UNO/Uno/src/Carta/Carta.cpp" "CMakeFiles/Uno.dir/src/Carta/Carta.cpp.o" "gcc" "CMakeFiles/Uno.dir/src/Carta/Carta.cpp.o.d"
+  "/home/mynordma/UNO/Uno/src/Consola/Consola.cpp" "CMakeFiles/Uno.dir/src/Consola/Consola.cpp.o" "gcc" "CMakeFiles/Uno.dir/src/Consola/Consola.cpp.o.d"
+  "/home/mynordma/UNO/Uno/src/Juego/Juego.cpp" "CMakeFiles/Uno.dir/src/Juego/Juego.cpp.o" "gcc" "CMakeFiles/Uno.dir/src/Juego/Juego.cpp.o.d"
+  "/home/mynordma/UNO/Uno/src/Jugador/Jugador.cpp" "CMakeFiles/Uno.dir/src/Jugador/Jugador.cpp.o" "gcc" "CMakeFiles/Uno.dir/src/Jugador/Jugador.cpp.o.d"
+  "/home/mynordma/UNO/Uno/src/Lado/Flip/LadoColorEterno.cpp" "CMakeFiles/Uno.dir/src/Lado/Flip/LadoColorEterno.cpp.o" "gcc" "CMakeFiles/Uno.dir/src/Lado/Flip/LadoColorEterno.cpp.o.d"
+  "/home/mynordma/UNO/Uno/src/Lado/Flip/LadoFlip.cpp" "CMakeFiles/Uno.dir/src/Lado/Flip/LadoFlip.cpp.o" "gcc" "CMakeFiles/Uno.dir/src/Lado/Flip/LadoFlip.cpp.o.d"
+  "/home/mynordma/UNO/Uno/src/Lado/Flip/LadoMasDosFlip.cpp" "CMakeFiles/Uno.dir/src/Lado/Flip/LadoMasDosFlip.cpp.o" "gcc" "CMakeFiles/Uno.dir/src/Lado/Flip/LadoMasDosFlip.cpp.o.d"
+  "/home/mynordma/UNO/Uno/src/Lado/Flip/LadoMasSeisFlip.cpp" "CMakeFiles/Uno.dir/src/Lado/Flip/LadoMasSeisFlip.cpp.o" "gcc" "CMakeFiles/Uno.dir/src/Lado/Flip/LadoMasSeisFlip.cpp.o.d"
+  "/home/mynordma/UNO/Uno/src/Lado/Flip/LadoMasTresFlip.cpp" "CMakeFiles/Uno.dir/src/Lado/Flip/LadoMasTresFlip.cpp.o" "gcc" "CMakeFiles/Uno.dir/src/Lado/Flip/LadoMasTresFlip.cpp.o.d"
+  "/home/mynordma/UNO/Uno/src/Lado/Flip/LadoMasUnoFlip.cpp" "CMakeFiles/Uno.dir/src/Lado/Flip/LadoMasUnoFlip.cpp.o" "gcc" "CMakeFiles/Uno.dir/src/Lado/Flip/LadoMasUnoFlip.cpp.o.d"
+  "/home/mynordma/UNO/Uno/src/Lado/Flip/LadoSaltaTodos.cpp" "CMakeFiles/Uno.dir/src/Lado/Flip/LadoSaltaTodos.cpp.o" "gcc" "CMakeFiles/Uno.dir/src/Lado/Flip/LadoSaltaTodos.cpp.o.d"
+  "/home/mynordma/UNO/Uno/src/Lado/Lado.cpp" "CMakeFiles/Uno.dir/src/Lado/Lado.cpp.o" "gcc" "CMakeFiles/Uno.dir/src/Lado/Lado.cpp.o.d"
+  "/home/mynordma/UNO/Uno/src/Lado/LadoCambio.cpp" "CMakeFiles/Uno.dir/src/Lado/LadoCambio.cpp.o" "gcc" "CMakeFiles/Uno.dir/src/Lado/LadoCambio.cpp.o.d"
+  "/home/mynordma/UNO/Uno/src/Lado/LadoComodin.cpp" "CMakeFiles/Uno.dir/src/Lado/LadoComodin.cpp.o" "gcc" "CMakeFiles/Uno.dir/src/Lado/LadoComodin.cpp.o.d"
+  "/home/mynordma/UNO/Uno/src/Lado/LadoMasCuatro.cpp" "CMakeFiles/Uno.dir/src/Lado/LadoMasCuatro.cpp.o" "gcc" "CMakeFiles/Uno.dir/src/Lado/LadoMasCuatro.cpp.o.d"
+  "/home/mynordma/UNO/Uno/src/Lado/LadoMasDos.cpp" "CMakeFiles/Uno.dir/src/Lado/LadoMasDos.cpp.o" "gcc" "CMakeFiles/Uno.dir/src/Lado/LadoMasDos.cpp.o.d"
+  "/home/mynordma/UNO/Uno/src/Lado/LadoNumero.cpp" "CMakeFiles/Uno.dir/src/Lado/LadoNumero.cpp.o" "gcc" "CMakeFiles/Uno.dir/src/Lado/LadoNumero.cpp.o.d"
+  "/home/mynordma/UNO/Uno/src/Lado/LadoRayosX.cpp" "CMakeFiles/Uno.dir/src/Lado/LadoRayosX.cpp.o" "gcc" "CMakeFiles/Uno.dir/src/Lado/LadoRayosX.cpp.o.d"
+  "/home/mynordma/UNO/Uno/src/Lado/LadoReversa.cpp" "CMakeFiles/Uno.dir/src/Lado/LadoReversa.cpp.o" "gcc" "CMakeFiles/Uno.dir/src/Lado/LadoReversa.cpp.o.d"
+  "/home/mynordma/UNO/Uno/src/Lado/LadoSalto.cpp" "CMakeFiles/Uno.dir/src/Lado/LadoSalto.cpp.o" "gcc" "CMakeFiles/Uno.dir/src/Lado/LadoSalto.cpp.o.d"
+  "/home/mynordma/UNO/Uno/src/Validador/Validador.cpp" "CMakeFiles/Uno.dir/src/Validador/Validador.cpp.o" "gcc" "CMakeFiles/Uno.dir/src/Validador/Validador.cpp.o.d"
+  "/home/mynordma/UNO/Uno/src/main.cpp" "CMakeFiles/Uno.dir/src/main.cpp.o" "gcc" "CMakeFiles/Uno.dir/src/main.cpp.o.d"
+  )
+
+# Targets to which this target links which contain Fortran sources.
+set(CMAKE_Fortran_TARGET_LINKED_INFO_FILES
+  )
+
+# Targets to which this target links which contain Fortran sources.
+set(CMAKE_Fortran_TARGET_FORWARD_LINKED_INFO_FILES
+  )
+
+# Fortran module output directory.
+set(CMAKE_Fortran_TARGET_MODULE_DIR "")

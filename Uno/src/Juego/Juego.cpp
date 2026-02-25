@@ -34,6 +34,7 @@ Juego::~Juego()
 
 }
 
+// Metodos principales del juego
 void Juego::iniciarJuego()
 {
     std::srand(static_cast<unsigned>(std::time(nullptr)));
@@ -75,6 +76,186 @@ void Juego::iniciarJuego()
     }
 }
 
+bool Juego::iniciarTurnos() {
+    std::cout << "\nIniciando turnos...\n";
+
+    // Verificar que haya jugadores y cartas para iniciar el juego
+    int totalJugadores = jugadores.getLongitud();
+    NodoCircularDoble<Jugador*>* nodoInicial = jugadores.getCabeza();
+    if (nodoInicial == nullptr) {
+        validador.validarInicioTurnos(totalJugadores, nullptr);
+        return false;
+    }
+    Jugador* jugadorInicial = nodoInicial->getDato();
+    if (!validador.validarInicioTurnos(totalJugadores, jugadorInicial)) {
+        return false;
+    }
+    if (!validador.validarJugadorConCartas(jugadorInicial, "No hay cartas suficientes para iniciar turnos.")) {
+        return false;
+    }
+
+    // Seleccionar la carta inicial para el descarte
+    limpiarPantalla();
+    std::cout << "\nTurno inicial de " << jugadorInicial->getNombre() << ":\n";
+    mostrarCartasJugador(jugadorInicial);
+
+    // Pedir al jugador inicial que seleccione una carta para iniciar el descarte
+    int indiceInicial = pedirIndiceCarta(jugadorInicial, "Seleccione la carta para iniciar el descarte: ");
+    Carta* cartaInicial = jugadorInicial->extraerCarta(indiceInicial);
+    descarte.insertar(cartaInicial);
+    std::cout << jugadorInicial->getNombre() << " descarta: "
+              << cartaInicial->getLadoActual()->toString() << "\n";
+
+    bool hayGanador = false;
+    std::string nombreGanador;
+    NodoCircularDoble<Jugador*>* nodoActual = nodoInicial;
+    if (totalJugadores > 1) {
+        nodoActual = nodoActual->getSiguiente();
+    }
+
+    // Bucle principal de turnos
+    while (!hayGanador) {
+
+        // Verificar que el jugador actual exista y tenga cartas
+        if (nodoActual == nullptr) {
+            break;
+        }
+
+        Jugador* jugador = nodoActual->getDato();
+        if (jugador == nullptr) {
+            nodoActual = (direccionTurno == 1) ? nodoActual->getSiguiente() : nodoActual->getAnterior();
+            continue;
+        }
+
+        jugadorActual = jugador;
+        nodoActualTurno = nodoActual;
+
+        // Verificar si el jugador actual ya ha ganado
+        if (jugador->getCantidadCartas() == 0) {
+            std::cout << "\n" << jugador->getNombre() << " ha ganado.\n";
+            nombreGanador = jugador->getNombre();
+            hayGanador = true;
+            break;
+        }
+
+        // Aplicar efectos pendientes al inicio del turno
+        if (aplicarEfectosInicioTurno(jugador)) {
+            esperarContinuar();
+            nodoActual = (direccionTurno == 1) ? nodoActual->getSiguiente() : nodoActual->getAnterior();
+            continue;
+        }
+
+        // Mostrar el estado actual del juego
+        limpiarPantalla();
+        mostrarTopeDescarte();
+        Lado* ladoTope = descarte.verCima()->getLadoActual();
+        std::cout << "\nTurno de " << jugador->getNombre() << ":\n";
+
+        bool acumulacionActiva = modoAcumulacion && cartasRoboPendientes > 0;
+
+        if (!modoGanarConNegra && jugador->getCantidadCartas() == 1) {
+            Carta* cartaUnica = jugador->getCartas().get(0);
+            if (esCartaNegra(cartaUnica)) {
+                std::cout << jugador->getNombre() << " no puede jugar una carta negra como última.\n";
+                jugador->manejarSinCompatibles(*ladoTope);
+                esperarContinuar();
+                nodoActual = (direccionTurno == 1) ? nodoActual->getSiguiente() : nodoActual->getAnterior();
+                continue;
+            }
+        }
+
+        if (acumulacionActiva && !jugador->tieneCartaAcumulable(*ladoTope)) {
+            std::cout << jugador->getNombre() << " no puede acumular y debe robar " << cartasRoboPendientes << " carta(s).\n";
+            jugador->robarCartas(cartasRoboPendientes);
+            cartasRoboPendientes = 0;
+            esperarContinuar();
+            nodoActual = (direccionTurno == 1) ? nodoActual->getSiguiente() : nodoActual->getAnterior();
+            continue;
+        }
+
+        // Verificar si el jugador tiene cartas compatibles con el tope del descarte
+        if (!jugador->tieneCartaCompatible(*ladoTope)) {
+            jugador->manejarSinCompatibles(*ladoTope);
+
+            // Verificar si el jugador actual ha ganado después de robar
+            if (jugador->getCantidadCartas() == 0) {
+                std::cout << "\n" << jugador->getNombre() << " ha ganado.\n";
+                nombreGanador = jugador->getNombre();
+                hayGanador = true;
+                break;
+            }
+
+            esperarContinuar();
+
+            // Pasar al siguiente jugador, se usa % para ciclar de vuelta al inicio de la lista de jugadores
+            nodoActual = (direccionTurno == 1) ? nodoActual->getSiguiente() : nodoActual->getAnterior();
+            continue;
+        }
+
+        // Pedir al jugador que seleccione una carta para jugar o reportar UNO
+        while (true) {
+            mostrarCartasJugador(jugador);
+            int totalCartas = jugador->getCantidadCartas();
+            if (modoGritoDeUno) {
+                std::cout << totalCartas + 1 << ". Reportar UNO\n";
+            }
+
+            int opcion = leerOpcionMenu();
+
+            if (modoGritoDeUno && opcion == totalCartas + 1) {
+                manejarReporteUno(jugador);
+                continue;
+            }
+
+            if (opcion < 1 || opcion > totalCartas) {
+                std::cout << "Indice inválido.\n";
+                continue;
+            }
+
+            int indice = opcion - 1;
+            Carta* cartaSeleccionada = jugador->getCartas().get(indice);
+            if (!validarJugada(jugador, cartaSeleccionada, *ladoTope, acumulacionActiva)) {
+                std::cout << "Esa carta no es compatible con las reglas actuales.\n";
+                continue;
+            }
+
+            if (jugador->jugarCarta(indice, *ladoTope)) {
+                manejarGritoUno(jugador);
+                break;
+            }
+
+            std::cout << "Esa carta no es compatible con el tope.\n";
+        }
+
+        // Verificar si el jugador actual ha ganado después de jugar
+        if (jugador->getCantidadCartas() == 0) {
+            std::cout << "\n" << jugador->getNombre() << " ha ganado.\n";
+            nombreGanador = jugador->getNombre();
+            hayGanador = true;
+            break;
+        }
+
+        if (repetirTurnoActual) {
+            repetirTurnoActual = false;
+            continue;
+        }
+
+        nodoActual = (direccionTurno == 1) ? nodoActual->getSiguiente() : nodoActual->getAnterior();
+    }
+
+    if (!hayGanador) {
+        return false;
+    }
+
+    bool jugarDeNuevo = preguntarReinicio();
+    if (!jugarDeNuevo) {
+        std::cout << "\nSaliendo...\n";
+    }
+    return jugarDeNuevo;
+}
+
+// Metodos auxiliares
+
 int Juego::calcularCantidadDeMazos(int cantidadJugadores) {
     if (cantidadJugadores <= 0) {
         return 1;
@@ -83,6 +264,7 @@ int Juego::calcularCantidadDeMazos(int cantidadJugadores) {
     return ((cantidadJugadores - 1) / 6) + 1;
 }
 
+// Metodo que crea la cantidad de mazos necesarios para la cantidad de jugadores, barajea el mazo y muestra su contenido
 void Juego::crearMazoCompleto() {
     std::cout << "\nCreando el mazo completo de cartas...\n";
 
@@ -95,6 +277,7 @@ void Juego::crearMazoCompleto() {
     mostrarMazo();
 }
 
+// Metodo que crea un mazo individual de UNO
 void Juego::crearMazo() {
 
     // Cartas numerica
@@ -141,6 +324,7 @@ void Juego::crearMazo() {
     }
 }
 
+// Metodo que crea un mazo de UNO Flip
 void Juego::crearMazoFlip() {
     std::cout << "\nCreando el mazo de cartas Flip...\n";
 
@@ -431,6 +615,8 @@ Color Juego::pedirColorCarta(const std::string& nombreJugador) {
 Color Juego::pedirColorOscuro(const std::string& nombreJugador) {
     return consola.pedirColorOscuro(nombreJugador);
 }
+
+// Métodos para aplicar efectos de las cartas
 
 void Juego::aplicarReversa() {
     direccionTurno *= -1;
@@ -868,183 +1054,7 @@ bool Juego::esCartaNegra(const Carta* carta) const {
     return dynamic_cast<LadoComodin*>(lado) != nullptr || dynamic_cast<LadoMasCuatro*>(lado) != nullptr;
 }
 
-bool Juego::iniciarTurnos() {
-    std::cout << "\nIniciando turnos...\n";
 
-    // Verificar que haya jugadores y cartas para iniciar el juego
-    int totalJugadores = jugadores.getLongitud();
-    NodoCircularDoble<Jugador*>* nodoInicial = jugadores.getCabeza();
-    if (nodoInicial == nullptr) {
-        validador.validarInicioTurnos(totalJugadores, nullptr);
-        return false;
-    }
-    Jugador* jugadorInicial = nodoInicial->getDato();
-    if (!validador.validarInicioTurnos(totalJugadores, jugadorInicial)) {
-        return false;
-    }
-    if (!validador.validarJugadorConCartas(jugadorInicial, "No hay cartas suficientes para iniciar turnos.")) {
-        return false;
-    }
-
-    // Seleccionar la carta inicial para el descarte
-    limpiarPantalla();
-    std::cout << "\nTurno inicial de " << jugadorInicial->getNombre() << ":\n";
-    mostrarCartasJugador(jugadorInicial);
-
-    // Pedir al jugador inicial que seleccione una carta para iniciar el descarte
-    int indiceInicial = pedirIndiceCarta(jugadorInicial, "Seleccione la carta para iniciar el descarte: ");
-    Carta* cartaInicial = jugadorInicial->extraerCarta(indiceInicial);
-    descarte.insertar(cartaInicial);
-    std::cout << jugadorInicial->getNombre() << " descarta: "
-              << cartaInicial->getLadoActual()->toString() << "\n";
-
-    bool hayGanador = false;
-    std::string nombreGanador;
-    NodoCircularDoble<Jugador*>* nodoActual = nodoInicial;
-    if (totalJugadores > 1) {
-        nodoActual = nodoActual->getSiguiente();
-    }
-
-    // Bucle principal de turnos
-    while (!hayGanador) {
-
-        // Verificar que el jugador actual exista y tenga cartas
-        if (nodoActual == nullptr) {
-            break;
-        }
-
-        Jugador* jugador = nodoActual->getDato();
-        if (jugador == nullptr) {
-            nodoActual = (direccionTurno == 1) ? nodoActual->getSiguiente() : nodoActual->getAnterior();
-            continue;
-        }
-
-        jugadorActual = jugador;
-        nodoActualTurno = nodoActual;
-
-        // Verificar si el jugador actual ya ha ganado
-        if (jugador->getCantidadCartas() == 0) {
-            std::cout << "\n" << jugador->getNombre() << " ha ganado.\n";
-            nombreGanador = jugador->getNombre();
-            hayGanador = true;
-            break;
-        }
-
-        // Aplicar efectos pendientes al inicio del turno
-        if (aplicarEfectosInicioTurno(jugador)) {
-            esperarContinuar();
-            nodoActual = (direccionTurno == 1) ? nodoActual->getSiguiente() : nodoActual->getAnterior();
-            continue;
-        }
-
-        // Mostrar el estado actual del juego
-        limpiarPantalla();
-        mostrarTopeDescarte();
-        Lado* ladoTope = descarte.verCima()->getLadoActual();
-        std::cout << "\nTurno de " << jugador->getNombre() << ":\n";
-
-        bool acumulacionActiva = modoAcumulacion && cartasRoboPendientes > 0;
-
-        if (!modoGanarConNegra && jugador->getCantidadCartas() == 1) {
-            Carta* cartaUnica = jugador->getCartas().get(0);
-            if (esCartaNegra(cartaUnica)) {
-                std::cout << jugador->getNombre() << " no puede jugar una carta negra como última.\n";
-                jugador->manejarSinCompatibles(*ladoTope);
-                esperarContinuar();
-                nodoActual = (direccionTurno == 1) ? nodoActual->getSiguiente() : nodoActual->getAnterior();
-                continue;
-            }
-        }
-
-        if (acumulacionActiva && !jugador->tieneCartaAcumulable(*ladoTope)) {
-            std::cout << jugador->getNombre() << " no puede acumular y debe robar " << cartasRoboPendientes << " carta(s).\n";
-            jugador->robarCartas(cartasRoboPendientes);
-            cartasRoboPendientes = 0;
-            esperarContinuar();
-            nodoActual = (direccionTurno == 1) ? nodoActual->getSiguiente() : nodoActual->getAnterior();
-            continue;
-        }
-
-        // Verificar si el jugador tiene cartas compatibles con el tope del descarte
-        if (!jugador->tieneCartaCompatible(*ladoTope)) {
-            jugador->manejarSinCompatibles(*ladoTope);
-
-            // Verificar si el jugador actual ha ganado después de robar
-            if (jugador->getCantidadCartas() == 0) {
-                std::cout << "\n" << jugador->getNombre() << " ha ganado.\n";
-                nombreGanador = jugador->getNombre();
-                hayGanador = true;
-                break;
-            }
-
-            esperarContinuar();
-
-            // Pasar al siguiente jugador, se usa % para ciclar de vuelta al inicio de la lista de jugadores
-            nodoActual = (direccionTurno == 1) ? nodoActual->getSiguiente() : nodoActual->getAnterior();
-            continue;
-        }
-
-        // Pedir al jugador que seleccione una carta para jugar o reportar UNO
-        while (true) {
-            mostrarCartasJugador(jugador);
-            int totalCartas = jugador->getCantidadCartas();
-            if (modoGritoDeUno) {
-                std::cout << totalCartas + 1 << ". Reportar UNO\n";
-            }
-
-            int opcion = leerOpcionMenu();
-
-            if (modoGritoDeUno && opcion == totalCartas + 1) {
-                manejarReporteUno(jugador);
-                continue;
-            }
-
-            if (opcion < 1 || opcion > totalCartas) {
-                std::cout << "Indice inválido.\n";
-                continue;
-            }
-
-            int indice = opcion - 1;
-            Carta* cartaSeleccionada = jugador->getCartas().get(indice);
-            if (!validarJugada(jugador, cartaSeleccionada, *ladoTope, acumulacionActiva)) {
-                std::cout << "Esa carta no es compatible con las reglas actuales.\n";
-                continue;
-            }
-
-            if (jugador->jugarCarta(indice, *ladoTope)) {
-                manejarGritoUno(jugador);
-                break;
-            }
-
-            std::cout << "Esa carta no es compatible con el tope.\n";
-        }
-
-        // Verificar si el jugador actual ha ganado después de jugar
-        if (jugador->getCantidadCartas() == 0) {
-            std::cout << "\n" << jugador->getNombre() << " ha ganado.\n";
-            nombreGanador = jugador->getNombre();
-            hayGanador = true;
-            break;
-        }
-
-        if (repetirTurnoActual) {
-            repetirTurnoActual = false;
-            continue;
-        }
-
-        nodoActual = (direccionTurno == 1) ? nodoActual->getSiguiente() : nodoActual->getAnterior();
-    }
-
-    if (!hayGanador) {
-        return false;
-    }
-
-    bool jugarDeNuevo = preguntarReinicio();
-    if (!jugarDeNuevo) {
-        std::cout << "\nSaliendo...\n";
-    }
-    return jugarDeNuevo;
-}
 
 
 

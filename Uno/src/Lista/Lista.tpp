@@ -85,3 +85,8 @@ void Lista<T>::intercambiar(Lista<T>& otra) {
     otra.longitud = tempLongitud;
 }
 
+template <typename T>
+Nodo<T>* Lista<T>::getCabeza() const {
+    return cabeza;
+}
+

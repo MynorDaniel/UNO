@@ -38,12 +38,14 @@ void Jugador::mostrarCartas()
 
 bool Jugador::tieneCartaCompatible(const Lado& tope)
 {
-    for (int i = 0; i < cartas.getLongitud(); i++) {
-        Carta* carta = cartas.get(i);
+    Nodo<Carta*>* actual = cartas.getCabeza();
+    while (actual != nullptr) {
+        Carta* carta = actual->getDato();
         Lado* ladoActual = carta ? carta->getLadoActual() : nullptr;
         if (ladoActual != nullptr && ladoActual->esCompatible(tope)) {
             return true;
         }
+        actual = actual->getSiguiente();
     }
     return false;
 }
@@ -143,24 +145,28 @@ void Jugador::robarCartas(int cantidad)
 
 bool Jugador::tieneCartaDeColor(Color color) const
 {
-    for (int i = 0; i < cartas.getLongitud(); i++) {
-        Carta* carta = cartas.get(i);
+    Nodo<Carta*>* actual = cartas.getCabeza();
+    while (actual != nullptr) {
+        Carta* carta = actual->getDato();
         Lado* lado = carta ? carta->getLadoActual() : nullptr;
         if (lado != nullptr && lado->getColor() == color) {
             return true;
         }
+        actual = actual->getSiguiente();
     }
     return false;
 }
 
 bool Jugador::tieneCartaNumero(int numero) const
 {
-    for (int i = 0; i < cartas.getLongitud(); i++) {
-        Carta* carta = cartas.get(i);
+    Nodo<Carta*>* actual = cartas.getCabeza();
+    while (actual != nullptr) {
+        Carta* carta = actual->getDato();
         LadoNumero* ladoNumero = carta ? dynamic_cast<LadoNumero*>(carta->getLadoActual()) : nullptr;
         if (ladoNumero != nullptr && ladoNumero->getNumero() == numero) {
             return true;
         }
+        actual = actual->getSiguiente();
     }
     return false;
 }
@@ -170,20 +176,20 @@ bool Jugador::tieneCartaAcumulable(const Lado& tope) const
     const bool topeMasDos = dynamic_cast<const LadoMasDos*>(&tope) != nullptr;
     const bool topeMasCuatro = dynamic_cast<const LadoMasCuatro*>(&tope) != nullptr;
 
-    for (int i = 0; i < cartas.getLongitud(); i++) {
-        Carta* carta = cartas.get(i);
+    Nodo<Carta*>* actual = cartas.getCabeza();
+    while (actual != nullptr) {
+        Carta* carta = actual->getDato();
         Lado* lado = carta ? carta->getLadoActual() : nullptr;
-        if (lado == nullptr) {
-            continue;
-        }
+        if (lado != nullptr) {
+            if (topeMasDos && dynamic_cast<LadoMasDos*>(lado) != nullptr) {
+                return true;
+            }
 
-        if (topeMasDos && dynamic_cast<LadoMasDos*>(lado) != nullptr) {
-            return true;
+            if (topeMasCuatro && dynamic_cast<LadoMasCuatro*>(lado) != nullptr) {
+                return true;
+            }
         }
-
-        if (topeMasCuatro && dynamic_cast<LadoMasCuatro*>(lado) != nullptr) {
-            return true;
-        }
+        actual = actual->getSiguiente();
     }
 
     return false;
